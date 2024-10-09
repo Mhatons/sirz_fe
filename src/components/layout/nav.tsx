@@ -63,7 +63,7 @@ export default function NavBar() {
                 <div onClick={() => navigate("/")} className="lg:pb-5 lg:h-[100px] w-[20%]">
                     logo
                 </div>
-                <ul className="flex max-lg:hidden items-center text-[18px] justify-between w-[80%] font-comfortaa">
+                <ul className="flex max-lg:hidden items-center text-[18px] gap-4 justify-between w-[80%] font-comfortaa">
                     {
                         navItems.map((item, index) => (
                             <li
