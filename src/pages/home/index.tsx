@@ -2,7 +2,7 @@ import { IoLockClosedOutline } from "react-icons/io5";
 import Gallery from "../../components/gallery";
 import banner from '../../assets/banner.webp';
 import benefitImage from '../../assets/tran.png'
-import Hero from "../../components/hero";
+import Hero from "../../components/hero/hero";
 import Card from "../../components/layout/card";
 import { CiDollar } from "react-icons/ci";
 import { MdShowChart } from "react-icons/md";

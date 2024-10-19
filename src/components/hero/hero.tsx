@@ -1,7 +1,15 @@
-import Button from "./common/button";
-import phoneImg from '../assets/step1.png'
+import { useState } from "react";
+import Button from "../common/button";
+// import phoneImg from '../../assets/step1.png'
+import { StepOne, StepThree, StepTwo } from "./steps";
 
 export default function Hero() {
+    const [currentStep, setCurrentStep] = useState("step1");
+
+    const toggleSteps = (current_step: string) => {
+        setCurrentStep(current_step)
+    }
+
     return (
         <div className="bg-[#00637E] py-20 sm:flex max-sm:px-6 items-center text-white">
             <div className="sm:w-[40%] ">
@@ -14,10 +22,10 @@ export default function Hero() {
                         <b>WE TRADE. YOU EARN.</b>
                         Join our Telegram Bot and start earning money today!
                     </div>
-                    <Button name="get started" onClick={() => { }} />
+                    <Button name="get started" />
                 </div>
             </div>
-            <div className="sm:w-1/2 max-sm:pt-20 flex max-sm:justify-center max-sm:flex-col items-center gap-20">
+            {/* <div className="sm:w-1/2 max-sm:pt-20 flex max-sm:justify-center max-sm:flex-col items-center gap-20">
                 <div className="sm:w-[33%] w-[50%]">
                     <img src={phoneImg} alt="" className="w-full" />
                 </div>
@@ -33,7 +41,24 @@ export default function Hero() {
                     </div>
                     <button className="py-4 px-8 rounded-full text-black bg-[#AFFFF6]">Continue</button>
                 </div>
-            </div>
+            </div> */}
+            {
+                currentStep === 'step1' ?
+                    <StepOne
+                        onClick={() => toggleSteps('step2')}
+                    /> :
+                    currentStep === 'step2' ?
+                        <StepTwo
+                            onClick={() => toggleSteps('step3')}
+                        /> :
+                        currentStep === "step3" ?
+                            <StepThree
+                                onClick={() => toggleSteps('step1')}
+                            /> :
+                            null
+            }
+
+
         </div>
     )
 }
