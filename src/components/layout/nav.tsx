@@ -98,7 +98,7 @@ export default function NavBar() {
                     // isOpen && (
                     <ul
                         className={`flex absolute bg-[#006C83] transform ${isOpen ? 'translate-y-0' : '-translate-y-[600px]'
-                            } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-16 pb-8 pt-5 shadow-lg lg:hidden flex-col items-center lg:text-[18px] justify-between font-comfortaa`}>
+                            } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-16 pb-8 pt-10 shadow-lg lg:hidden flex-col items-center lg:text-[18px] justify-between font-comfortaa`}>
                         {
                             navItems.map((item, index) => (
                                 <li
