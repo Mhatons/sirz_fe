@@ -64,11 +64,11 @@ export default function NavBar() {
                 <div onClick={() => navigate("/")} className="lg:pb-5 lg:h-[100px] w-[20%]">
                     <img src={logo} alt="" className=" h-full cursor-pointer" />
                 </div>
-                <ul className="flex max-lg:hidden items-center text-[18px] gap-4 justify-between w-[80%] font-comfortaa">
+                <ul className="flex max-lg:hidden items-center text-[15px] gap-4 justify-between w-[80%] font-comfortaa">
                     {
                         navItems.map((item, index) => (
                             <li
-                                className=" cursor-pointer"
+                                className=" whitespace-nowrap cursor-pointer"
                                 onClick={() => {
                                     const { action } = item;
 
@@ -103,7 +103,7 @@ export default function NavBar() {
                             navItems.map((item, index) => (
                                 <li
                                     key={index}
-                                    className=" cursor-pointer my-2"
+                                    className=" cursor-pointer whitespace-nowrap my-2"
                                     onClick={() => {
                                         const { action } = item;
 

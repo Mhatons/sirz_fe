@@ -124,7 +124,7 @@ export default function Home() {
                                 <li className="flex sm:w-[24%] items-start sm:justify-between justify-center max-sm:pb-20 ">
                                     <div key={index} className="flex items-center justify-center flex-col">
                                         <h2 style={{backgroundColor: item.color}} className={`h-16 w-16 rounded-full  font-exo flex items-center justify-center text-white font-bold text-[30px]`}>{item.index}</h2>
-                                        <h4 className="sm:text-[23px] text-[18px] max-sm:pt-4 text-center font-bold text-[#196BB6]">{item.description}</h4>
+                                        <h4 className="sm:text-[20px] text-[18px] max-sm:pt-4 text-center font-bold text-[#196BB6]">{item.description}</h4>
                                     </div>
                                     <div className="text-[30px] max-sm:hidden mt-5 text-[#06C6D1]">{item.icon}</div>
                                 </li>
