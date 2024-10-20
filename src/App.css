@@ -5,3 +5,11 @@
 .profit_shadow {
     box-shadow: 0px 0px 20px 5px silver;
 }
+
+.login_backgroundColor {
+    background-image: linear-gradient(to right, #00597A, #00597acf, #00000049, #00597acf, #00597A);
+}
+
+.scrollBarHidden::-webkit-scrollbar {
+    display: none;
+}
