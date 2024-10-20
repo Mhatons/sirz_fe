@@ -3,7 +3,6 @@ import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from '../../../assets/logo.jpg'
-import Button from "../../../components/common/button";
 
 export default function AdminNavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +13,10 @@ export default function AdminNavBar() {
     }
 
     const navItems = [
-        {
-            title: <Button name="Sign in" />,
-            action: "#"
-        },
+        // {
+        //     title: <Button name="Sign in" />,
+        //     action: "#"
+        // },
         {
             title: <BsPersonFill className="text-[30px]" />,
             action: "#"
