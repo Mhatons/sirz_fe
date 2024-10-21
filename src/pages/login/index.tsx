@@ -26,6 +26,7 @@ export default function Login() {
     };
 
     const handleSubmit = async () => {
+        console.log("userData", userData)
         setIsLoading(true);
         try {
             const response = await axios.post(`${BASE_URL}/api/admin/login`, userData);

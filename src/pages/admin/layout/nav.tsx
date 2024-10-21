@@ -3,9 +3,11 @@ import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from '../../../assets/logo.jpg'
+import Modal from "../../../components/layout/modal";
 
 export default function AdminNavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const navigate = useNavigate()
 
     const toggleMenu = () => {
@@ -23,12 +25,15 @@ export default function AdminNavBar() {
         },
     ];
 
-    const handleScroll = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+    const handleLogout = async () => {
+        localStorage.removeItem('password');
+        setIsModalOpen(false)
+        location.reload();
     };
+
+    const handleIconClick = () => {
+        setIsModalOpen(true)
+    }
     return (
         <div className="fixed w-full max-w-[100%] z-40">
             <div className={`bg-[#006C83] ${isOpen ? "" : "shadow-lg"} text-white lg:h-[80px] px-10 items-center flex justify-between`}>
@@ -40,20 +45,7 @@ export default function AdminNavBar() {
                         navItems.map((item, index) => (
                             <li
                                 className=" cursor-pointer"
-                                onClick={() => {
-                                    const { action } = item;
-
-                                    if (action.startsWith('/')) {
-                                        // Internal command, navigate within the app
-                                        navigate(action);
-                                    } else if (action.startsWith('http://') || action.startsWith('https://')) {
-                                        // External link, open in a new tab
-                                        window.open(action, '_blank');
-                                    } else {
-                                        // Handle scroll or other actions
-                                        handleScroll(action);
-                                    }
-                                }}
+                                onClick={handleIconClick}
                                 key={index}>
                                 {item?.title}
                             </li>
@@ -75,20 +67,7 @@ export default function AdminNavBar() {
                                 <li
                                     key={index}
                                     className=" cursor-pointer my-2"
-                                    onClick={() => {
-                                        const { action } = item;
-
-                                        if (action.startsWith('/')) {
-                                            // Internal command, navigate within the app
-                                            navigate(action);
-                                        } else if (action.startsWith('http://') || action.startsWith('https://')) {
-                                            // External link, open in a new tab
-                                            window.open(action, '_blank');
-                                        } else {
-                                            // Handle scroll or other actions
-                                            handleScroll(action);
-                                        }
-                                    }}
+                                    onClick={handleIconClick}
                                 >
                                     {item?.title}
                                 </li>
@@ -99,6 +78,14 @@ export default function AdminNavBar() {
                 }
 
             </div>
+
+            <Modal
+                title="Delete all deposits"
+                isOpen={isModalOpen}
+                setIsOpen={setIsModalOpen}
+                onClick={handleLogout}
+                text="You're about to logout"
+            />
         </div>
     )
 }
