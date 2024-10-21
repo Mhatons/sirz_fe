@@ -158,6 +158,7 @@ export default function Admin() {
             {
                 currentModal === 'delete_all' && (
                     <Modal
+                        title="Delete all deposits"
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         onClick={deleteAllDeposits}
@@ -168,6 +169,7 @@ export default function Admin() {
             {
                 currentModal === 'delete_one' && (
                     <Modal
+                        title="Delete deposit"
                         isOpen={isOpen}
                         setIsOpen={setIsOpen}
                         onClick={deleteDepositById}
