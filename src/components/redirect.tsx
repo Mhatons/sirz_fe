@@ -6,8 +6,8 @@ const Redirect = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
+    const password = localStorage.getItem('password');
+    if (password) {
       navigate('/admin'); // Redirect to admin if the user exists in localStorage
     }
   }, [navigate]);

@@ -16,8 +16,6 @@ export default function Login() {
     const [isLoading, setIsLoading] = useState<boolean | null>();
     const [userData, setUserData] = useState<IData>({ email: "", password: "" });
 
-    console.log("userData", userData)
-
     // Handle input changes dynamically
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target; // Get the input field's name and value
@@ -34,8 +32,8 @@ export default function Login() {
             console.log("response", response)
 
             // Store the user data in localStorage as a string
-            localStorage.setItem('user', JSON.stringify(response.data));
-            navigate('/admin'); 
+            localStorage.setItem('password', JSON.stringify(response.data.admin.password));
+            navigate('/admin');
 
             setIsLoading(false);
             console.log('Login successful:', response.data);
@@ -75,7 +73,9 @@ export default function Login() {
                         className=" bg-button hover:bg-[#1d3e61] capitalize text-lg rounded-md mt-8 w-full text-white py-3 px-7 font-bold">
                         {!isLoading ? "login" : "processing..."}
                     </button>
-                    <div className="  bg-black mt-3 py-1 text-center italic font-comfortaa text-red-500">{err}</div>
+                    <div className="  mt-3 text-center italic font-comfortaa text-red-500">
+                        <span className="bg-black text-center py-1 px-4">{err}</span>
+                    </div>
                 </div>
             </form>
         </div>

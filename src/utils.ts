@@ -6,3 +6,8 @@ export const formatDate = (date: string) => {
     const formattedDate = moment(date).format('MMMM D, YYYY');
     return formattedDate
 }
+
+export const formatDateTime = (date: string) => {
+    const formattedDate = moment(date).format('ddd MMM D YYYY, HH:mm:ss');
+    return formattedDate
+}

@@ -8,11 +8,14 @@ import Login from './pages/login';
 import Register from './pages/register';
 import ProtectedRoute from './components/protectedRoutes';
 import Redirect from './components/redirect';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
   return (
     <div className="">
+      <ToastContainer />
       <Router>
         <Layout>
           <Redirect />
