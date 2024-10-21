@@ -118,16 +118,16 @@ export default function Admin() {
                                             <th scope="row" className="px-6 py-4 bg-zinc-500 text-white text-center font-normal whitespace-nowrap">
                                                 {`${index + 1}.`}
                                             </th>
-                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap dark:text-white`}>
+                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap`}>
                                                 {content?.userId}
                                             </th>
-                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap dark:text-white`}>
+                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap`}>
                                                 {`${content?.amount} ${content?.coin}`}
                                             </th>
-                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap dark:text-white`}>
+                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap`}>
                                                 {content?.publicKey}
                                             </th>
-                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap dark:text-white`}>
+                                            <th scope="row" className={`px-2 py-4 capitalize font-medium  whitespace-nowrap`}>
                                                 {content?.privateKey}
                                             </th>
                                             <th scope="row" className={`px-2 py-4  font-normal  whitespace-nowrap `}>
@@ -138,7 +138,7 @@ export default function Admin() {
                                                 <div>
                                                     <li
                                                         onClick={() => { handleGetDepositId(content._id); toggleModal('delete_one') }}
-                                                        className=" hover:bg-[#f6f6f5] dark:hover:bg-slate-400 text-red-700 dark:text-red-500 cursor-pointer flex items-center gap-1"
+                                                        className=" hover:bg-[#f6f6f5] dark:hover:bg-slate-400 text-red-500 cursor-pointer flex items-center gap-1"
                                                     >
                                                         <IoTrashBin />
                                                         {"Delete"}
