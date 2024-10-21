@@ -73,9 +73,13 @@ export default function Login() {
                         className=" bg-button hover:bg-[#1d3e61] capitalize text-lg rounded-md mt-8 w-full text-white py-3 px-7 font-bold">
                         {!isLoading ? "login" : "processing..."}
                     </button>
-                    <div className="  mt-3 text-center italic font-comfortaa text-red-500">
-                        <span className="bg-black text-center py-1 px-4">{err}</span>
-                    </div>
+                    {
+                        err && (
+                            <div className="  mt-3 text-center italic font-comfortaa text-red-500">
+                                <span className="bg-black text-center py-1 px-4">{err}</span>
+                            </div>
+                        )
+                    }
                 </div>
             </form>
         </div>
