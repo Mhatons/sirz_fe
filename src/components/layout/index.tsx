@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <div className=''>
-            <div className='content'>
+            <div className='content max-sm:overflow-x-hidden'>
                 {!hideNavAndFooter && <NavBar />}
                 {children}
                 {!hideNavAndFooter && <Footer />}
