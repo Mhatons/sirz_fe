@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoLockClosedOutline } from "react-icons/io5";
 import Gallery from "../../components/gallery";
 import Hero from "../../components/hero/hero";

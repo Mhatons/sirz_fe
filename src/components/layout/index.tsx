@@ -1,5 +1,5 @@
 // Layout.js
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from './nav';
 import Footer from './footer';
