@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from './nav';
 import Footer from './footer';
+import video from '../../assets/201735-916310640_tiny.mp4'
 
 interface LayoutProps {
     children: ReactNode; // Explicitly type children as ReactNode
@@ -20,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {!hideNavAndFooter && <Footer />}
             </div>
             <video className='background-video' autoPlay loop muted playsInline >
-                <source src={"https://cdn.pixabay.com/video/2024/02/23/201735-916310640_large.mp4"} type="video/mp4" />
+                <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
