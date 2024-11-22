@@ -11,7 +11,7 @@ export default function Hero() {
     }
 
     return (
-        <div className="bg-[#00637E] py-20 sm:flex max-sm:px-6 items-center text-white">
+        <div className="bg-[#0c33f4a6] py-20 sm:flex max-sm:px-6 sm:w-[95%] m-auto sm:rounded-lg items-center text-white">
             <div className="sm:w-[40%] ">
                 <div className="sm:w-1/2 m-auto">
                     <header className=" font-exo font-extrabold sm:text-[30px] text-[25px]">

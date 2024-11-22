@@ -58,8 +58,8 @@ const ProfitChart = () => {
             {
                 label: 'Profit Over Time',
                 data: profitData,
-                borderColor: '#004d40',
-                backgroundColor: 'rgba(0, 77, 64, 0.1)',
+                borderColor: '#ddd',
+                backgroundColor: '#0c33f486',
                 fill: true,
                 tension: 0.4, // Smooth curve
             },
@@ -126,7 +126,7 @@ const ProfitChart = () => {
                     <select
                         id="mode"
                         name="mode"
-                        className="border border-black max-sm:w-full rounded-md outline-none px-4 py-1 focus:ring-0"
+                        className="border text-black border-black max-sm:w-full rounded-md outline-none px-4 py-1 focus:ring-0"
                         onChange={(e) => setProfitType(e.target.value)}
                     >
                         <option value="conservative">Conservative</option>
@@ -149,4 +149,3 @@ const ProfitChart = () => {
 };
 
 export default ProfitChart;
-

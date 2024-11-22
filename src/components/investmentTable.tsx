@@ -53,11 +53,11 @@ export default function InvestmentTable() {
     ];
 
     return (
-        <div id="recent-investments" className="overflow-x-auto">
-            <header className="text-[35px] text-center text-primary py-10">Recent Investments</header>
-            <table className="sm:w-[85%] w-[90%] border-b-4 border-[#009879] m-auto bg-[#e9e8e8] ">
+        <div id="recent-investments" className="overflow-x-auto rounded-lg">
+            <header className="text-[35px] rounded-lg text-center text-white py-10">Recent Investments</header>
+            <table className=" w-[90%] rounded-lg border-b-4 border-[#009879] m-auto bg-[#e9e8e8] ">
                 <thead>
-                    <tr className="bg-primary overflow-x-hidden text-white font-exo font-bold text-[20px]">
+                    <tr className="bg-[#0c33f4] overflow-x-hidden text-white font-exo font-bold text-[20px]">
                         <th className="text-left py-3 px-4">Initials</th>
                         <th className="text-left py-3 px-4">Amount</th>
                         <th className="text-left whitespace-nowrap py-3 px-4">Date & Time</th>

@@ -18,7 +18,7 @@ function App() {
       <ToastContainer />
       <Router>
         <Layout>
-          <Redirect />
+          {/* <Redirect /> */}
           <Routes >
             <Route path="/" element={<Home />} />
             <Route path="/faq" element={<FAQ />} />

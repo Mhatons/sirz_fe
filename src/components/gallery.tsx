@@ -5,11 +5,17 @@ import 'slick-carousel/slick/slick-theme.css';
 
 export default function Gallery() {
     const images = [
-        'https://astroearning.com/assets/images/screenshot1-410x379.jpg',
-        'https://astroearning.com/assets/images/screenshot5-886x879.jpg',
-        'https://astroearning.com/assets/images/screenshot2-410x379.jpg',
-        'https://astroearning.com/assets/images/screensho8-886x931.jpg',
+        'https://cdn5.vectorstock.com/i/1000x1000/23/39/crypto-currency-mining-farm-server-data-center-vector-20962339.jpg',
+        'https://cdn5.vectorstock.com/i/1000x1000/23/39/crypto-currency-mining-farm-server-data-center-vector-20962339.jpg',
+        'https://cdn5.vectorstock.com/i/1000x1000/23/39/crypto-currency-mining-farm-server-data-center-vector-20962339.jpg',
+        'https://cdn5.vectorstock.com/i/1000x1000/23/39/crypto-currency-mining-farm-server-data-center-vector-20962339.jpg',
     ];
+    // const images = [
+    //     'https://astroearning.com/assets/images/screenshot1-410x379.jpg',
+    //     'https://astroearning.com/assets/images/screenshot5-886x879.jpg',
+    //     'https://astroearning.com/assets/images/screenshot2-410x379.jpg',
+    //     'https://astroearning.com/assets/images/screensho8-886x931.jpg',
+    // ];
 
     const settings = {
         infinite: true,
@@ -30,8 +36,8 @@ export default function Gallery() {
     };
 
     return (
-        <section className=" w-[80%] py-8 m-auto ">
-            <h3 className="text-2xl sm:text-[40px] font-bold font-comfortaa text-primary text-center mb-4">Screenshots of Trading Results</h3>
+        <section className=" w-[80%] pb-8 pt-16 m-auto ">
+            <h3 className="text-2xl sm:text-[40px] font-bold font-comfortaa text-[#ddd] text-center mb-4">Screenshots of Trading Results</h3>
             <Slider {...settings}>
                 {images.map((src, index) => (
                     <div key={index} className="p-2 w-full h-[350px]">
