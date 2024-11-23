@@ -89,7 +89,7 @@ export default function Home() {
     const { visibleSections, registerRef } = useIntersectionObserver();
 
     return (
-        <div className="sm:pt-40 pt-10">
+        <div className="sm:pt-40 pt-24">
             {/* Hero Section */}
             <Hero />
 

@@ -194,7 +194,7 @@ export default function NavBar() {
     }, []);
 
     return (
-        <div className={`fixed ${isScrolled ? "bg-[#0c33f486]" : ""}  w-full z-40`}>
+        <div className={`fixed ${isScrolled ? "bg-[#0c33f4e6]" : ""}  w-full z-40`}>
             <div
                 className={` text-white px-10 flex justify-between transition-all duration-300 ${isScrolled ? 'h-[60px] items-center shadow-lg' : 'py-6 lg:h-[160px] items-baseline h-[80px]'
                     }`}
@@ -248,8 +248,8 @@ export default function NavBar() {
                     />
                 </div>
                 <ul
-                    className={`flex absolute bg-[#006C83] transform ${isOpen ? 'translate-y-0' : '-translate-y-[600px]'
-                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-16 pb-8 pt-10 shadow-lg lg:hidden flex-col items-center lg:text-[18px] justify-between font-comfortaa`}
+                    className={`flex absolute bg-[#0c33f4e6] transform ${isOpen ? 'translate-y-0' : '-translate-y-[600px]'
+                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-8 pt-20 shadow-lg lg:hidden flex-col items-center lg:text-[18px] justify-between font-comfortaa`}
                 >
                     {navItems.map((item, index) => (
                         <li
