@@ -231,7 +231,6 @@ export default function NavBar() {
                                     // External link, open in a new tab
                                     window.open(action, '_blank');
                                 } else {
-                                    // Handle scroll or other actions
                                     handleScroll(action);
                                 }
                             }}
