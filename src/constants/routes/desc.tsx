@@ -9,5 +9,9 @@ export const ROUTES = {
     Home: {
         PATH: "",
         ELEMENT: <Home />
+    },
+    ABOUT: {
+        PATH: "/home",
+        ELEMENT: <Home />
     }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './styles.css'
 import { PiToggleLeftFill, PiToggleRightFill } from 'react-icons/pi';
 import { useAppDispatch, useAppSelector } from '../app/hook';

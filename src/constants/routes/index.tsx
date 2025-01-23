@@ -14,7 +14,11 @@ const routes = (user: Iuser) =>
                 {
                     path: (ROUTES.Home.PATH),
                     element: (ROUTES.Home.ELEMENT),
-                }
+                },
+                {
+                    path: (ROUTES.ABOUT.PATH),
+                    element: (user && ROUTES.ABOUT.ELEMENT),
+                },
             ]
         }
     ])
