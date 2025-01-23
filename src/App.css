@@ -67,20 +67,23 @@
 .cardtext {
   height: 0px;
   background-color: #1d57687b;
-  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Smooth height and background color transition */
+  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 .cardtext_desc {
   display: none;
 }
-.cardcontainer:hover .cardtext {
+.cardcontainer:hover .cardtext,
+.cardcontainer.in-view .cardtext {
   background-color: #1d5668;
   box-shadow: 1px 1px 1px 1px whitesmoke;
   height: 90%;
 }
-.cardcontainer:hover .cardtext_desc {
+.cardcontainer:hover .cardtext_desc,
+.cardcontainer.in-view .cardtext_desc {
   display: block;
 }
-.cardcontainer:hover .cardButtonContainer{
+.cardcontainer:hover .cardButtonContainer,
+.cardcontainer.in-view .cardButtonContainer {
   background-color: #04232d5c;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
