@@ -48,18 +48,25 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* animated card */
 .animatedcardtext {
   height: 30%;
-  transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Smooth height and background color transition */
+  transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  /* Smooth height and background color transition */
 }
+
 .animatedcardtext_desc {
   display: none;
 }
-.animatedcardcontainer:hover .animatedcardtext {
+
+.animatedcardcontainer:hover .animatedcardtext,
+.animatedcardcontainer.in-view .animatedcardtext {
   background-color: #1d5668;
   height: 65%;
 }
-.animatedcardcontainer:hover .animatedcardtext_desc {
+
+.animatedcardcontainer:hover .animatedcardtext_desc,
+.animatedcardcontainer.in-view .animatedcardtext_desc {
   display: block;
 }
 
@@ -69,19 +76,23 @@
   background-color: #1d57687b;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
+
 .cardtext_desc {
   display: none;
 }
+
 .cardcontainer:hover .cardtext,
 .cardcontainer.in-view .cardtext {
   background-color: #1d5668;
   box-shadow: 1px 1px 1px 1px whitesmoke;
   height: 90%;
 }
+
 .cardcontainer:hover .cardtext_desc,
 .cardcontainer.in-view .cardtext_desc {
   display: block;
 }
+
 .cardcontainer:hover .cardButtonContainer,
 .cardcontainer.in-view .cardButtonContainer {
   background-color: #04232d5c;
