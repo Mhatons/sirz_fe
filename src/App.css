@@ -1,15 +1,86 @@
 .card_shadow:hover {
-    box-shadow: 0px 5px 1px 0px #eaeaea;
+  box-shadow: 0px 5px 1px 0px #eaeaea;
 }
 
 .profit_shadow {
-    box-shadow: 0px 0px 20px 5px #0c33f486;
+  box-shadow: 0px 0px 20px 5px #0c33f486;
 }
 
 .login_backgroundColor {
-    background-image: linear-gradient(to right, #00597A, #00597acf, #00000049, #00597acf, #00597A);
+  background-image: linear-gradient(to right, #00597A, #00597acf, #00000049, #00597acf, #00597A);
 }
 
 .scrollBarHidden::-webkit-scrollbar {
-    display: none;
-};
+  display: none;
+}
+
+;
+
+.hero_bg {
+  background-image:
+    linear-gradient(to bottom, rgba(245, 245, 245, 0) 60%, rgba(245, 245, 245, 1) 100%),
+
+    url(./assets/201735-916310640_tiny.mp4);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.backgroundGradient {
+  background-image: linear-gradient(to right, #ffffff, #ffffffc8, #f5f5f5b4, #f5f5f52b, #f5f5f500);
+  /* transform: scaleX(-1); */
+  z-index: 100;
+}
+
+.floating-button {
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.floating-button:hover {
+  background-color: #eca269;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.animatedcardtext {
+  height: 30%;
+  transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Smooth height and background color transition */
+}
+.animatedcardtext_desc {
+  display: none;
+}
+.animatedcardcontainer:hover .animatedcardtext {
+  background-color: #1d5668;
+  height: 65%;
+}
+.animatedcardcontainer:hover .animatedcardtext_desc {
+  display: block;
+}
+
+/* common card */
+.cardtext {
+  height: 0px;
+  background-color: #1d57687b;
+  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Smooth height and background color transition */
+}
+.cardtext_desc {
+  display: none;
+}
+.cardcontainer:hover .cardtext {
+  background-color: #1d5668;
+  box-shadow: 1px 1px 1px 1px whitesmoke;
+  height: 90%;
+}
+.cardcontainer:hover .cardtext_desc {
+  display: block;
+}
+.cardcontainer:hover .cardButtonContainer{
+  background-color: #04232d5c;
+  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}

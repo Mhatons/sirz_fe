@@ -1,16 +1,35 @@
+// import PropTypes from "prop-types";
 
-interface Ibutton {
-    name: string,
-    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+function Button({ type, text, className, onClick, loading, disabled }: {
+  type?: string;
+  text: string;
+  className?: string;
+  onClick: () => void;
+  loading?: boolean;
+  disabled?: boolean
+}) {
+  return (
+    <button className={` font-comfortaa tracking-widest
+    ${type === "inverted" ? " bg-[#fff]  text-[#F29254] rounded-full " :
+        "bg-[#F29254] text-[#ffffff]  rounded-full "}  
+    ${className?.length ? ` ${className}` :
+        'w-full'} flex align-center justify-center py-4 cursor-pointer text-sm font-bold floating-button 
+    ${loading || disabled ? "opacity-25" : ""} `}
+      style={{ cursor: `${loading || disabled ? "not-allowed" : ""}` }}
+      onClick={onClick}>
+      {loading ? "Please wait..." : text}
+    </button>
+  )
 }
-export default function Button(props: Ibutton) {
-    const { name, onClick } = props;
 
-    return (
-        <button
-            onClick={onClick || (() => window.open('https://t.me/Portalearn_bot', '_blank'))}
-            className="bg-button border capitalize text-lg rounded-md border-white text-white py-3 px-7 font-extrabold">
-            {name}
-        </button>
-    );
-}
+export default Button
+
+
+// Button.propTypes = {
+//   type: PropTypes?.string,
+//   text: PropTypes?.string?.isRequired,
+//   className: PropTypes?.string,
+//   loading: PropTypes?.bool,
+//   disabled: PropTypes?.bool,
+//   onClick: PropTypes?.func
+// };
