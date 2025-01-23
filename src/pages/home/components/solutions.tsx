@@ -20,7 +20,7 @@ export default function Solutions() {
         },
     ]
     return (
-        <div className="w-[85%] m-auto pt-12 ">
+        <div className="sm:w-[85%] w-[95%] m-auto pt-12 ">
             <section className=" sm:grid grid-cols-2 gap-4 items-center text-sm justify-between pb-10">
                 <h4 className=" text-[30px] max-sm:pb-4 leading-10">Haven & Hive Interiors Guarantees the very best taste at friendly price</h4>
                 <div className="text-[23px] leading-8 text-zinc-500 font-light ">

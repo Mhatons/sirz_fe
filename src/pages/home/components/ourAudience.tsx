@@ -36,7 +36,7 @@ export default function OurAudience() {
                             <li key={index} className=" flex items-start max-sm:pb-7 max-sm:flex-col max-sm:items-center max-sm:text-center ">
                                 <HiOutlineClipboardDocumentCheck className="text-[30px] sm:w-[10%] text-secondary" />
                                 <div className="w-[89%]">
-                                    <h4 className=" font-semibold text-2xl ">{data.title}</h4>
+                                    <h4 className=" font-semibold max-sm:pb-3 max-sm:pt-5 text-2xl ">{data.title}</h4>
                                     <div className=" text-lg text-zinc-400 ">{data.description}</div>
                                 </div>
                             </li>

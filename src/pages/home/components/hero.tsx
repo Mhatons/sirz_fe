@@ -42,7 +42,7 @@ export default function Hero() {
                         <b className=" dark:text-zinc-400 text-zinc-600 max-sm:text-sm  font-normal">Integrity | Professionalism | Eco-friendly | Client-Centered </b>
                         <div className='  sm:float-right pt-4 max-sm:flex items-center justify-center '>
                             <button className={` font-comfortaa tracking-widest
-                            border-[#F29254] border text-[#ffffff] px-16  rounded-full 
+                            bg-[#F29254] text-[#ffffff] px-16  rounded-full 
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm font-bold hover:bg-transparent floating-button `}
                             >
                                 Contact us
