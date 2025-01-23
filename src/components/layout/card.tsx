@@ -23,7 +23,7 @@
 // }
 
 
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Idata {
   title: string;
