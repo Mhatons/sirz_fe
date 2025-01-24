@@ -12,7 +12,7 @@ export default function Contact() {
             <div className=" md:grid grid-cols-2 gap-8">
                 <div className="w-[90%] m-auto">
                     <header className=" text-[30px] text-black dark:text-white font-medium">Let Us Make That Sweet Haven You've Imagined a Reality</header>
-                    <div className=" text-xl font-light py-5 sm:leading-9">
+                    <div className=" text-xl font-light py-5 sm:leading-9 leading-8 text-justify">
                         At Haven and Hive Interiors, we’re dedicated to transforming your space into a reflection of your vision. Our expert team works closely with you to understand your unique needs and goals, crafting tailored interior solutions that enhance functionality and style. Let us help you create an environment that inspires success and growth. Reach out today, and let’s begin the journey toward transforming your space.
                     </div>
                 </div>
