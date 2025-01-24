@@ -26,7 +26,7 @@ export default function NavBar() {
     const navItems = [
         ...menuItem,
         { title: <BsPersonFill className="text-[30px]" />, action: "#" },
-        { title: <DarkModeToggle />, action: "#" },
+        // { title: <DarkModeToggle />, action: "#" },
     ];
 
     const handleScroll = (id: string) => {
@@ -54,7 +54,7 @@ export default function NavBar() {
                     />
                 </div>
                 <ul
-                    className={`flex max-lg:hidden items-center dark:text-white text-black text-[15px] gap-4 justify-between  font-comfortaa transition-all`}
+                    className={`flex max-lg:hidden items-center dark:text-white text-[#ffffff] font-semibold text-[15px] gap-4 justify-between  font-comfortaa transition-all`}
                 >
                     {navItems.map((item, index) => (
                         <li
@@ -72,7 +72,7 @@ export default function NavBar() {
                         <DarkModeToggle />
                     </li>
                 </ul>
-                <div className="lg:hidden text-black dark:text-white">
+                <div className="lg:hidden flex items-center text-black dark:text-white">
                     {
                         !isOpen && <FaBars
                             className="text-[30px] cursor-pointer"
@@ -85,6 +85,7 @@ export default function NavBar() {
                             onClick={toggleMenu}
                         />
                     }
+
                 </div>
                 <ul
                     className={`flex absolute bg-[#f4f5f7f2] text-black rounded-b-3xl dark:text-white dark:bg-[#1b1f23f7] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
@@ -112,6 +113,9 @@ export default function NavBar() {
                             {item?.title}
                         </li>
                     ))}
+                    <li>
+                        <DarkModeToggle />
+                    </li>
                 </ul>
             </div>
         </div>

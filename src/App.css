@@ -61,6 +61,7 @@
 
 .animatedcardcontainer:hover .animatedcardtext {
   background-color: #C71540;
+  color: whitesmoke;
   height: 65%;
 }
 
@@ -94,6 +95,36 @@
   background-color: #04232d5c;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
+
+.heroButton {
+  right: 20px;
+  top: 10px;
+  transition: all 0.4s ease; /* Smooth transition for position changes */
+  font-size: 50px;
+}
+
+.heroButtonContainer:hover .heroButton {
+  right: -19px;
+  top: -19px;
+  font-size: 80px;
+}
+.heroButtonContainer:hover {
+  background-color: #c7153f69;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

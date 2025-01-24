@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FACEBOOK_ICON, INSTAGRAM_ICON, LINKEDIN_ICON, RIGHT_DIRECTION_ARROW_ICON, TWITTER_ICON } from '../../assets/icons';
 import { useNavigate } from 'react-router-dom';
 import { overlayImage } from '../../assets/images';
+import { ROUTES } from '../../constants/routes/desc';
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -18,7 +19,7 @@ export default function Footer() {
       >
         <div className="w-full pb-12 border-b border-white max-w-[80vw] lg:max-w-[90vw] mx-auto">
           <div className="relative w-full flex flex-col md:flex-row items-center md:items-start justify-between">
-            <div className="relative w-fit">
+            <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className="relative cursor-pointer w-fit">
               <motion.div
                 variants={textVariants}
                 initial="initial"
@@ -38,7 +39,7 @@ export default function Footer() {
 
             <div className="hidden text-right md:block">
               <p
-                onClick={() => navigate('/about')}
+                onClick={() => navigate(ROUTES.ABOUT.PATH)}
                 className="text-xs font-nexa text-[#fff] cursor-pointer"
 
               >

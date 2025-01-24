@@ -16,8 +16,16 @@ const routes = (user: Iuser) =>
                     element: (ROUTES.Home.ELEMENT),
                 },
                 {
+                    path: (ROUTES.SAMPLE_PAGE.PATH),
+                    element: (user && ROUTES.SAMPLE_PAGE.ELEMENT),
+                },
+                {
                     path: (ROUTES.ABOUT.PATH),
-                    element: (user && ROUTES.ABOUT.ELEMENT),
+                    element: (ROUTES.ABOUT.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CONTACT.PATH),
+                    element: (ROUTES.CONTACT.ELEMENT),
                 },
             ]
         }

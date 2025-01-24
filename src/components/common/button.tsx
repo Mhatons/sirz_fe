@@ -1,8 +1,11 @@
 // import PropTypes from "prop-types";
 
-function Button({ type, text, className, onClick, loading, disabled }: {
+import { ReactNode } from "react";
+
+
+export default function Button({ type, text, className, onClick, loading, disabled }: {
   type?: string;
-  text: string;
+  text: string | ReactNode;
   className?: string;
   onClick: () => void;
   loading?: boolean;
@@ -21,15 +24,3 @@ function Button({ type, text, className, onClick, loading, disabled }: {
     </button>
   )
 }
-
-export default Button
-
-
-// Button.propTypes = {
-//   type: PropTypes?.string,
-//   text: PropTypes?.string?.isRequired,
-//   className: PropTypes?.string,
-//   loading: PropTypes?.bool,
-//   disabled: PropTypes?.bool,
-//   onClick: PropTypes?.func
-// };
