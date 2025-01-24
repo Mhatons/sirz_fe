@@ -60,11 +60,11 @@ export default function OurService() {
             description: "Offering routine and schedules timely maintenance and treatment of furniture wares, including environmental fumigation.",
         },
     ];
-    
+
     return (
         <div className=" pt-12 pb-10">
             <header className=" text-[30px] text-center font-comfortaa">Our services</header>
-            <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-x-6 gap-y-2 w-[95%] max-sm:flex-col py-10 m-auto items-center justify-center sm:justify-evenly">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 xxl:grid-cols-2 grid-cols-1 gap-x-6 gap-y-2 w-[95%] max-sm:flex-col py-10 m-auto items-center justify-center sm:justify-evenly">
                 {cardMenu.map((card, index) => (
                     <div className=" cursor-pointer" key={index}>
                         <Card

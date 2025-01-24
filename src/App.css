@@ -59,14 +59,12 @@
   display: none;
 }
 
-.animatedcardcontainer:hover .animatedcardtext,
-.animatedcardcontainer.in-view .animatedcardtext {
-  background-color: #1d5668;
+.animatedcardcontainer:hover .animatedcardtext {
+  background-color: #C71540;
   height: 65%;
 }
 
-.animatedcardcontainer:hover .animatedcardtext_desc,
-.animatedcardcontainer.in-view .animatedcardtext_desc {
+.animatedcardcontainer:hover .animatedcardtext_desc {
   display: block;
 }
 
@@ -81,8 +79,7 @@
   display: none;
 }
 
-.cardcontainer:hover .cardtext,
-.cardcontainer.in-view .cardtext {
+.cardcontainer:hover .cardtext {
   background-color: #1d5668;
   box-shadow: 1px 1px 1px 1px whitesmoke;
   height: 90%;
@@ -93,8 +90,44 @@
   display: block;
 }
 
-.cardcontainer:hover .cardButtonContainer,
-.cardcontainer.in-view .cardButtonContainer {
+.cardcontainer:hover .cardButtonContainer {
   background-color: #04232d5c;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+
+
+
+
+
+/* media querry */
+@media(max-width: 800px) {
+
+  /* animated card */
+  .animatedcardcontainer:hover .animatedcardtext,
+  .animatedcardcontainer.in-view .animatedcardtext {
+    background-color: #C71540;
+    height: 65%;
+  }
+
+  .animatedcardcontainer:hover .animatedcardtext_desc,
+  .animatedcardcontainer.in-view .animatedcardtext_desc {
+    display: block;
+  }
+
+
+
+  /* common card */
+  .cardcontainer:hover .cardtext,
+  .cardcontainer.in-view .cardtext {
+    background-color: #1d5668;
+    box-shadow: 1px 1px 1px 1px whitesmoke;
+    height: 90%;
+  }
+
+  .cardcontainer:hover .cardButtonContainer,
+  .cardcontainer.in-view .cardButtonContainer {
+    background-color: #04232d5c;
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }
 }

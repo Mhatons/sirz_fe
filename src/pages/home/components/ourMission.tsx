@@ -9,7 +9,7 @@ export default function OurMission() {
         >
             <section className="pt-16">
                 <h2 className="text-3xl text-center font-bold mb-0 text-secondary_light font-comfortaa ">Our Mission</h2>
-                <div className="sm:grid grid-cols-2 sm:w-[80%] w-[90%] m-auto gap-8 sm:pt-14">
+                <div className="sm:grid grid-cols-2 max-sm:flex flex-col-reverse sm:w-[80%] w-[90%] m-auto gap-8 sm:pt-14">
                     
                     <div className=" max-sm:pb-10">
                         <div className="pb-12 max-sm:pt-8 font-comfortaa ">
@@ -27,11 +27,11 @@ export default function OurMission() {
                             <Button onClick={() => { }} text="Get Started now" />
                         </div>
                     </div>
-                    <div className=" relative sm:h-[450px] h-[350px]">
+                    <div className=" relative sm:h-[450px] h-[350px] max-sm:pt-12">
                         <img src={sampleImage} alt="" className="w-full h-full transform scale-x-[-1] object-cover rounded-3xl" />
-                        <div className=" text-center font-comfortaa p-4 shadow-lg mt-[-2em] absolute right-0 left-0 rounded-2xl text-md font-extrabold sm:w-[75%] m-auto bg-[#fff] z-10 text-[#AB4412]">
+                        {/* <div className=" text-center font-comfortaa p-4 shadow-lg mt-[-2em] absolute right-0 left-0 rounded-2xl text-md font-extrabold sm:w-[75%] m-auto bg-[#fff] z-10 text-[#AB4412]">
                             Henry E. E. - Real Estate Expert, GIS Specialist, and Surveyor
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

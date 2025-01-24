@@ -27,7 +27,7 @@ export default function OurAudience() {
     return (
         < section
             style={{ backgroundImage: `url(${overlayImage})`, backgroundSize: 'cover' }}
-            className=" max-sm:pb-8 text-background_light sm:pt-[16em] pt-[4em] bg-[#10333d] pb-14" >
+            className=" max-sm:pb-8 text-background_light lg:pt-[18em] xxl:pt-[38em] sm:pt-[33em] md:pt-[30em] pt-[4em] bg-[#10333d] pb-14" >
             <div className=" sm:w-[80%] w-[95%] m-auto">
                 <header className=" text-center text-[35px] font-semibold">Who we server ?</header>
                 <ul className=" sm:grid grid-cols-2 pt-10 gap-6">

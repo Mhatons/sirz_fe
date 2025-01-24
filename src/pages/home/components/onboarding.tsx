@@ -31,7 +31,7 @@ export default function OnboardingSteps() {
             <div className="h-[500px] relative bg-[#f96a0a]">
                 <img src={sampleImage} alt="" className="w-full h-full object-cover object-bottom opacity-75 " />
             </div>
-            <div className="grid sm:grid-cols-4 mt-[-6em] left-0 right-0 sm:absolute w-[90%] m-auto gap-5">
+            <div className="grid lg:grid-cols-4 xxl:grid-cols-2 mt-[-6em] left-0 right-0 xxl:absolute w-[90%] m-auto gap-5">
                 {
                     onbording.map((item, index: number) => (
                         <div key={index} className={`bg-[#fff] dark:bg-background_dark ${!index && " max-sm:z-50"} sm:shadow-lg   cursor-pointer text-center rounded-2xl p-8 flex items-center justify-center`}>

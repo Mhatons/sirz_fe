@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
             <video
                 ref={videoRef}
-                className=' absolute top-0 h-screen z-0 object-cover w-full'
+                className=' absolute top-0 h-full z-0 object-cover w-full'
                 autoPlay
                 loop
                 muted
@@ -85,9 +85,6 @@ export default function Hero() {
                     <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
                 )
             }
-
-
-
         </section>
     )
 

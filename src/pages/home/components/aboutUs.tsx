@@ -9,9 +9,9 @@ export default function AboutUs() {
                 <div className="sm:grid grid-cols-2 max-sm:flex-col sm:w-[80%] w-[90%] m-auto gap-16 mb-5 py-14">
                     <div className=" relative sm:h-[450px] h-[350px] ">
                         <img src={sampleImage} alt="" className="w-full h-full transform scale-x-[-1] object-cover rounded-3xl" />
-                        <div className=" text-center font-comfortaa p-4 shadow-lg mt-[-2em] absolute right-0 left-0 rounded-2xl text-md font-extrabold sm:w-[75%] m-auto bg-[#fff] z-10 text-[#AB4412]">
+                        {/* <div className=" text-center font-comfortaa p-4 shadow-lg mt-[-2em] absolute right-0 left-0 rounded-2xl text-md font-extrabold sm:w-[75%] m-auto bg-[#fff] z-10 text-[#AB4412]">
                             Henry E. E. - Real Estate Expert, GIS Specialist, and Surveyor
-                        </div>
+                        </div> */}
                     </div>
                     <div className=" max-sm:pt-10">
                         <div className="pb-12 max-sm:pt-8 font-comfortaa ">

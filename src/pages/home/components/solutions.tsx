@@ -28,7 +28,7 @@ export default function Solutions() {
                     ensuring satisfaction through meticulous attention to detail and innovative design solutions.
                 </div>
             </section>
-            <section className=" sm:grid grid-cols-3 gap-8 ">
+            <section className=" grid xxm:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ">
                 {
                     data.map((data, index) => (
                         <AnimatedCard
