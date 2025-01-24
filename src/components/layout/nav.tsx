@@ -15,7 +15,7 @@ export default function NavBar() {
     const navigate = useNavigate();
     const menuItem = [
         { title: 'Home', action: "home" },
-        { title: "About us", action: "about" },
+        { title: "About us", action: "/about" },
         { title: "FAQs", action: "/faq" },
     ];
 
@@ -59,7 +59,7 @@ export default function NavBar() {
                     {navItems.map((item, index) => (
                         <li
                             className="whitespace-nowrap hover:border-rose-700 border-transparent border-b-2 cursor-pointer"
-                            onClick={() => { }}
+                            onClick={() => navigate(item.action)}
                             key={index}
                         >
                             {item?.title}
