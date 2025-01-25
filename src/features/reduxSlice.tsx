@@ -5,12 +5,18 @@ interface IReduxState {
     toggleState: boolean;
     toggleShow: boolean;
     isDarkMode: boolean;
+    showServices: boolean;
+    isOpen: boolean;
+    currentService: string | null
 }
 
 const initialState: IReduxState = {
     toggleState: false,
     toggleShow: false,
     isDarkMode: false,
+    showServices: false,
+    isOpen: false,
+    currentService: ""
 }
 
 const slice = createSlice({
@@ -26,6 +32,15 @@ const slice = createSlice({
         setIsDarkMode(state, action: PayloadAction<boolean>) {
             state.isDarkMode = action.payload
         },
+        setShowServices(state, action: PayloadAction<boolean>) {
+            state.showServices = action.payload
+        },
+        setIsOpen(state, action: PayloadAction<boolean>) {
+            state.isOpen = action.payload
+        },
+        setCurrentService(state, action: PayloadAction<string | null>) {
+            state.currentService = action.payload
+        },
     }
 })
 
@@ -35,5 +50,8 @@ export const {
     setToggleState,
     setToggleShow,
     setIsDarkMode,
+    setCurrentService,
+    setShowServices,
+    setIsOpen,
 } = slice.actions;
 export default slice.reducer

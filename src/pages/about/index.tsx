@@ -1,10 +1,10 @@
-import video from '../../assets/images/3770054-hd_1920_1080_25fps.mp4';
 import { useEffect, useRef } from 'react';
 import { CgArrowsExpandUpRight } from 'react-icons/cg';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../app/hook';
 import { allReduxSliceInfo } from '../../features/reduxSlice';
 import { ROUTES } from '../../constants/routes/desc';
+import { ABOUT_HERO_VIDEO } from '../../assets';
 
 export default function About() {
     const { isDarkMode } = useAppSelector(allReduxSliceInfo);
@@ -56,7 +56,7 @@ export default function About() {
                 playsInline
                 preload='auto'
             >
-                <source src={video} type="video/mp4" className="  object-cover" />
+                <source src={ABOUT_HERO_VIDEO} type="video/mp4" className="  object-cover" />
                 Your browser does not support the video tag.
             </video>
             {

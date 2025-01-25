@@ -1,42 +1,55 @@
-import { BsPersonFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa6";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { logo_dark, logo_light } from "../../assets/images";
 
 import DarkModeToggle from "../../features/darkMode";
-import { useAppSelector } from "../../app/hook";
-import { allReduxSliceInfo } from "../../features/reduxSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hook";
+import { allReduxSliceInfo, setIsOpen } from "../../features/reduxSlice";
+import { ROUTES } from "../../constants/routes/desc";
+import { logo_dark, logo_light } from "../../assets";
+import NavbarDropdown from "../../constants/navbardropdown";
 import { IoMdClose } from "react-icons/io";
 
 export default function NavBar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo)
+    // const [isOpen, setIsOpen] = useState(false);
+    const dispatch = useAppDispatch()
+    const { isDarkMode, isOpen } = useAppSelector(allReduxSliceInfo)
     const navigate = useNavigate();
     const menuItem = [
-        { title: 'Home', action: "home" },
-        { title: "About us", action: "/about" },
-        { title: "FAQs", action: "/faq" },
+        {
+            title: 'Home',
+            action: ROUTES.Home.PATH,
+            icon: "",
+        },
+        {
+            title: "About us",
+            action: ROUTES.ABOUT.PATH,
+            icon: "",
+        },
+        {
+            title: "Contact",
+            action: ROUTES.CONTACT.PATH,
+            icon: "",
+        },
+        // {
+        //     title: `Services`,
+        //     icon: <IoIosArrowDown />,
+        //     action: 'services'
+        // },
+        {
+            title: <NavbarDropdown />,
+            icon: "",
+            action: 'services'
+        },
+        {
+            title: "FAQs",
+            action: ROUTES.SERVICES.PATH,
+            icon: "",
+        },
     ];
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        dispatch(setIsOpen(!isOpen));
     };
-
-    const navItems = [
-        ...menuItem,
-        { title: <BsPersonFill className="text-[30px]" />, action: "#" },
-        // { title: <DarkModeToggle />, action: "#" },
-    ];
-
-    const handleScroll = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
-    // Track scroll event to adjust navbar
 
     return (
         <div className={` absolute top-0  w-full z-40`}>
@@ -54,24 +67,30 @@ export default function NavBar() {
                     />
                 </div>
                 <ul
-                    className={`flex max-lg:hidden items-center dark:text-white text-[#ffffff] font-semibold text-[15px] gap-4 justify-between  font-comfortaa transition-all`}
+                    className={`flex max-lg:hidden items-center dark:text-white text-background_dark font-normal text-[15px] gap-5 justify-between  font-comfortaa transition-all`}
                 >
-                    {navItems.map((item, index) => (
+                    {menuItem.map((item, index) => (
                         <li
-                            className="whitespace-nowrap hover:border-rose-700 border-transparent border-b-2 cursor-pointer"
-                            onClick={() => navigate(item.action)}
+                            className="whitespace-nowrap flex items-center gap-2 hover:border-rose-700 border-transparent border-b-2 cursor-pointer"
+                            onClick={() => {
+                                if (item.action === 'services') {
+                                    // toggleShowServices() 
+                                } else {
+                                    navigate(item.action); // Navigate to route
+                                }
+                            }}
                             key={index}
                         >
                             {item?.title}
+                            {item.icon}
                         </li>
                     ))}
-                    {/* <li>
-                        <Button text="Contact" onClick={() => { }} />
-                    </li> */}
                     <li>
                         <DarkModeToggle />
                     </li>
                 </ul>
+
+                {/* display on smaller screen sizes */}
                 <div className="lg:hidden flex items-center text-black dark:text-white">
                     {
                         !isOpen && <FaBars
@@ -87,36 +106,33 @@ export default function NavBar() {
                     }
 
                 </div>
-                <ul
-                    className={`flex absolute bg-[#f4f5f7f2] text-black rounded-b-3xl dark:text-white dark:bg-[#1b1f23f7] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
-                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-center lg:text-[18px] justify-between font-comfortaa`}
+                <div
+                    className={`flex absolute bg-[#f4f5f7f2] text-black dark:text-white dark:bg-[#1b1f23f7] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
+                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
                 >
-                    {navItems.map((item, index) => (
-                        <li
-                            key={index}
-                            className="cursor-pointer whitespace-nowrap my-2"
-                            onClick={() => {
-                                const { action } = item;
-
-                                if (action.startsWith('/')) {
-                                    navigate(action);
-                                } else if (
-                                    action.startsWith('http://') ||
-                                    action.startsWith('https://')
-                                ) {
-                                    window.open(action, '_blank');
-                                } else {
-                                    handleScroll(action);
-                                }
-                            }}
-                        >
-                            {item?.title}
+                    <ul className=" w-[80%] relative m-auto">
+                        {menuItem.map((item, index) => (
+                            <li
+                                key={index}
+                                className="cursor-pointer flex items-center gap-2 whitespace-nowrap my-6"
+                                onClick={() => {
+                                    if (item.action === 'services') {
+                                        // toggleShowServices() 
+                                    } else {
+                                        dispatch(setIsOpen(false)); navigate(item.action)
+                                    }
+                                }}
+                            >
+                                {item?.title}
+                                {item.icon}
+                            </li>
+                        ))}
+                        <li className="flex items-center gap-4">
+                            toggle mode
+                            <DarkModeToggle />
                         </li>
-                    ))}
-                    <li>
-                        <DarkModeToggle />
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     );

@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { FACEBOOK_ICON, INSTAGRAM_ICON, LINKEDIN_ICON, RIGHT_DIRECTION_ARROW_ICON, TWITTER_ICON } from '../../assets/icons';
 import { useNavigate } from 'react-router-dom';
-import { overlayImage } from '../../assets/images';
 import { ROUTES } from '../../constants/routes/desc';
+import { LINKEDIN_ICON, RIGHT_DIRECTION_ARROW_ICON, TWITTER_ICON, FACEBOOK_ICON, INSTAGRAM_ICON, overlayImage } from '../../assets';
 
 export default function Footer() {
   const navigate = useNavigate()

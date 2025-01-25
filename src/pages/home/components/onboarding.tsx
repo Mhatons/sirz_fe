@@ -1,4 +1,4 @@
-import { sampleImage } from "../../../assets/images";
+import { sampleImage } from "../../../assets";
 import { PersonIcon } from "../../../assets/icons/svg";
 
 export default function OnboardingSteps() {

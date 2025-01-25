@@ -1,5 +1,5 @@
-import { overlayImage } from "../../../assets/images";
 import { HiOutlineClipboardDocumentCheck } from "react-icons/hi2";
+import { overlayImage } from "../../../assets";
 
 export default function OurAudience() {
 

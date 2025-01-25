@@ -1,4 +1,4 @@
-import { overlayImage, sampleImage } from "../../../assets/images";
+import { overlayImage, sampleImage } from "../../../assets";
 import Button from "../../../components/common/button";
 
 export default function OurMission() {
