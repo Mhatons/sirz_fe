@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../app/hook';
 import { allReduxSliceInfo } from '../../features/reduxSlice';
 import { ROUTES } from '../../constants/routes/desc';
-import { SERVICE_HERO_VIDEO } from '../../assets';
+import { VIDEO } from '../../assets';
 
 export default function Services() {
     const { isDarkMode, currentService } = useAppSelector(allReduxSliceInfo);
@@ -58,7 +58,7 @@ export default function Services() {
                 playsInline
                 preload='auto'
             >
-                <source src={SERVICE_HERO_VIDEO} type="video/mp4" className="  object-cover" />
+                <source src={VIDEO.SERVICE_HERO_VIDEO} type="video/mp4" className="  object-cover" />
                 Your browser does not support the video tag.
             </video>
             {

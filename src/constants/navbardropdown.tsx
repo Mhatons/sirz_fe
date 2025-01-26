@@ -1,6 +1,6 @@
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../app/hook";
-import { FACEBOOK_ICON, INSTAGRAM_ICON, LINKEDIN_ICON, serviceDropImg, TWITTER_ICON } from "../assets";
+import { ICONS, IMAGES } from "../assets";
 import { allReduxSliceInfo, setIsOpen, setShowServices } from "../features/reduxSlice";
 import { ServiceDetails } from "./serviceMenu";
 import { useNavigate } from "react-router-dom";
@@ -34,7 +34,7 @@ export default function NavbarDropdown() {
                 <div className=" grid grid-cols-2 border-t pt-8">
                     <div className=" border-r relative mr-10 pr-10">
                         <div className="w-full relative ">
-                            <img src={serviceDropImg} alt="" className="w-full object-cover max-h-[300px]" />
+                            <img src={IMAGES.serviceDropImg} alt="" className="w-full object-cover max-h-[300px]" />
                             <div className=" absolute top-4 text-rose-800 right-3 w- text-[25px] ">
                                 <p>A Haven you can Trust</p>
                             </div>
@@ -43,13 +43,13 @@ export default function NavbarDropdown() {
                             <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
                                 {/* <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p> */}
                                 <div className="flex flex-row items-center justify-center gap-x-10">
-                                    <img src={LINKEDIN_ICON} alt="LinkedIn" />
+                                    <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" />
                                     {/* <img src={TWITTER_ICON} onClick={} alt="Twitter" /> */}
                                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                        <img src={TWITTER_ICON} alt="Twitter" />
+                                        <img src={ICONS.TWITTER_ICON} alt="Twitter" />
                                     </a>
-                                    <img src={INSTAGRAM_ICON} alt="Instagram" />
-                                    <img src={FACEBOOK_ICON} alt="Facebook" />
+                                    <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" />
+                                    <img src={ICONS.FACEBOOK_ICON} alt="Facebook" />
                                 </div>
                             </div>
                         </div>

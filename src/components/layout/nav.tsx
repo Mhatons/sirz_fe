@@ -5,9 +5,9 @@ import DarkModeToggle from "../../features/darkMode";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
 import { allReduxSliceInfo, setIsOpen } from "../../features/reduxSlice";
 import { ROUTES } from "../../constants/routes/desc";
-import { logo_dark, logo_light } from "../../assets";
 import NavbarDropdown from "../../constants/navbardropdown";
 import { IoMdClose } from "react-icons/io";
+import { IMAGES } from "../../assets";
 
 export default function NavBar() {
     // const [isOpen, setIsOpen] = useState(false);
@@ -17,24 +17,16 @@ export default function NavBar() {
     const menuItem = [
         {
             title: 'Home',
-            action: ROUTES.Home.PATH,
-            icon: "",
+            action: ROUTES.HOME.PATH,
         },
         {
             title: "About us",
             action: ROUTES.ABOUT.PATH,
-            icon: "",
         },
         {
             title: "Contact",
             action: ROUTES.CONTACT.PATH,
-            icon: "",
         },
-        // {
-        //     title: `Services`,
-        //     icon: <IoIosArrowDown />,
-        //     action: 'services'
-        // },
         {
             title: <NavbarDropdown />,
             icon: "",
@@ -43,7 +35,6 @@ export default function NavBar() {
         {
             title: "FAQs",
             action: ROUTES.SERVICES.PATH,
-            icon: "",
         },
     ];
 
@@ -54,16 +45,16 @@ export default function NavBar() {
     return (
         <div className={` absolute top-0  w-full z-40`}>
             <div
-                className={` text-white px-10 pt-4 flex justify-between transition-all duration-300 h-[60px] items-center `}
+                className={` text-white sm:w-[95%] w-[90%] m-auto pt-4 flex justify-between transition-all duration-300 h-[60px] items-center `}
             >
                 <div
                     onClick={() => navigate("/")}
-                    className={`cursor-pointer sm:w-72 w-60 ms-[-7em]  transition-all duration-300 `}
+                    className={`cursor-pointer sm:w-16 w-12  transition-all duration-300 `}
                 >
                     <img
-                        src={isDarkMode ? logo_dark : logo_light}
+                        src={isDarkMode ? IMAGES.logo_dark : IMAGES.logo_light}
                         alt=""
-                        className={` w-full  rounded-full`}
+                        className={` w-full rounded-full`}
                     />
                 </div>
                 <ul
@@ -76,7 +67,7 @@ export default function NavBar() {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
                                 } else {
-                                    navigate(item.action); // Navigate to route
+                                    navigate(item?.action); // Navigate to route
                                 }
                             }}
                             key={index}

@@ -6,20 +6,29 @@ import instagram from './icons/la-icons/instagram.svg';
 import rightArrow from './icons/la-icons/upside-right-arrow.svg';
 
 // image section
-import logo2 from './images/Haven & Hive logomark 1.png';
-import logo1 from './images/Haven & Hive logomark 2.png';
+import logo2 from './images/Haven & Hive logomark 1_bf.png';
+import logo1 from './images/Haven___Hive_logomark_2-removebg-preview.png';
 import overlayImg from './images/overlay-img-UwG0G81_.png';
 import serviceDropdownImg from './images/teams.jpg';
+import teamImage from './images/pexels-tima-miroshnichenko-6195121.jpg';
+
+// solution images
+import solutionImg_one from './images/globalImg.jpg';
+import solutionImg_two from './images/pexels-thomas-scarso-224286-1915906.jpg';
+import solutionImg_three from './images/pexels-mikhail-nilov-6930542.jpg';
 
 // services
 import industrialcleaning from './images/pexels-tima-miroshnichenko-6474196.jpg';
 import curtains from './images/curtains.jpg';
-import pro_manage from './images/pro_manage.jpg';
+import pro_manage from './images/projectManegement.jpg';
 import pro_advice from './images/pro_advice.jpg';
 import treatment from './images/cleaning..jpg';
 import painting from './images/painting.jpg';
-import office from './images/office.jpg';
+import office from './images/pexels-pixabay-416320.jpg'
 import consultation from './images/consultation.jpg';
+import space_planning from './images/space_planning.jpg';
+import pop from './images/pexels-pixabay-276701.jpg';
+import floor_img from './images/pexels-clickerhappy-1388944.jpg'
 
 
 
@@ -33,25 +42,37 @@ import sampleImg from './images/pexels-fotoaibe-1743226.jpg';
 import homevideo from './videos/vid (1).mp4';
 import aboutvideo from './videos/3770054-hd_1920_1080_25fps.mp4';
 import servicevideo from './videos/vid (4).mp4';
+import curtainVideo from './videos/MOV_17062152480475370.mp4';
+// import teamVideo from './videos/'
 
+// _________________________________________________________________________
 // _________________________________________________________________________
 
 // export icons
-export const FACEBOOK_ICON = facebook;
-export const TWITTER_ICON = twitter;
-export const INSTAGRAM_ICON = instagram;
-export const LINKEDIN_ICON = linkedin;
-export const RIGHT_DIRECTION_ARROW_ICON = rightArrow;
+export const ICONS = {
+    FACEBOOK_ICON: facebook,
+    TWITTER_ICON: twitter,
+    INSTAGRAM_ICON: instagram,
+    LINKEDIN_ICON: linkedin,
+    RIGHT_DIRECTION_ARROW_ICON: rightArrow
+}
+
 
 // export images
-export const logo_dark = logo1;
-export const logo_light = logo2;
-export const sampleImage = sampleImg;
-export const overlayImage = overlayImg;
-export const serviceDropImg = serviceDropdownImg;
+export const IMAGES = {
+    logo_dark: logo1,
+    logo_light: logo2,
+    sampleImage: sampleImg,
+    overlayImage: overlayImg,
+    serviceDropImg: serviceDropdownImg,
+    onboardingImg: teamImage,
+    solutionImageOne: solutionImg_one,
+    solutionImageTwo: solutionImg_two,
+    solutionImageThree: solutionImg_three,
+}
+
 
 // services
-export const IndustrialCleaningBg = industrialcleaning
 export const SERVICES = {
     IndustrialCleaningBg: industrialcleaning,
     IndustrialTreatmentBg: treatment,
@@ -61,9 +82,16 @@ export const SERVICES = {
     paintingBg: painting,
     professionalAdviceBg: pro_advice,
     projectManagementBg: pro_manage,
+    spacePlanning: space_planning,
+    popImg: pop,
+    flooringImg: floor_img
 }
 
+
 // export videos
-export const HOME_HERO_VIDEO = homevideo;
-export const ABOUT_HERO_VIDEO = aboutvideo;
-export const SERVICE_HERO_VIDEO = servicevideo;
+export const VIDEO = {
+    HOME_HERO_VIDEO: homevideo,
+    ABOUT_HERO_VIDEO: aboutvideo,
+    SERVICE_HERO_VIDEO: servicevideo,
+    CURTAIN_VIDEO: curtainVideo,
+}

@@ -12,8 +12,8 @@ const routes = (user: Iuser) =>
             element: (ROUTES.LAYOUT.ELEMENT),
             children: [
                 {
-                    path: (ROUTES.Home.PATH),
-                    element: (ROUTES.Home.ELEMENT),
+                    path: (ROUTES.HOME.PATH),
+                    element: (ROUTES.HOME.ELEMENT),
                 },
                 {
                     path: (ROUTES.SAMPLE_PAGE.PATH),

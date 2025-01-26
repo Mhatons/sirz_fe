@@ -1,10 +1,10 @@
-import { overlayImage, sampleImage } from "../../../assets";
+import { IMAGES } from "../../../assets";
 import Button from "../../../components/common/button";
 
 export default function OurMission() {
     return (
         <div
-            style={{ backgroundImage: `url(${overlayImage})`, backgroundSize: 'cover' }}
+            style={{ backgroundImage: `url(${IMAGES.overlayImage})`, backgroundSize: 'cover' }}
             className="bg-[#10333d] text-background_light pb-24"
         >
             <section className="pt-16">
@@ -28,7 +28,7 @@ export default function OurMission() {
                         </div>
                     </div>
                     <div className=" relative sm:h-[450px] h-[350px] max-sm:pt-12">
-                        <img src={sampleImage} alt="" className="w-full h-full transform scale-x-[-1] object-cover rounded-3xl" />
+                        <img src={IMAGES.sampleImage} alt="" className="w-full h-full transform scale-x-[-1] object-cover rounded-3xl" />
                         {/* <div className=" text-center font-comfortaa p-4 shadow-lg mt-[-2em] absolute right-0 left-0 rounded-2xl text-md font-extrabold sm:w-[75%] m-auto bg-[#fff] z-10 text-[#AB4412]">
                             Henry E. E. - Real Estate Expert, GIS Specialist, and Surveyor
                         </div> */}

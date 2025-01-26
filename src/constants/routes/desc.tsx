@@ -21,7 +21,7 @@ export const ROUTES = {
         PATH: "/",
         ELEMENT: <Layout />
     },
-    Home: {
+    HOME: {
         PATH: "",
         ELEMENT: <Home />
     },

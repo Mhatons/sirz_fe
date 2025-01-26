@@ -5,7 +5,7 @@ import spinImg from '../../../assets/images/Haven___Hive_logomark_2-removebg-pre
 import { CgArrowsExpandUpRight } from 'react-icons/cg';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../../constants/routes/desc';
-import { HOME_HERO_VIDEO } from "../../../assets";
+import { VIDEO } from "../../../assets";
 
 export default function Hero() {
     const { isDarkMode } = useAppSelector(allReduxSliceInfo);
@@ -64,7 +64,7 @@ export default function Hero() {
                 playsInline
                 preload='auto'
             >
-                <source src={HOME_HERO_VIDEO} type="video/mp4" className="  object-cover" />
+                <source src={VIDEO.HOME_HERO_VIDEO} type="video/mp4" className="  object-cover" />
                 Your browser does not support the video tag.
             </video>
             {

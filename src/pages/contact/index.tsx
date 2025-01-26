@@ -1,5 +1,5 @@
 import { useAppSelector } from "../../app/hook";
-import { overlayImage } from "../../assets";
+import { IMAGES } from "../../assets";
 import { allReduxSliceInfo } from "../../features/reduxSlice";
 import ContactForm from "./components/contactForm";
 
@@ -7,7 +7,7 @@ export default function Contact() {
     const { isDarkMode } = useAppSelector(allReduxSliceInfo)
     return (
         <div
-            style={{ backgroundImage: isDarkMode ? `url(${overlayImage})` : "", backgroundSize: 'cover' }}
+            style={{ backgroundImage: isDarkMode ? `url(${IMAGES.overlayImage})` : "", backgroundSize: 'cover' }}
             className="sm:pt-32 dark:bg-[#10333d] bg-[#c7e2e9] backgroundGradient text-background_dark dark:text-background_light border-b pt-28 sm:py-20">
             <div className=" sm:w-[90%] m-auto md:grid grid-cols-2 gap-16">
                 <div className=" max-sm:px-4 max-md:pb-10 pt-4 ">

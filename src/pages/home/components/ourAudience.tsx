@@ -1,5 +1,5 @@
 import { HiOutlineClipboardDocumentCheck } from "react-icons/hi2";
-import { overlayImage } from "../../../assets";
+import { IMAGES } from "../../../assets";
 
 export default function OurAudience() {
 
@@ -26,7 +26,7 @@ export default function OurAudience() {
 
     return (
         < section
-            style={{ backgroundImage: `url(${overlayImage})`, backgroundSize: 'cover' }}
+            style={{ backgroundImage: `url(${IMAGES.overlayImage})`, backgroundSize: 'cover' }}
             className=" max-sm:pb-8 text-background_light lg:pt-[18em] xxl:pt-[38em] sm:pt-[33em] md:pt-[30em] pt-[4em] bg-[#10333d] pb-14" >
             <div className=" sm:w-[80%] w-[95%] m-auto">
                 <header className=" text-center text-[35px] font-semibold">Who we server ?</header>

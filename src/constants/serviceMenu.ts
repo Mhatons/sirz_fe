@@ -27,7 +27,7 @@ export const ServiceDetails = {
         },
     },
     SpacePlanning: {
-        image: SERVICES.IndustrialCleaningBg,
+        image: SERVICES.spacePlanning,
         title: "Space Planning",
         description: "Optimizing layouts for functionality and aesthetics.",
         get url() {
@@ -67,7 +67,7 @@ export const ServiceDetails = {
         },
     },
     FlooringSolutions: {
-        image: SERVICES.IndustrialCleaningBg,
+        image: SERVICES.flooringImg,
         title: "Flooring Solutions",
         description: "Installation of tiles, parquet, and interlocking systems to suit various design styles.",
         get url() {
@@ -75,7 +75,7 @@ export const ServiceDetails = {
         },
     },
     Pop: {
-        image: SERVICES.IndustrialCleaningBg,
+        image: SERVICES.popImg,
         title: "Plaster of Paris (POP)",
         description: "Creating decorative elements for ceilings and walls.",
         get url() {

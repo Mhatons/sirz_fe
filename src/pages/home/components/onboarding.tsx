@@ -1,4 +1,4 @@
-import { sampleImage } from "../../../assets";
+import { IMAGES } from "../../../assets";
 import { PersonIcon } from "../../../assets/icons/svg";
 
 export default function OnboardingSteps() {
@@ -27,9 +27,10 @@ export default function OnboardingSteps() {
     ];
 
     return (
-        < section className=" max-sm:pb-8 pt-20 max-sm:bg-[#ddd]" >
+        < section className=" max-sm:pb-8 pt-14 max-sm:bg-[#ddd]" >
+            <header className=" text-[30px] pb-6 text-center text-primary_dark">Onboarding Process</header>
             <div className="h-[500px] relative bg-[#f96a0a]">
-                <img src={sampleImage} alt="" className="w-full h-full object-cover object-bottom opacity-75 " />
+                <img src={IMAGES.onboardingImg} alt="" className="w-full h-full object-cover object-center opacity-75 " />
             </div>
             <div className="grid lg:grid-cols-4 xxl:grid-cols-2 mt-[-6em] left-0 right-0 xxl:absolute w-[90%] m-auto gap-5">
                 {

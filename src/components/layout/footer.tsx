@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes/desc';
-import { LINKEDIN_ICON, RIGHT_DIRECTION_ARROW_ICON, TWITTER_ICON, FACEBOOK_ICON, INSTAGRAM_ICON, overlayImage } from '../../assets';
+import { ICONS, IMAGES } from '../../assets';
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <>
       <footer
-        style={{ backgroundImage: `url(${overlayImage})`, backgroundSize: 'cover' }}
+        style={{ backgroundImage: `url(${IMAGES.overlayImage})`, backgroundSize: 'cover' }}
         className="bg-[#333333] pt-24 pb-8"
       >
         <div className="w-full pb-12 border-b border-white max-w-[80vw] lg:max-w-[90vw] mx-auto">
@@ -30,7 +30,7 @@ export default function Footer() {
                 </h3>
               </motion.div>
               <img
-                src={RIGHT_DIRECTION_ARROW_ICON}
+                src={ICONS.RIGHT_DIRECTION_ARROW_ICON}
                 alt=" "
                 className="w-[30px] md:w-[55px] absolute -top-5 left-3/4 sm:left-auto sm:-right-8 md:-right-16 md:-top-14"
               />
@@ -76,13 +76,13 @@ export default function Footer() {
               <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
                 <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p>
                 <div className="flex flex-row items-center justify-center gap-x-10">
-                  <img src={LINKEDIN_ICON} alt="LinkedIn" />
+                  <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" />
                   {/* <img src={TWITTER_ICON} onClick={} alt="Twitter" /> */}
                   <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <img src={TWITTER_ICON} alt="Twitter" />
+                    <img src={ICONS.TWITTER_ICON} alt="Twitter" />
                   </a>
-                  <img src={INSTAGRAM_ICON} alt="Instagram" />
-                  <img src={FACEBOOK_ICON} alt="Facebook" />
+                  <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" />
+                  <img src={ICONS.FACEBOOK_ICON} alt="Facebook" />
                 </div>
               </div>
               <div className="flex flex-col text-[#fff] sm:flex-row items-start gap-y-3 sm:items-center justify-center text-xs font-nexa-light mt-7 gap-x-10">

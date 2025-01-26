@@ -1,21 +1,21 @@
 import AnimatedCard from "../../../components/layout/animatedCard";
-import sampleImg from '../../../assets/images/pexels-fotoaibe-1743226.jpg'
+import { IMAGES } from "../../../assets";
 
 export default function Solutions() {
     const data = [
         {
             title: "Analysis",
-            image: sampleImg,
+            image: IMAGES.solutionImageOne,
             desc: "The first step in our services is to work closely with you to understand your business needs and goals.",
         },
         {
             title: "Analysis",
-            image: sampleImg,
+            image: IMAGES.solutionImageThree,
             desc: "The first step in our services is to work closely with you to understand your business needs and goals.",
         },
         {
             title: "Analysis",
-            image: sampleImg,
+            image: IMAGES.solutionImageTwo,
             desc: "The first step in our services is to work closely with you to understand your business needs and goals.",
         },
     ]
