@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import DarkModeToggle from "../../features/darkMode";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
-import { allReduxSliceInfo, setIsOpen } from "../../features/reduxSlice";
+import { allReduxSliceInfo, setIsOpen, setShowServices } from "../../features/reduxSlice";
 import { ROUTES } from "../../constants/routes/desc";
 import NavbarDropdown from "../../constants/navbardropdown";
 import { IoMdClose } from "react-icons/io";
@@ -40,6 +40,7 @@ export default function NavBar() {
 
     const toggleMenu = () => {
         dispatch(setIsOpen(!isOpen));
+        dispatch(setShowServices(false));
     };
 
     return (
