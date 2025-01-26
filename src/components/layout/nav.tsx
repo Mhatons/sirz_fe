@@ -99,7 +99,7 @@ export default function NavBar() {
 
                 </div>
                 <div
-                    className={`flex absolute bg-[#f4f5f7f2] text-black dark:text-white dark:bg-[#1b1f23f7] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
+                    className={`flex absolute bg-[#f4f5f7] text-black dark:text-white dark:bg-[#1b1f23] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
                         } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
                 >
                     <ul className=" w-[80%] relative m-auto">

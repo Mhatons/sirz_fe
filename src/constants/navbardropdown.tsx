@@ -69,7 +69,7 @@ export default function NavbarDropdown() {
                 </div>
             </section>
 
-            <section className={`${showServices ? 'translate-y-00' : '-translate-y-[800px] hidden'} lg:hidden pt-6 border-b pb-6 mb-4`}>
+            <section className={`${showServices ? 'translate-y-00' : '-translate-y-[800px] hidden'} lg:hidden pt-6 border-b border-primary pb-6 mb-4`}>
                 <ul className=" grid-cols-2 text-sm gap-3 ps-6">
                     {Object.values(ServiceDetails).map((item, index) => (
                         <li
