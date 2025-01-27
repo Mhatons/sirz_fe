@@ -33,6 +33,14 @@ export default function NavBar() {
             action: 'services'
         },
         {
+            title: "Projects",
+            action: ROUTES.SERVICES.PATH,
+        },
+        {
+            title: "Careers",
+            action: ROUTES.SERVICES.PATH,
+        },
+        {
             title: "FAQs",
             action: ROUTES.SERVICES.PATH,
         },
@@ -68,7 +76,7 @@ export default function NavBar() {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
                                 } else {
-                                    navigate(item?.action); // Navigate to route
+                                    {navigate(item?.action); dispatch(setShowServices(false))}; // Navigate to route
                                 }
                             }}
                             key={index}

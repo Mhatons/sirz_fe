@@ -1,72 +1,118 @@
-import { useEffect, useRef } from 'react';
 import { CgArrowsExpandUpRight } from 'react-icons/cg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAppSelector } from '../../app/hook';
 import { allReduxSliceInfo } from '../../features/reduxSlice';
+import { ServiceDetails } from '../../constants/serviceMenu';
 import { ROUTES } from '../../constants/routes/desc';
-import { VIDEO } from '../../assets';
+import { IMAGES } from '../../assets';
 
 export default function Services() {
-    const { isDarkMode, currentService } = useAppSelector(allReduxSliceInfo);
-    const navigate = useNavigate()
-    // const videoRef = useRef(null);
-    const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
+    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
+    const navigate = useNavigate();
+    const { title } = useParams();
 
-    console.log("currentService", currentService)
+    const service = Object.values(ServiceDetails).find(
+        (item) => item.title === title
+    );
 
-    useEffect(() => {
-        if (videoRef.current) {
-            // Set the playback speed
-            videoRef.current.playbackRate = 0.5; // Adjust the speed (e.g., 0.5 for half-speed)
-        }
-    }, []);
+    if (!service) {
+        return <h1>Service not found</h1>;
+    }
+
+
+
     return (
-        <section className={` hero_bg min-h-screen h-screen relative`}>
-            <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
-                <div className="text-left max-w-[90%] m-auto sm:pt-48 pt-60 max-sm:m-auto ">
-                    <div className=' max-sm:ps-3'>
-                        <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">About Us</h1>
-                    </div>
-                    <div className=' max-sm:px-2 max-sm:text-center m-auto'>
-                        <div className='flex items-center w-full py-5  '>
-                            <div className="h-[1px] dark:bg-zinc-400 bg-[#424242] flex-grow"></div>
+        <div>
+            <section className={` hero_bg min-h-screen h-screen relative`}>
+                <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
+                    <div className="text-left max-w-[90%] m-auto sm:pt-48 pt-60 max-sm:m-auto ">
+                        <div className=' max-sm:ps-3'>
+                            <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">{service.title}</h1>
                         </div>
-                        <div className='grid sm:grid-cols-7 gap-4'>
-                            <div className=' col-span-5'>
-                                <p className="text-lg max-sm:text-sm max-sm:leading-6 tracking-wide text-justify text-black dark:text-white font-comfortaa sm:my-4">
-                                    We are a highly dedicated team of interior design professionals offering expert guidance and innovative solutions to transforming spaces to elegant havens
-                                </p>
+                        <div className=' max-sm:px-2 max-sm:text-center m-auto'>
+                            <div className='flex items-center w-full py-5  '>
+                                <div className="h-[1px] dark:bg-zinc-400 bg-[#424242] flex-grow"></div>
                             </div>
+                            <div className='grid sm:grid-cols-7 gap-4'>
+                                <div className=' col-span-5'>
+                                    <p className="text-lg max-sm:text-sm max-sm:leading-6 tracking-wide text-justify text-black dark:text-white font-comfortaa sm:my-4">
+                                        {service.description}
+                                    </p>
+                                </div>
 
-                            <div className=" flex items-center justify-center col-span-2 ">
-                                <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className=' heroButtonContainer relative border sm:w-[60%] w-[180px] cursor-pointer h-24 rounded-lg dark:text-white text-white max-sm:text-primary_dark border-white max-sm:border-primary_dark dark:border-white  items-start gap-3'>
-                                    <p className=' absolute bottom-1 left-1 mt-6 text-lg '>Contact Us</p>
-                                    <CgArrowsExpandUpRight className=' heroButton  absolute ' />
+                                <div className=" flex items-center justify-center col-span-2 ">
+                                    <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className=' heroButtonContainer relative border sm:w-[60%] w-[180px] cursor-pointer h-24 rounded-lg dark:text-white text-white max-sm:text-primary_dark border-white max-sm:border-primary_dark dark:border-white  items-start gap-3'>
+                                        <p className=' absolute bottom-1 left-1 mt-6 text-lg '>Contact Us</p>
+                                        <CgArrowsExpandUpRight className=' heroButton  absolute ' />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <video
-                ref={videoRef}
-                className=' absolute top-0 h-full z-0 object-cover w-full'
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload='auto'
-            >
-                <source src={VIDEO.SERVICE_HERO_VIDEO} type="video/mp4" className="  object-cover" />
-                Your browser does not support the video tag.
-            </video>
-            {
-                isDarkMode && (
-                    <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
-                )
-            }
-        </section>
+                <img
+                    src={service.image}
+                    alt="industial service"
+                    className='absolute top-0 h-full z-0 object-cover w-full'
+                />
+                {
+                    isDarkMode && (
+                        <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
+                    )
+                }
+            </section>
+
+            <section className='pt-10 '>
+                <div>
+                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar mt-5 flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:border dark:border-s-0 dark:bg-background_dark bg-background_light'>
+                        <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
+                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionOne.title}</header>
+                            {service.sectionOne.description}
+                        </div>
+                    </div>
+
+                    <div className='flex justify-end'>
+                        <div className=' sm:h-96 h-64 sm:mt-5 mt-10 flex  overflow-hidden items-center justify-center rounded-s-full lg:w-[50%] md:w-[70%] w-[95%]'>
+                            <img src={service.sectionOne.image} alt="" className=' object-cover h-full w-full' />
+                        </div>
+                    </div>
+
+                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar sm:mt-5 mt-10  flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:border dark:border-s-0 dark:bg-background_dark bg-background_light'>
+                        <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
+                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionTwo.title}</header>
+                            {service.sectionTwo.description}
+                        </div>
+                    </div>
+
+                    <div className='flex justify-end'>
+                        <div className=' sm:h-96 h-64 sm:mt-5 mt-10 flex  overflow-hidden items-center justify-center rounded-s-full lg:w-[50%] md:w-[70%] w-[95%]'>
+                            <img src={service.sectionTwo.image} alt="" className=' object-cover h-full w-full' />
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style={{ backgroundImage: `url(${IMAGES.solutionImageTwo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                    className=' mt-20 relative'
+                >
+                    <div className=' py-10 text-white bg-[#000000a8]'>
+                        <header className=' sm:text-[30px] text-[25px]  text-center pb-8 capitalize text-secondary_light dark:text-rose-500'>Other Services You may interested in</header>
+                        <ul className=" lg:grid-cols-3 sm:grid-cols-2 sm:w-[80%] text-justify m-auto grid text-sm gap-3 ">
+                            {Object.values(ServiceDetails).map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="cursor-pointer whitespace-nowrap my-1 ps-10 tracking-wider  hover:text-secondary_light"
+                                    onClick={() => { navigate(`services/${item.title}`) }}
+                                >
+                                    {item?.title}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     )
 
 }

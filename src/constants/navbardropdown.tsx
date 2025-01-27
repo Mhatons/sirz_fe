@@ -59,7 +59,7 @@ export default function NavbarDropdown() {
                             <li
                                 key={index}
                                 className="cursor-pointer whitespace-nowrap my-2 hover:text-rose-700"
-                                onClick={() => { dispatch(setShowServices(false)); navigate(item.url) }}
+                                onClick={() => { dispatch(setShowServices(false)); navigate(`/services/${item.title}`) }}
                             >
                                 {item?.title}
                             </li>
@@ -75,7 +75,7 @@ export default function NavbarDropdown() {
                         <li
                             key={index}
                             className="cursor-pointer list-disc whitespace-nowrap my-4 tracking-wider hover:text-rose-700"
-                            onClick={() => { dispatch(setShowServices(false)); navigate(item.url); dispatch(setIsOpen(false)) }}
+                            onClick={() => { dispatch(setShowServices(false)); navigate(`/services/${item.title}`); dispatch(setIsOpen(false)) }}
                         >
                             {item?.title}
                         </li>

@@ -86,8 +86,22 @@ export default function About() {
                 <section className='w-[87%] pt-14 m-auto'>
                     <header className='text-left sm:text-[40px] text-[25px] pb-3 border-primary text-[#424242] dark:text-zinc-300 capitalize'>We're exeperts in the interior space</header>
                     <p>With years of experience and a deep understanding of the job market, our team of experts provides personalised career mentoring to help individuals achieve their professional goals. To access our expertise, individuals can choose from the following options:</p>
+                    <p>OUR NETWORK of collaborating professionals, formed over more than twenty years of practice, includes architects, builders, artists, and artisans who share our vision.</p>
                 </section>
 
+
+                <section className=' bg-background_light dark:bg-background_dark mt-14 pb-16'>
+                    <div className='w-[87%] pt-10 m-auto'>
+                        <header className='text-left sm:text-[40px] text-[25px] border-b-[1.3px] pb-3 border-primary capitalize text-rose-700 dark:text-rose-500'>Our Approach</header>
+                        <div className=' text-zinc-600 dark:text-zinc-300 text-justify sm:grid grid-cols-2 gap-10 sm:text-lg text-[16px] py-8'>
+                            <p>
+                                is dynamic and thorough. We understand that our clients’ needs and preferences are unique. This drives us to design each project from scratch, which keeps us in a constant state of creative discovery. We work holistically and consider every detail. This involves establishing an overall aesthetic direction, thinking through the circulation and layout of each space, designing interior architectural elements, specifying finishes, fixtures, furniture, accessories, and art. 
+                                To ensure the design intent is seen through to the very end, we know our involvement in every phase is key. From conceptual design through construction administration to the very last furniture installation, we want to be there.
+                            </p>
+                            <img src={IMAGES.solutionImageThree} alt="" className=' xxl:h-full object-cover w-full' />
+                        </div>
+                    </div>
+                </section>
 
                 <section className=' bg-background_light dark:bg-background_dark mt-14 pb-16'>
                     <div className='w-[87%] pt-10 m-auto'>
