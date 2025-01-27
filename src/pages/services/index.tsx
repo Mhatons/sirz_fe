@@ -19,6 +19,11 @@ export default function Services() {
         return <h1>Service not found</h1>;
     }
 
+    const handleServiceClick = (title: string) => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigate(`/services/${title}`);
+    }
+
 
 
     return (
@@ -103,7 +108,7 @@ export default function Services() {
                                 <li
                                     key={index}
                                     className="cursor-pointer whitespace-nowrap my-1 ps-10 tracking-wider  hover:text-secondary_light"
-                                    onClick={() => { navigate(`services/${item.title}`) }}
+                                    onClick={() => { handleServiceClick(item.title) }}
                                 >
                                     {item?.title}
                                 </li>

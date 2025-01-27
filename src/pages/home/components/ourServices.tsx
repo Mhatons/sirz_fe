@@ -6,7 +6,7 @@ export default function OurService() {
     const navigate = useNavigate();
 
     const handleServiceClick = (selectedService: string) => {
-        navigate(selectedService);
+        navigate(`/services/${selectedService}`);
     }
 
     return (
@@ -14,7 +14,7 @@ export default function OurService() {
             <header className=" text-[30px] text-center font-comfortaa">Our services</header>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 xxl:grid-cols-2 grid-cols-1 gap-x-6 gap-y-2 w-[95%] max-sm:flex-col py-10 m-auto items-center justify-center sm:justify-evenly">
                 {Object.values(ServiceDetails).map((card, index) => (
-                    <div onClick={() => handleServiceClick(card.url)} className=" cursor-pointer" key={index}>
+                    <div onClick={() => handleServiceClick(card.title)} className=" cursor-pointer" key={index}>
                         <Card
                             title={card.title}
                             image={card.image}
