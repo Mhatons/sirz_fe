@@ -31,6 +31,10 @@ const routes = (user: Iuser) =>
                     path: (ROUTES.SERVICES.PATH),
                     element: (ROUTES.SERVICES.ELEMENT),
                 },
+                {
+                    path: (ROUTES.PROJECTS.PATH),
+                    element: (ROUTES.PROJECTS.ELEMENT),
+                },
             ]
         }
     ])

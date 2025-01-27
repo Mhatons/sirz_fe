@@ -34,7 +34,7 @@ export default function NavBar() {
         },
         {
             title: "Projects",
-            action: ROUTES.SERVICES.PATH,
+            action: ROUTES.PROJECTS.PATH,
         },
         {
             title: "Careers",

@@ -2,6 +2,7 @@ import Layout from "../../components/layout/layout";
 import About from "../../pages/about";
 import Contact from "../../pages/contact";
 import Home from "../../pages/home";
+import Projects from "../../pages/projects";
 import Services from "../../pages/services";
 
 export const ROUTES = {
@@ -29,5 +30,9 @@ export const ROUTES = {
     SERVICES: {
         PATH: "/services/:title",
         ELEMENT: <Services />
+    },
+    PROJECTS: {
+        PATH: "/projects",
+        ELEMENT: <Projects />
     },
 }

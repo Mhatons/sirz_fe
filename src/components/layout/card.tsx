@@ -70,8 +70,8 @@ export default function Card(props: Idata) {
           {title}
         </h4>
       </div>
-      <div className="text-[16px] text-white cardtext absolute bottom-0 p-2 rounded-t-3xl w-[90%] m-auto text-center hover:text-white">
-        <h4 className="text-[18px] font-semibold pt-9">{title}</h4>
+      <div className="sm:text-[16px] text-[14px] text-white cardtext absolute bottom-0 p-2 rounded-t-3xl w-[90%] m-auto text-center hover:text-white">
+        <h4 className="text-[18px] font-semibold pt-4">{title}</h4>
         <div className="cardtext_desc text-zinc-400 pt-2">{desc}</div>
       </div>
     </div>
