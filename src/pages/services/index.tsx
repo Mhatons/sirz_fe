@@ -102,7 +102,7 @@ export default function Services() {
                     className=' mt-20 relative'
                 >
                     <div className=' py-10 text-white bg-[#000000a8]'>
-                        <header className=' sm:text-[30px] text-[25px]  text-center pb-8 capitalize text-secondary_light dark:text-rose-500'>Other Services You may interested in</header>
+                        <header className=' max-w-[80%] m-auto sm:text-[30px] text-[25px]  text-center pb-8 capitalize text-secondary_light '>Other Services You may interested in</header>
                         <ul className=" lg:grid-cols-3 sm:grid-cols-2 sm:w-[80%] text-justify m-auto grid text-sm gap-3 ">
                             {Object.values(ServiceDetails).map((item, index) => (
                                 <li
