@@ -19,15 +19,15 @@ export const ServiceDetails = {
     },
     MaintenanceTreatment: {
         image: SERVICES.IndustrialTreatmentBg,
-        title: "Routine Maintenance & Treatment",
+        title: "Maintenance & Treatment",
         description: `Preserve the quality and functionality of your spaces with our tailored maintenance services and scheduled treatments. These proactive care solutions ensure lasting durability, safeguard your furnishings, and maintain the aesthetic appeal of your interiors year-round.`,
         sectionOne: {
-            title: "Industrial cleaning",
+            title: "attention to details",
             description: `Our maintenance and treatment services are designed to preserve the longevity and quality of your spaces and furnishings. From minor repairs to comprehensive upkeep, we ensure your environment remains functional and visually appealing. Each service is tailored to meet the specific needs of your residential or commercial property.`,
             image: SERVICES.IndustrialCleaningBg,
         },
         sectionTwo: {
-            title: "Industrial cleaning",
+            title: "Routine treatment",
             description: `Routine treatment is essential to maintain the integrity and appearance of your furniture, floors, and other assets. Our team offers scheduled, timely interventions, including preventive care and protective treatments, to ensure your space remains in pristine condition year-round.`,
             image: SERVICES.IndustrialCleaningBg,
         },
@@ -35,7 +35,7 @@ export const ServiceDetails = {
     },
     InteriorDesignConsultation: {
         image: SERVICES.consultationBg,
-        title: "Interior Design Consultation",
+        title: "Design Consultation",
         description: `Our Professional Design Consultation service offers expert guidance in creating personalized spaces that align with your vision, needs, and budget. 
         We assist with everything from material selection to project execution, ensuring practical and aesthetic solutions.`,
         sectionOne: {

@@ -70,7 +70,7 @@ export default function Services() {
 
             <section className='pt-10 '>
                 <div>
-                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar mt-5 flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:border dark:border-s-0 dark:bg-background_dark bg-background_light'>
+                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar mt-5 flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:bg-background_dark bg-background_light'>
                         <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
                             <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionOne.title}</header>
                             {service.sectionOne.description}
@@ -83,7 +83,7 @@ export default function Services() {
                         </div>
                     </div>
 
-                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar sm:mt-5 mt-10  flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:border dark:border-s-0 dark:bg-background_dark bg-background_light'>
+                    <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar sm:mt-5 mt-10  flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:bg-background_dark bg-background_light'>
                         <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
                             <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionTwo.title}</header>
                             {service.sectionTwo.description}
