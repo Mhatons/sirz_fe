@@ -38,7 +38,7 @@ export default function NavBar() {
         },
         {
             title: "Careers",
-            action: ROUTES.SERVICES.PATH,
+            action: ROUTES.CAREER.PATH,
         },
         {
             title: "FAQs",

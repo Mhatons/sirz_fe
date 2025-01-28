@@ -4,8 +4,9 @@ import { CgArrowsExpandUpRight } from "react-icons/cg";
 import { useAppSelector } from "../../app/hook";
 import { allReduxSliceInfo } from "../../features/reduxSlice";
 import { useEffect, useRef } from "react";
-import { IMAGES, VIDEO } from "../../assets";
-import Card from "../../components/layout/card";
+import { VIDEO } from "../../assets";
+import ProjectCard from "../../components/layout/projectCards";
+import { ProjectData } from "../../constants/projectData";
 
 export default function Projects() {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function Projects() {
         }
     }, []);
 
-    
+
 
     return (
         <div>
@@ -89,12 +90,18 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 w-[90%] m-auto">
-                    <Card
-                        title="Asokoro"
-                        desc="curtain and blinds installation"
-                        image={IMAGES.solutionImageOne}
-                    />
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-1 w-[90%] m-auto">
+                    {
+                        ProjectData.map((project, index) => (
+                            <div onClick={() => navigate(`/project-details/${project.title}`)} key={index}>
+                                <ProjectCard
+                                    title={project.title}
+                                    desc={project.description}
+                                    image={project.image[0]}
+                                />
+                            </div>
+                        ))
+                    }
                 </div>
             </section>
         </div>

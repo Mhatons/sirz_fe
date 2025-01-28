@@ -95,6 +95,41 @@
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
+
+/* project card */
+.projectcardtext {
+  height: 0px;
+  /* background-color: #1d57687b; */
+  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.projectcardtext_desc {
+  display: none;
+}
+
+.projectcardcontainer img {
+  transition: transform 1s ease; /* Smooth animation for both hover and return */
+}
+
+.projectcardcontainer:hover img {
+  transform: scale(1.3); /* Zoom in the image */
+}
+
+.projectcardcontainer:hover .projectcardtext {
+  /* background-color: red; */
+  box-shadow: 1px 1px 1px 1px whitesmoke;
+  height: 60%;
+}
+
+.projectcardcontainer:hover .projectcardtext_desc,
+.projectcardcontainer.in-view .projectcardtext_desc {
+  display: block;
+}
+
+
+
+
+
 .heroButton {
   right: 20px;
   top: 10px;
@@ -166,4 +201,17 @@
     background-color: #04232d5c;
     transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
   }
+
+    /* project card */
+    .projectcardcontainer:hover .projectcardtext,
+    .projectcardcontainer.in-view .projectcardtext {
+      /* background-color: #1d5668; */
+      box-shadow: 1px 1px 1px 1px whitesmoke;
+      height: 60%;
+    }
+    
+    .projectcardcontainer:hover img,
+    .projectcardcontainer.in-view img {
+      transform: scale(1.3); /* Zoom in the image */
+    }
 }

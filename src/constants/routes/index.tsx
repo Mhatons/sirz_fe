@@ -35,6 +35,14 @@ const routes = (user: Iuser) =>
                     path: (ROUTES.PROJECTS.PATH),
                     element: (ROUTES.PROJECTS.ELEMENT),
                 },
+                {
+                    path: (ROUTES.PROJECTDETAILS.PATH),
+                    element: (ROUTES.PROJECTDETAILS.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CAREER.PATH),
+                    element: (ROUTES.CAREER.ELEMENT),
+                },
             ]
         }
     ])

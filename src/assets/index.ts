@@ -11,6 +11,7 @@ import logo1 from './images/Haven___Hive_logomark_2-removebg-preview.png';
 import overlayImg from './images/overlay-img-UwG0G81_.png';
 import serviceDropdownImg from './images/teams.jpg';
 import teamImage from './images/pexels-tima-miroshnichenko-6195121.jpg';
+import teamImage_black_white from './images/teaams.jpg';
 
 // solution images
 import solutionImg_one from './images/globalImg.jpg';
@@ -69,6 +70,7 @@ export const IMAGES = {
     solutionImageOne: solutionImg_one,
     solutionImageTwo: solutionImg_two,
     solutionImageThree: solutionImg_three,
+    teamImgBlackWhite: teamImage_black_white
 }
 
 

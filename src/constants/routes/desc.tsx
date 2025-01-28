@@ -1,7 +1,9 @@
 import Layout from "../../components/layout/layout";
 import About from "../../pages/about";
+import Career from "../../pages/career";
 import Contact from "../../pages/contact";
 import Home from "../../pages/home";
+import ProjectDetails from "../../pages/projectDetails";
 import Projects from "../../pages/projects";
 import Services from "../../pages/services";
 
@@ -34,5 +36,13 @@ export const ROUTES = {
     PROJECTS: {
         PATH: "/projects",
         ELEMENT: <Projects />
+    },
+    PROJECTDETAILS: {
+        PATH: "/project-details/:title",
+        ELEMENT: <ProjectDetails />
+    },
+    CAREER: {
+        PATH: "/career",
+        ELEMENT: <Career />
     },
 }
