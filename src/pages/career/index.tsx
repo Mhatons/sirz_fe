@@ -1,9 +1,12 @@
 import { IMAGES } from "../../assets";
 import { useAppSelector } from "../../app/hook";
 import { allReduxSliceInfo } from "../../features/reduxSlice";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../constants/routes/desc";
 
 export default function Career() {
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo)
+    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
+    const navigate = useNavigate();
     const positions = [
         {
             title: "Frontend Developer",
@@ -39,16 +42,16 @@ export default function Career() {
             </div>
 
             {/* Available Positions */}
-            <section className="container mx-auto px-2 sm:px-4 py-16">
+            <section className="container w-[90%] m-auto py-16">
                 <h2 className="text-3xl font-bold text-center mb-12">Current Openings</h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                     {positions.map((position, index) => (
                         <div
                             key={index}
-                            className="bg-white dark:bg-background_dark shadow-lg rounded-lg p-6 hover:transform hover:-translate-y-2 transition duration-300"
+                            className=" dark:bg-background_dark bg-background_light shadow-xl rounded-lg p-6 hover:transform hover:-translate-y-2 transition duration-300"
                         >
-                            <h3 className="text-xl font-bold mb-2">{position.title}</h3>
+                            <h3 className="text-[25px] mb-2">{position.title}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                                 {position.location} • {position.type}
                             </p>
@@ -56,7 +59,7 @@ export default function Career() {
                             <button className={` font-comfortaa bg-[#F29254] text-white tracking-widest
                                         flex align-center justify-center py-3 px-5 rounded-md cursor-pointer text-sm font-bold floating-button 
                                         `}
-                                onClick={() => { }}
+                                onClick={() => navigate(ROUTES.CONTACT.PATH)}
                             >
                                 Apply Now
                             </button>
@@ -76,7 +79,7 @@ export default function Career() {
                         <button className={` font-comfortaa bg-[#F29254] text-white tracking-widest
                                         flex align-center justify-center py-3 px-5 rounded-md cursor-pointer text-sm font-bold floating-button 
                                         `}
-                            onClick={() => { }}
+                            onClick={() => navigate(ROUTES.CONTACT.PATH)}
                         >
                             Contact Us
                         </button>

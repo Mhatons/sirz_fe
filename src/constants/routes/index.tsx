@@ -43,6 +43,10 @@ const routes = (user: Iuser) =>
                     path: (ROUTES.CAREER.PATH),
                     element: (ROUTES.CAREER.ELEMENT),
                 },
+                {
+                    path: (ROUTES.REFERRAL.PATH),
+                    element: (ROUTES.REFERRAL.ELEMENT),
+                },
             ]
         }
     ])

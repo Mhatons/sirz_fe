@@ -44,6 +44,7 @@ import homevideo from './videos/vid (1).mp4';
 import aboutvideo from './videos/3770054-hd_1920_1080_25fps.mp4';
 import servicevideo from './videos/vid (4).mp4';
 import curtainVideo from './videos/MOV_17062152480475370.mp4';
+import referralVideo from './videos/vid (2).mp4'
 // import teamVideo from './videos/'
 
 // _________________________________________________________________________
@@ -96,4 +97,5 @@ export const VIDEO = {
     ABOUT_HERO_VIDEO: aboutvideo,
     SERVICE_HERO_VIDEO: servicevideo,
     CURTAIN_VIDEO: curtainVideo,
+    REFERRAL_VIDEO: referralVideo,
 }

@@ -41,6 +41,10 @@ export default function NavBar() {
             action: ROUTES.CAREER.PATH,
         },
         {
+            title: "Refer & earn",
+            action: ROUTES.REFERRAL.PATH,
+        },
+        {
             title: "FAQs",
             action: ROUTES.SERVICES.PATH,
         },

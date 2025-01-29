@@ -5,6 +5,7 @@ import Contact from "../../pages/contact";
 import Home from "../../pages/home";
 import ProjectDetails from "../../pages/projectDetails";
 import Projects from "../../pages/projects";
+import Referral from "../../pages/referral";
 import Services from "../../pages/services";
 
 export const ROUTES = {
@@ -44,5 +45,9 @@ export const ROUTES = {
     CAREER: {
         PATH: "/career",
         ELEMENT: <Career />
+    },
+    REFERRAL: {
+        PATH: "/referral",
+        ELEMENT: <Referral />
     },
 }
