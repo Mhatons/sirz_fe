@@ -192,8 +192,6 @@ export default function Referral() {
                 </section >
 
                 <section className=' sm:pt-36'>
-
-                    {/* Testimonials */}
                     <section className="container mx-auto sm:px-4 py-16">
                         <h2 className="text-3xl font-bold text-center mb-12">What People Are Saying</h2>
 
