@@ -110,7 +110,7 @@ export default function Referral() {
 
     return (
         <div>
-            <section className={` hero_bg min-h-screen h-screen relative`}>
+            <section className={` min-h-screen h-screen relative`}>
                 <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
                     <div className="text-left max-w-[90%] m-auto sm:pt-48 pt-60 max-sm:m-auto ">
                         <div className=' max-sm:ps-3'>
