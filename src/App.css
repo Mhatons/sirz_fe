@@ -11,10 +11,8 @@
 }
 
 .scrollBarHidden::-webkit-scrollbar {
-  display: none;
+  display: none
 }
-
-;
 
 .hero_bg {
   background-image:
