@@ -11,7 +11,7 @@ export default function Services() {
     const navigate = useNavigate();
     const { title } = useParams();
 
-    const service = Object.values(ServiceDetails).find(
+    const service = ServiceDetails.find(
         (item) => item.title === title
     );
 
@@ -72,27 +72,27 @@ export default function Services() {
                 <div>
                     <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar mt-5 flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:bg-background_dark bg-background_light'>
                         <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
-                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionOne.title}</header>
-                            {service.sectionOne.description}
+                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sections[0].title}</header>
+                            {service.sections[0].description}
                         </div>
                     </div>
 
                     <div className='flex justify-end'>
                         <div className=' sm:h-96 h-64 sm:mt-5 mt-10 flex  overflow-hidden items-center justify-center rounded-s-full lg:w-[50%] md:w-[70%] w-[95%]'>
-                            <img src={service.sectionOne.image} alt="" className=' object-cover h-full w-full' />
+                            <img src={service.sections[0].image} alt="" className=' object-cover h-full w-full' />
                         </div>
                     </div>
 
                     <div className=' sm:h-96 h-64 overflow-y-scroll hideScrollBar sm:mt-5 mt-10  flex items-center justify-center rounded-e-full lg:w-[50%] md:w-[70%] w-[95%] dark:bg-background_dark bg-background_light'>
                         <div className=' w-[90%] max-h-[90%] h-auto sm:text-[14px] leading-7 font-comfortaa text-[12px]'>
-                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sectionTwo.title}</header>
-                            {service.sectionTwo.description}
+                            <header className=' capitalize sm:text-[25px] max-w-[70%] text-[18px] sm:pb-4 pb-2'>{service.sections[1].title}</header>
+                            {service.sections[0].description}
                         </div>
                     </div>
 
                     <div className='flex justify-end'>
                         <div className=' sm:h-96 h-64 sm:mt-5 mt-10 flex  overflow-hidden items-center justify-center rounded-s-full lg:w-[50%] md:w-[70%] w-[95%]'>
-                            <img src={service.sectionTwo.image} alt="" className=' object-cover h-full w-full' />
+                            <img src={service.sections[1].image} alt="" className=' object-cover h-full w-full' />
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ export default function Services() {
                     <div className=' py-10 text-white bg-[#000000a8]'>
                         <header className=' max-w-[80%] m-auto sm:text-[30px] text-[25px]  text-center pb-8 capitalize text-secondary_light '>Other Services You may interested in</header>
                         <ul className=" lg:grid-cols-3 sm:grid-cols-2 sm:w-[80%] text-justify m-auto grid text-sm gap-3 ">
-                            {Object.values(ServiceDetails).map((item, index) => (
+                            {ServiceDetails?.map((item, index) => (
                                 <li
                                     key={index}
                                     className="cursor-pointer whitespace-nowrap my-1 ps-10 tracking-wider  hover:text-secondary_light"

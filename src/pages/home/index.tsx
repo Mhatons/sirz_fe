@@ -7,6 +7,7 @@ import OurAudience from "./components/ourAudience";
 import OurMission from "./components/ourMission";
 import AboutUs from "./components/aboutUs";
 import OurService from "./components/ourServices";
+import OurProjects from "./components/projects";
 
 export default function Home() {
 
@@ -52,6 +53,7 @@ export default function Home() {
             <AboutUs />
             <OurMission />
             <OurService />
+            <OurProjects />
         </div>
     );
 }

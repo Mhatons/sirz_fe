@@ -41,9 +41,9 @@ export default function ProjectCard(props: Idata) {
       }`}
     >
       <img src={image} alt="" className="w-full object-cover h-full " />
-      <div className="sm:text-[16px] text-[14px] projectcardtext bg-background_light dark:bg-background_dark absolute bottom-0 p-2  w-[95%] rounded-tr-2xl m-auto text-center hover:text-white">
-        <h4 className="text-[18px] dark:text-zinc-500 text-zinc-700 font-semibold pt-4">{title}</h4>
-        <div className="projectcardtext_desc dark:text-zinc-400 text-zinc-600 pt-2">{desc}</div>
+      <div className="sm:text-[16px] text-[14px] projectcardtext bg-[#f4f5f7a8] dark:bg-[#000000a8] absolute bottom-0 p-2  w-[95%] rounded-tr-2xl m-auto text-center hover:text-white">
+        <h4 className="text-[18px] dark:text-primary_light text-primary_dark font-semibold pt-4">{title}</h4>
+        <div className="projectcardtext_desc dark:text-zinc-200 text-zinc-800 pt-2">{desc}</div>
       </div>
     </div>
   );

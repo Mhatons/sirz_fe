@@ -7,14 +7,19 @@ import ProjectDetails from "../../pages/projectDetails";
 import Projects from "../../pages/projects";
 import Referral from "../../pages/referral";
 import Services from "../../pages/services";
+import Welcome from "../../pages/welcome";
 
 export const ROUTES = {
     LAYOUT: {
         PATH: "/",
         ELEMENT: <Layout />
     },
-    HOME: {
+    WELCOME: {
         PATH: "",
+        ELEMENT: <Welcome />
+    },
+    HOME: {
+        PATH: "/home",
         ELEMENT: <Home />
     },
     // sample test page for the user object

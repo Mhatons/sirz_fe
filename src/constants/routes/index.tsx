@@ -7,6 +7,11 @@ interface Iuser {
 
 const routes = (user: Iuser) =>
     createBrowserRouter([
+
+        {
+            path: (ROUTES.WELCOME.PATH),
+            element: (ROUTES.WELCOME.ELEMENT),
+        },
         {
             path: (ROUTES.LAYOUT.PATH),
             element: (ROUTES.LAYOUT.ELEMENT),

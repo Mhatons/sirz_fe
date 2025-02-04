@@ -2,8 +2,8 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../app/hook";
 import { ICONS, IMAGES } from "../assets";
 import { allReduxSliceInfo, setIsOpen, setShowServices } from "../features/reduxSlice";
-import { ServiceDetails } from "./serviceMenu";
 import { useNavigate } from "react-router-dom";
+import { ServiceDetails } from "./serviceMenu";
 
 export default function NavbarDropdown() {
     const dispatch = useAppDispatch();

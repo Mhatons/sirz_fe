@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import DarkModeToggle from "../../features/darkMode";
 import { useAppDispatch, useAppSelector } from "../../app/hook";
@@ -11,7 +11,8 @@ import { IMAGES } from "../../assets";
 
 export default function NavBar() {
     // const [isOpen, setIsOpen] = useState(false);
-    const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch();
+    const location = useLocation();
     const { isDarkMode, isOpen } = useAppSelector(allReduxSliceInfo)
     const navigate = useNavigate();
     const menuItem = [
@@ -61,7 +62,7 @@ export default function NavBar() {
                 className={` text-white sm:w-[95%] w-[90%] m-auto pt-4 flex justify-between transition-all duration-300 h-[60px] items-center `}
             >
                 <div
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate(ROUTES.HOME.PATH)}
                     className={`cursor-pointer sm:w-16 w-12  transition-all duration-300 `}
                 >
                     <img
@@ -75,7 +76,10 @@ export default function NavBar() {
                 >
                     {menuItem.map((item, index) => (
                         <li
-                            className="whitespace-nowrap flex items-center gap-2 hover:border-rose-700 border-transparent border-b-2 cursor-pointer"
+                            className={`whitespace-nowrap flex items-center gap-2 hover:border-rose-700 
+                                ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
+                                border-transparent border-b-2 cursor-pointer`}
+                                // (item.pageUrl === ADMIN_ROUTES.ORDERS.PATH && location.pathname.startsWith(ADMIN_ROUTES.ORDERS.PATH)
                             onClick={() => {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
@@ -111,7 +115,7 @@ export default function NavBar() {
 
                 </div>
                 <div
-                    className={`flex absolute bg-[#f4f5f7] text-black dark:text-white dark:bg-[#1b1f23] transform ${isOpen ? 'translate-y-00' : '-translate-y-[600px]'
+                    className={`flex absolute bg-[#f4f5f7] text-black dark:text-white dark:bg-[#1b1f23] transform ${isOpen ? 'translate-y-00' : '-translate-y-[800px]'
                         } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
                 >
                     <ul className=" w-[80%] relative m-auto">
