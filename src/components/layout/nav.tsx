@@ -79,7 +79,9 @@ export default function NavBar() {
                     {menuItem.map((item, index) => (
                         <li
                             className={`whitespace-nowrap flex items-center gap-2 hover:border-rose-700 
-                                ${location.pathname.toLowerCase() === item.action.toLowerCase()
+                                ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
+                                    item.action.toLowerCase() === 'services' && location.pathname.toLowerCase().includes('/services/') ||
+                                    item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details")
                                     ? "border-rose-700" : ""}
                                 border-transparent border-b-2 cursor-pointer`}
                             // ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 

@@ -43,7 +43,8 @@ import sampleImg from './images/pexels-fotoaibe-1743226.jpg';
 import homevideo from './videos/vid (1).mp4';
 import aboutvideo from './videos/3770054-hd_1920_1080_25fps.mp4';
 import servicevideo from './videos/vid (4).mp4';
-import curtainVideo from './videos/MOV_17062152480475370.mp4';
+import curtainVideoMission from './videos/2025-01-27-083118842.mp4';
+import curtainVideo from './videos/_storage_emulated_0_Android_data_com.fawazapp.blackhole_files_DCIM_blackhole_4DAGAVWSO1DJRLTD59AF.mp4';
 import referralVideo from './videos/vid (2).mp4'
 // import teamVideo from './videos/'
 
@@ -98,4 +99,5 @@ export const VIDEO = {
     SERVICE_HERO_VIDEO: servicevideo,
     CURTAIN_VIDEO: curtainVideo,
     REFERRAL_VIDEO: referralVideo,
+    MISSIONVIDEO: curtainVideoMission,
 }

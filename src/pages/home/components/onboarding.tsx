@@ -11,12 +11,12 @@ export default function OnboardingSteps() {
         },
         {
             title: "Receive a Welcome Email",
-            description: "Get all the information you need to get started, including a link to join our exclusive WhatsApp community and a unique code for all transactions",
+            description: "Get all the information you need to get started, and a unique code for all transactions",
             icon: ""
         },
         {
             title: "Refer & Earn",
-            description: " Participate in our referral package, as everyone you reffer is bonded to you for life. you can a percentage of whatever goods or services we render to them",
+            description: " Participate in our referral package, as everyone you reffer is bonded to you for life.",
             icon: ""
         },
         {

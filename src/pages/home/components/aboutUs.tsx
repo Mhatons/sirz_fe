@@ -18,7 +18,7 @@ export default function AboutUs() {
             <section className="pt-16 pb-4">
                 <h2 className="text-3xl text-center font-bold mb-0 text-primary font-comfortaa ">About Us</h2>
                 <div className="sm:grid grid-cols-2 max-sm:flex-col sm:w-[80%] w-[90%] m-auto gap-16 mb-5 py-14">
-                    <div className=" relative sm:h-[500px] h-[400px] ">
+                    <div className=" relative sm:h-[500px] h-[450px] ">
                         {/* <img src={IMAGES.sampleImage} alt="" className="w-full h-full transform scale-x-[-1] object-cover rounded-3xl" /> */}
                         <video
                             ref={videoRef}
@@ -37,15 +37,21 @@ export default function AboutUs() {
                         </div> */}
                     </div>
                     <div className=" ">
-                        <div className="pb-12 max-sm:pt-8 font-comfortaa ">
+                        <div className="pb-12 max-sm:pt-8 font-comfortaa text-sm text-justify ">
                             <p className="">
-                                Haven & Hive Interiors is dedicated to providing comprehensive interior design services that blend functionality with aesthetic appeal
+                                Haven & Hive Interiors is a dynamic interior design company dedicated to transforming living and workspaces with a perfect blend of style, functionality, and quality.
+                                Founded by <b>Faruna Anthony Achile</b> in 2019, our company is driven by a passion for creating elegant and comfortable interiors that reflect the unique personalities and needs of our clients.
+                                We believe that great design should be both aesthetically pleasing and practical, enhancing the way people experience their spaces.
                             </p>
-                            <p className="py-5">
-                                We strive to create environments that reflect our clients' personalities and needs, ensuring satisfaction through meticulous attention to detail and innovative design solutions.
+                            <p className="pt-3">
+                                At Haven & Hive Interiors, we specialize in rebranding and upgrading locally made furniture, curtains and window blinds, ensuring that Nigerian craftsmanship meets and surpasses international standards.
+                                By refining quality, incorporating modern design trends, and utilizing superior materials, we make high-end furniture, curtains, and window blinds more accessible and affordable.
+                                Our mission is to provide Nigerians with world-class interior solutions without the excessive cost of imported alternatives.
                             </p>
-                            <p className="py-5">
-                                Our long-term vision includes expanding our services to encompass complete building projects and developing a line of customized interior products under our brand.
+                            <p className="pt-3">
+                                With a commitment to excellence, innovation, and customer satisfaction, Haven & Hive Interiors is shaping the future of interior design in Nigeria. 
+                                We collaborate with skilled artisans, leverage cutting-edge techniques, and continuously refine our offerings to create timeless, functional, and inspiring spaces. 
+                                Whether it’s a residential or commercial project, we bring creativity and precision to every detail, turning visions into reality.
                             </p>
                         </div>
                         <div className="sm:w-1/2">
