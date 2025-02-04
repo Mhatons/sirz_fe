@@ -56,6 +56,8 @@ export default function NavBar() {
         dispatch(setShowServices(false));
     };
 
+    console.log("location.pathname", location.pathname)
+
     return (
         <div className={` absolute top-0  w-full z-40`}>
             <div
@@ -77,14 +79,17 @@ export default function NavBar() {
                     {menuItem.map((item, index) => (
                         <li
                             className={`whitespace-nowrap flex items-center gap-2 hover:border-rose-700 
-                                ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
+                                ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
+                                    item.action.toLowerCase() === 'services' && location.pathname.toLowerCase().includes('/services/') ||
+                                    item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details")
+                                    ? "border-rose-700" : ""}
                                 border-transparent border-b-2 cursor-pointer`}
-                                // (item.pageUrl === ADMIN_ROUTES.ORDERS.PATH && location.pathname.startsWith(ADMIN_ROUTES.ORDERS.PATH)
+                            // ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
                             onClick={() => {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
                                 } else {
-                                    {navigate(item?.action); dispatch(setShowServices(false))}; // Navigate to route
+                                    { navigate(item?.action); dispatch(setShowServices(false)) }; // Navigate to route
                                 }
                             }}
                             key={index}

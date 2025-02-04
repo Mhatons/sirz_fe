@@ -190,13 +190,19 @@
 @media(max-width: 800px) {
 
   /* animated card */
-  .animatedcardcontainer:hover .animatedcardtext,
+  .animatedcardcontainer:hover .animatedcardtext {
+    background-color: white;
+    height: 30%;
+  }
   .animatedcardcontainer.in-view .animatedcardtext {
     background-color: #C71540;
     height: 65%;
   }
 
-  .animatedcardcontainer:hover .animatedcardtext_desc,
+
+  .animatedcardcontainer:hover .animatedcardtext_desc {
+    display: none;
+  }
   .animatedcardcontainer.in-view .animatedcardtext_desc {
     display: block;
   }

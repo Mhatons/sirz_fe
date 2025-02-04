@@ -21,7 +21,7 @@ export default function OurProjects() {
                     ))
                 }
             </div>
-            <div className="flex items-center w-[30%] m-auto  justify-center">
+            <div className="flex items-center sm:w-[30%] w-[85%] m-auto  justify-center">
                 {/* <button className=" bg-[#2a84a074] border rounded-full px-12 tracking-wider text-md py-3">Click to see more</button> */}
                 <Button onClick={() => navigate("/projects")} text="Click to see more" />
             </div>
