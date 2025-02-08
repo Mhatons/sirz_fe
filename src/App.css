@@ -74,9 +74,10 @@
 }
 
 .animatedcardcontainer:hover .animatedcardtext {
-  background-color: #C71540;
-  color: whitesmoke;
-  height: 65%;
+  background-color: #1d5668;
+  /* background-color: #C71540; */
+  /* color: whitesmoke; */
+  height: 70%;
 }
 
 .animatedcardcontainer:hover .animatedcardtext_desc {
@@ -195,7 +196,8 @@
     height: 30%;
   }
   .animatedcardcontainer.in-view .animatedcardtext {
-    background-color: #C71540;
+    background-color: #2A85A0;
+    /* background-color: #C71540; */
     height: 65%;
   }
 

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { IMAGES, VIDEO } from "../../../assets";
-import Button from "../../../components/common/button";
 
 export default function OurMission() {
     const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
@@ -14,14 +13,14 @@ export default function OurMission() {
     return (
         <div
             style={{ backgroundImage: `url(${IMAGES.overlayImage})`, backgroundSize: 'cover' }}
-            className="bg-[#10333d] text-background_light pb-24"
+            className="bg-[#10333d] text-background_light pb-24 rounded-3xl"
         >
             <section className="pt-16">
                 <h2 className="text-3xl text-center font-bold mb-0 text-secondary_light font-comfortaa ">Our Mission</h2>
                 <div className="sm:grid grid-cols-2 max-sm:flex flex-col-reverse sm:w-[80%] w-[90%] m-auto gap-8 sm:pt-14">
 
-                    <div className=" max-sm:pb-10">
-                        <div className="pb-12 max-sm:pt-8 text-justify text-sm font-comfortaa ">
+                    <div className="">
+                        <div className=" max-sm:pt-8 text-justify text-[13px] font-comfortaa ">
                             <p className="">
                                 Haven & Hive Interiors is committed to redefining the interior design landscape in Nigeria by elevating the quality of locally crafted furniture and home décor.
                                 We recognize the artistry and craftsmanship of Nigerian furniture makers and seek to bridge the gap between local production and international standards.
@@ -38,11 +37,11 @@ export default function OurMission() {
                                 Haven & Hive Interiors is not just designing spaces—we are shaping the future of Nigerian interiors, making luxury accessible to all.
                             </p>
                         </div>
-                        <div className="sm:w-1/2">
+                        {/* <div className="sm:w-1/2">
                             <Button onClick={() => { }} text="Get Started now" />
-                        </div>
+                        </div> */}
                     </div>
-                    <div className=" relative sm:h-[500px] pt-5 h-[450px] ">
+                    <div className=" relative sm:h-[500px] max-sm:pt-5 h-[450px] ">
                         <video
                             ref={videoRef}
                             className=' top-0 h-full z-0 object-cover w-full'

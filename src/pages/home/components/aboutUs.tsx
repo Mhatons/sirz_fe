@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { VIDEO } from "../../../assets";
-import Button from "../../../components/common/button";
 
 export default function AboutUs() {
 
@@ -15,7 +14,7 @@ export default function AboutUs() {
 
     return (
         <div>
-            <section className="pt-16 pb-4">
+            <section className="pt-16 ">
                 <h2 className="text-3xl text-center font-bold mb-0 text-primary font-comfortaa ">About Us</h2>
                 <div className="sm:grid grid-cols-2 max-sm:flex-col sm:w-[80%] w-[90%] m-auto gap-16 mb-5 py-14">
                     <div className=" relative sm:h-[500px] h-[450px] ">
@@ -37,7 +36,7 @@ export default function AboutUs() {
                         </div> */}
                     </div>
                     <div className=" ">
-                        <div className="pb-12 max-sm:pt-8 font-comfortaa text-sm text-justify ">
+                        <div className=" max-sm:pt-8 font-comfortaa text-[13px] text-justify ">
                             <p className="">
                                 Haven & Hive Interiors is a dynamic interior design company dedicated to transforming living and workspaces with a perfect blend of style, functionality, and quality.
                                 Founded by <b>Faruna Anthony Achile</b> in 2019, our company is driven by a passion for creating elegant and comfortable interiors that reflect the unique personalities and needs of our clients.
@@ -54,9 +53,9 @@ export default function AboutUs() {
                                 Whether it’s a residential or commercial project, we bring creativity and precision to every detail, turning visions into reality.
                             </p>
                         </div>
-                        <div className="sm:w-1/2">
+                        {/* <div className="sm:w-1/2">
                             <Button onClick={() => { }} text="Get Started now" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

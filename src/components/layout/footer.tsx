@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="mt-10">
           <h4 className="text-[#fff] font-nexa-light text-sm text-center font-thin">
-            All Rights Reserved <span className="text-lg font-thin">&copy;</span> Trailblazer Group 2023
+            All Rights Reserved <span className="text-lg font-thin">&copy;</span> Haven & Hive Interiors Group 2025
           </h4>
         </div>
       </footer>

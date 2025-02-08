@@ -29,6 +29,10 @@ const routes = (user: Iuser) =>
                     element: (ROUTES.ABOUT.ELEMENT),
                 },
                 {
+                    path: (ROUTES.FAQ.PATH),
+                    element: (ROUTES.FAQ.ELEMENT),
+                },
+                {
                     path: (ROUTES.CONTACT.PATH),
                     element: (ROUTES.CONTACT.ELEMENT),
                 },

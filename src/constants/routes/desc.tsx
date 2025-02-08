@@ -2,6 +2,7 @@ import Layout from "../../components/layout/layout";
 import About from "../../pages/about";
 import Career from "../../pages/career";
 import Contact from "../../pages/contact";
+import FAQ from "../../pages/FAQ";
 import Home from "../../pages/home";
 import ProjectDetails from "../../pages/projectDetails";
 import Projects from "../../pages/projects";
@@ -30,6 +31,10 @@ export const ROUTES = {
     ABOUT: {
         PATH: "/about",
         ELEMENT: <About />
+    },
+    FAQ: {
+        PATH: "/faq",
+        ELEMENT: <FAQ />
     },
     CONTACT: {
         PATH: "/contact",

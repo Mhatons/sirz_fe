@@ -16,10 +16,10 @@ export default function NavBar() {
     const { isDarkMode, isOpen } = useAppSelector(allReduxSliceInfo)
     const navigate = useNavigate();
     const menuItem = [
-        {
-            title: 'Home',
-            action: ROUTES.HOME.PATH,
-        },
+        // {
+        //     title: 'Home',
+        //     action: ROUTES.HOME.PATH,
+        // },
         {
             title: "About us",
             action: ROUTES.ABOUT.PATH,
@@ -28,6 +28,10 @@ export default function NavBar() {
             title: "Contact",
             action: ROUTES.CONTACT.PATH,
         },
+        // {
+        //     title: "Market place",
+        //     action: ROUTES.CONTACT.PATH,
+        // },
         {
             title: <NavbarDropdown />,
             icon: "",
@@ -47,7 +51,7 @@ export default function NavBar() {
         },
         {
             title: "FAQs",
-            action: ROUTES.SERVICES.PATH,
+            action: ROUTES.FAQ.PATH,
         },
     ];
 
@@ -79,12 +83,13 @@ export default function NavBar() {
                     {menuItem.map((item, index) => (
                         <li
                             className={`whitespace-nowrap flex items-center gap-2 hover:border-rose-700 
-                                ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
-                                    item.action.toLowerCase() === 'services' && location.pathname.toLowerCase().includes('/services/') ||
-                                    item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details")
+                                ${location.pathname === item.action
                                     ? "border-rose-700" : ""}
                                 border-transparent border-b-2 cursor-pointer`}
                             // ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
+                            // ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
+                            //     item.action.toLowerCase() === 'services' && location.pathname.toLowerCase().includes('/services/') ||
+                            //     item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details")
                             onClick={() => {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
