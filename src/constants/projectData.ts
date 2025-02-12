@@ -4,7 +4,7 @@ export const ProjectData = [
     {
         image: [
             SERVICES.IndustrialCleaningBg,
-            SERVICES.curtainsBlindsBg,
+            SERVICES.curtainBlindImg_1,
             IMAGES.solutionImageOne,
             IMAGES.solutionImageTwo
         ],
@@ -16,7 +16,7 @@ export const ProjectData = [
         image: [
             IMAGES.solutionImageOne,
             SERVICES.IndustrialCleaningBg,
-            SERVICES.curtainsBlindsBg,
+            SERVICES.curtainBlindImg_1,
             IMAGES.solutionImageTwo,
         ],
         title: "Purple Tulip Hotel, Gwarima Abuja",
@@ -27,7 +27,7 @@ export const ProjectData = [
         image: [
             IMAGES.solutionImageTwo,
             SERVICES.IndustrialCleaningBg,
-            SERVICES.curtainsBlindsBg,
+            SERVICES.curtainBlindImg_1,
             IMAGES.solutionImageOne,
         ],
         title: "Maitama Goverment Lodge",

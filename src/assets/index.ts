@@ -20,20 +20,42 @@ import solutionImg_three from './images/pexels-mikhail-nilov-6930542.jpg';
 
 // services
 import industrialcleaning from './images/pexels-tima-miroshnichenko-6474196.jpg';
-import curtains from './images/curtains.jpg';
-import pro_manage from './images/projectManegement.jpg';
-import pro_advice from './images/pro_advice.jpg';
-import treatment from './images/cleaning..jpg';
-import painting from './images/painting.jpg';
-import office from './images/pexels-pixabay-416320.jpg'
-import consultation from './images/consultation.jpg';
-import space_planning from './images/space_planning.jpg';
-import pop from './images/pexels-pixabay-276701.jpg';
-import floor_img from './images/pexels-clickerhappy-1388944.jpg'
+import cleaningTable from './images/cleaning..jpg';
 
+// treatment
+import treatmentImage_1 from './images/treatment_1.jpg';
+import treatmentImage_2 from './images/treatment_2.jpg';
+import treatmentImage_3 from './images/treatment_3.jpg';
 
+// design consultation
+import design_consult_1 from './images/d_consult_1.jpg';
+import design_consult_2 from './images/d_consult_2.jpg';
+import design_consult_3 from './images/d_consult_3.jpg';
 
+// space planning
+import spacePlanninImage_1 from './images/space_planning_1.jpg';
+import spacePlanninImage_2 from './images/space_planning_2.jpg';
+import spacePlanninImage_3 from './images/space_planning_3.jpg';
 
+// procurement
+import procureImage_1 from "./images/procure_1.jpg";
+import procureImage_2 from "./images/procure_2.jpg";
+import procureImage_3 from "./images/procure_3.jpg";
+
+// project management
+import proMg_1 from './images/promag_1.jpg';
+import proMg_2 from './images/promag_2.jpg';
+import proMg_3 from './images/promag_3.jpg';
+
+// custom signage
+import signageImage_1 from './images/signage_1.jpg';
+import signageImage_2 from './images/signage_2.jpg';
+import signageImage_3 from './images/signage_3.jpg';
+
+// curtain/blind
+import curtain_blind_1 from './images/curtains.jpg';
+import curtain_blind_2 from './images/curtain_blind_2b.jpg';
+import curtain_blind_3 from './images/blinds.jpg';
 
 
 
@@ -78,17 +100,46 @@ export const IMAGES = {
 
 // services
 export const SERVICES = {
+
+    // cleaning
     IndustrialCleaningBg: industrialcleaning,
-    IndustrialTreatmentBg: treatment,
-    consultationBg: consultation,
-    officeBg: office,
-    curtainsBlindsBg: curtains,
-    paintingBg: painting,
-    professionalAdviceBg: pro_advice,
-    projectManagementBg: pro_manage,
-    spacePlanning: space_planning,
-    popImg: pop,
-    flooringImg: floor_img
+    industrialcleaning2: cleaningTable,
+
+
+    // treatment
+    treatmentImg_1: treatmentImage_1,
+    treatmentImg_2: treatmentImage_2,
+    treatmentImg_3: treatmentImage_3,
+
+    // design consultation
+    design_consultImg_1: design_consult_1,
+    design_consultImg_2: design_consult_2,
+    design_consultImg_3: design_consult_3,
+
+    // space planning
+    spacePlanningImg_1: spacePlanninImage_1,
+    spacePlanningImg_2: spacePlanninImage_2,
+    spacePlanningImg_3: spacePlanninImage_3,
+
+    // procurement
+    procureImg_1: procureImage_1,
+    procureImg_2: procureImage_2,
+    procureImg_3: procureImage_3,
+
+    // project management
+    proMgImg_1: proMg_1,
+    proMgImg_2: proMg_2,
+    proMgImg_3: proMg_3,
+
+    // custom signage
+    signageImg_1: signageImage_1,
+    signageImg_2: signageImage_2,
+    signageImg_3: signageImage_3,
+
+    // curtain & blind
+    curtainBlindImg_1: curtain_blind_1,
+    curtainBlindImg_2: curtain_blind_2,
+    curtainBlindImg_3: curtain_blind_3,
 }
 
 
