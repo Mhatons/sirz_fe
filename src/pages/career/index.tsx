@@ -8,25 +8,34 @@ export default function Career() {
     const { isDarkMode } = useAppSelector(allReduxSliceInfo);
     const navigate = useNavigate();
     const positions = [
+        
         {
-            title: "Frontend Developer",
-            location: "Abuja, Nigeria",
-            type: "Full-Time",
-            description: "Work on cutting-edge web applications with a focus on beautiful and intuitive UI/UX.",
+            "title": "Marketing Associate",
+            "location": "Remote",
+            "type": "Contract",
+            "description": "Identify and acquire new clients while earning competitive commissions. Leverage marketing strategies and networking to drive business growth."
         },
         {
-            title: "UI/UX Designer",
-            location: "Remote",
-            type: "Contract",
-            description: "Design user-friendly interfaces for mobile and web applications.",
+            "title": "Social Media Manager",
+            "location": "Abuja, Nigeria",
+            "type": "Full-Time",
+            "description": "Create engaging content, manage online presence, and grow our brand across social platforms."
         },
         {
-            title: "Project Manager",
-            location: "Lagos, Nigeria",
-            type: "Full-Time",
-            description: "Lead projects from inception to completion with agile methodologies.",
+            "title": "Graphic Designer",
+            "location": "Remote",
+            "type": "Full-Time",
+            "description": "Design stunning visuals and marketing materials that captivate and communicate our brand identity."
         },
+        {
+            "title": "Skilled Workers",
+            "location": "Abuja, Nigeria",
+            "type": "Full-Time",
+            "description": "Join our team of expert craftsmen, including painters, POP installers, and industrial cleaners, to bring spaces to life."
+        }
     ];
+
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfOH0MuxcvfaHlA1DDeIdOy0IF-ZlMAQP2_DsGHuchjW8NHow/viewform?usp=sharing";
 
     return (
         <div className="min-h-screen">
@@ -59,7 +68,8 @@ export default function Career() {
                             <button className={` font-comfortaa bg-[#F29254] text-white tracking-widest
                                         flex align-center justify-center py-3 px-5 rounded-md cursor-pointer text-sm font-bold floating-button 
                                         `}
-                                onClick={() => navigate(ROUTES.CONTACT.PATH)}
+                                // onClick={() => navigate(ROUTES.CONTACT.PATH)}
+                                onClick={() => window.location.href = googleFormUrl}
                             >
                                 Apply Now
                             </button>
@@ -72,7 +82,7 @@ export default function Career() {
             <section className="bg-background_light dark:bg-background_dark py-16">
                 <div className="container mx-auto px-2 text-center">
                     <h2 className="text-2xl font-bold mb-4">Don’t See the Right Role?</h2>
-                    <p className="text-lg text-gray-700 mb-6">
+                    <p className="text-lg text-gray-700 dark:text-gray-400 mb-6">
                         We’re always looking for great talent! Feel free to send us your resume and we’ll keep it on file.
                     </p>
                     <div className="flex items-center justify-center">

@@ -1,9 +1,11 @@
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useAppDispatch, useAppSelector } from "../app/hook";
-import { ICONS, IMAGES } from "../assets";
+import {  IMAGES } from "../assets";
 import { allReduxSliceInfo, setIsOpen, setShowServices } from "../features/reduxSlice";
 import { useNavigate } from "react-router-dom";
 import { ServiceDetails } from "./serviceMenu";
+import { socialLinks } from "../utils";
+import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
 
 export default function NavbarDropdown() {
     const dispatch = useAppDispatch();
@@ -42,14 +44,21 @@ export default function NavbarDropdown() {
                         <div className=" absolute bottom-0 bg-[#124e578a] py-2 pr-8">
                             <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
                                 {/* <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p> */}
-                                <div className="flex flex-row items-center justify-center gap-x-10">
-                                    <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" />
-                                    {/* <img src={TWITTER_ICON} onClick={} alt="Twitter" /> */}
-                                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                        <img src={ICONS.TWITTER_ICON} alt="Twitter" />
+                                <div className="flex flex-row text-white items-center justify-center gap-x-10">
+                                    <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
+                                        {/* <img src={ICONS.FACEBOOK_ICON} alt="Facebook" /> */}
+                                        <BsFacebook className='text-xl' />
                                     </a>
-                                    <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" />
-                                    <img src={ICONS.FACEBOOK_ICON} alt="Facebook" />
+                                    <a href={socialLinks.Instagram} target="_blank" rel="noopener noreferrer">
+                                        {/* <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" /> */}
+                                        <BsInstagram className='text-xl' />
+                                    </a>
+                                    <a href={socialLinks.Whatsapp} target="_blank" rel="noopener noreferrer">
+                                        <BsWhatsapp className='text-xl' />
+                                    </a>
+                                    <a href={socialLinks.TikTok} target="_blank" rel="noopener noreferrer">
+                                        <BsTiktok className='text-xl' />
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes/desc';
 import { ICONS, IMAGES } from '../../assets';
+import { socialLinks } from '../../utils';
+import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from 'react-icons/bs';
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -49,9 +51,9 @@ export default function Footer() {
                 <p className="text-[#fff] mb-2.5">General enquiries</p>
                 <a
                   className="text-[#fff]"
-                  href="mailto:mailto:business@lachariz.com"
+                  href="mailto:mailto:havenandhiveinteriors@gmail.com"
                 >
-                  mailto:business@havenandhive.com
+                  mailto:havenandhiveinteriors@gmail.com
                 </a>
               </div>
             </div>
@@ -61,13 +63,13 @@ export default function Footer() {
             <div className="flex flex-col gap-y-14 md:gap-y-5">
 
               <div className="text-xs font-nexa-light mt-10">
-                <p className="text-[#fff] mb-2.5">Office Address</p>
+                <p className="text-[#fff] mb-1">Locations</p>
                 <p className="text-[#fff]">
-                  4th Floor, Ocean Centre,
+                  {/* 4th Floor, Ocean Centre,
                   <br />
-                  Ahmodu Bello Ex Rd, Wuse,
+                  Ahmodu Bello Ex Rd, Wuse, */}
                   <br />
-                  Wuse Abuja.
+                  Abuja | Lagos | Ph | Asaba | Anambra.
                 </p>
               </div>
             </div>
@@ -75,14 +77,25 @@ export default function Footer() {
             <div className="flex flex-col gap-y-5">
               <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
                 <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p>
-                <div className="flex flex-row items-center justify-center gap-x-10">
-                  <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" />
-                  {/* <img src={TWITTER_ICON} onClick={} alt="Twitter" /> */}
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <div className="flex text-white flex-row items-center justify-center gap-x-10">
+                  {/* <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" /> */}
+                  {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                     <img src={ICONS.TWITTER_ICON} alt="Twitter" />
+                  </a> */}
+                  <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
+                    {/* <img src={ICONS.FACEBOOK_ICON} alt="Facebook" /> */}
+                    <BsFacebook className='text-xl' />
                   </a>
-                  <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" />
-                  <img src={ICONS.FACEBOOK_ICON} alt="Facebook" />
+                  <a href={socialLinks.Instagram} target="_blank" rel="noopener noreferrer">
+                    {/* <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" /> */}
+                    <BsInstagram className='text-xl' />
+                  </a>
+                  <a href={socialLinks.Whatsapp} target="_blank" rel="noopener noreferrer">
+                    <BsWhatsapp className='text-xl' />
+                  </a>
+                  <a href={socialLinks.TikTok} target="_blank" rel="noopener noreferrer">
+                    <BsTiktok className='text-xl' />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col text-[#fff] sm:flex-row items-start gap-y-3 sm:items-center justify-center text-xs font-nexa-light mt-7 gap-x-10">
@@ -95,7 +108,7 @@ export default function Footer() {
 
         <div className="mt-10">
           <h4 className="text-[#fff] font-nexa-light text-sm text-center font-thin">
-            All Rights Reserved <span className="text-lg font-thin">&copy;</span> Haven & Hive Interiors Group 2025
+            All Rights Reserved <span className="text-lg font-thin">&copy;</span> Haven & Hive Interiors Ltd 2025
           </h4>
         </div>
       </footer>

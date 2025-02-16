@@ -54,8 +54,8 @@ import signageImage_3 from './images/signage_3.jpg';
 
 // curtain/blind
 import curtain_blind_1 from './images/curtains.jpg';
-import curtain_blind_2 from './images/curtain_blind_2b.jpg';
-import curtain_blind_3 from './images/blinds.jpg';
+import curtain_blind_2 from './images/the-art-of-layering-drapes-blinds-and-shades-1200px-3.jpg';
+import curtain_blind_3 from './images/curtain_blind_2b.jpg';
 
 
 

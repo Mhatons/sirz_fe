@@ -27,7 +27,7 @@ export default function Hero() {
                         <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">Haven & Hive Interiors</h1>
                         <div className="sm:text-[25px] sm:max-w-[65%] pt-2 text-[17px] tracking-wider text-left font-light ">Crafting spaces, Shaping Future</div>
                     </div>
-                    <div className=' max-sm:px-2 max-sm:text-center m-auto max-sm:pt-7 pt-14'>
+                    <div className=' max-sm:px-2 max-sm:text-center m-auto max-sm:pt-7 pt-0'>
                         <div className='flex items-center w-full  '>
                             <div className="h-[1px] dark:bg-white bg-[#424242] flex-grow"></div>
                             <div className="w-8 h-8 border-white  rounded-full   mx-1">
@@ -37,7 +37,7 @@ export default function Hero() {
                         </div>
                         <div className='grid sm:grid-cols-7 gap-4'>
                             <div className=' col-span-5'>
-                                <p className="text-lg max-sm:text-sm max-sm:leading-7 tracking-wide text-justify text-black dark:text-white font-comfortaa sm:my-4">
+                                <p className="text-lg max-sm:text-sm max-sm:leading-7 tracking-wide text-left text-black dark:text-white font-comfortaa sm:my-4">
                                     We offer a full spectrum of services from initial concept to final execution, and
                                     We're dedicated to providing comprehensive interior design services that blend functionality with aesthetic appeal
                                 </p>

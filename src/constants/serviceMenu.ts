@@ -2,6 +2,24 @@ import { IMAGES, SERVICES } from "../assets";
 
 export const ServiceDetails = [
   {
+    name: "CurtainsWindowBlinds",
+    image: SERVICES.curtainBlindImg_1,
+    title: "Curtains & Window blinds",
+    description: "Our curtains and window blinds are expertly crafted in Turkey and selected specifically for the Nigerian climate. Designed to endure heat and humidity, they offer long-lasting durability and vibrant color retention without fading.",
+    sections: [
+      {
+        title: "Best Turkish Fabrics",
+        description: "Our curtains and window blinds are meticulously crafted in Turkey, known for its high-quality textile production. We carefully select each piece to ensure it is perfectly suited for the unique demands of the Nigerian climate. These products are designed to withstand the heat and humidity typical in the region, offering superior durability. With this careful selection process, our curtains and blinds retain their vibrant colors and elegant appeal for years, even in challenging weather conditions, ensuring that your interiors always look fresh and stylish without the risk of fading.",
+        image: SERVICES.curtainBlindImg_2,
+      },
+      {
+        title: "Installation Services",
+        description: "In addition to providing high-quality curtains and window blinds, we also offer professional installation services. Our experienced team ensures precise and efficient fitting, tailored to your space for optimal functionality and aesthetics. From measuring to installation, we handle every step with attention to detail, ensuring a seamless and hassle-free experience. Whether it's a residential or commercial space, we guarantee that your curtains and blinds will be installed to perfection, enhancing the overall look and feel of your interiors.",
+        image: SERVICES.curtainBlindImg_3,
+      },
+    ],
+  },
+  {
     name: "IndustrialCleaning",
     image: SERVICES.IndustrialCleaningBg,
     title: "Industrial cleaning",
@@ -88,24 +106,6 @@ export const ServiceDetails = [
         title: "Nothing short of excellence",
         description: "In addition to sourcing, our team carefully curates items that meet both style and durability standards, ensuring they harmonize with the overall design concept. We prioritize selecting pieces that not only elevate the visual appeal but also provide comfort and practicality for everyday use. Our procurement process includes negotiating with vendors to secure the best quality at competitive prices, enabling us to deliver value without compromising on excellence. From bespoke furniture to unique accessories, every detail is thoughtfully considered to transform spaces into timeless and inspiring environments tailored to our clients' needs.",
         image: SERVICES.procureImg_3,
-      },
-    ],
-  },
-  {
-    name: "CurtainsWindowBlinds",
-    image: SERVICES.curtainBlindImg_1,
-    title: "Curtains & Window blinds",
-    description: "Our curtains and window blinds are expertly crafted in Turkey and selected specifically for the Nigerian climate. Designed to endure heat and humidity, they offer long-lasting durability and vibrant color retention without fading.",
-    sections: [
-      {
-        title: "Best Turkish Fabrics",
-        description: "Our curtains and window blinds are meticulously crafted in Turkey, known for its high-quality textile production. We carefully select each piece to ensure it is perfectly suited for the unique demands of the Nigerian climate. These products are designed to withstand the heat and humidity typical in the region, offering superior durability. With this careful selection process, our curtains and blinds retain their vibrant colors and elegant appeal for years, even in challenging weather conditions, ensuring that your interiors always look fresh and stylish without the risk of fading.",
-        image: SERVICES.curtainBlindImg_2,
-      },
-      {
-        title: "Installation Services",
-        description: "In addition to providing high-quality curtains and window blinds, we also offer professional installation services. Our experienced team ensures precise and efficient fitting, tailored to your space for optimal functionality and aesthetics. From measuring to installation, we handle every step with attention to detail, ensuring a seamless and hassle-free experience. Whether it's a residential or commercial space, we guarantee that your curtains and blinds will be installed to perfection, enhancing the overall look and feel of your interiors.",
-        image: SERVICES.curtainBlindImg_3,
       },
     ],
   },

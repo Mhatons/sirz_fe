@@ -5,6 +5,7 @@ import { allReduxSliceInfo } from '../../features/reduxSlice';
 import { ServiceDetails } from '../../constants/serviceMenu';
 import { ROUTES } from '../../constants/routes/desc';
 import { IMAGES } from '../../assets';
+import { BsChevronDoubleRight } from 'react-icons/bs';
 
 export default function Services() {
     const { isDarkMode } = useAppSelector(allReduxSliceInfo);
@@ -107,9 +108,10 @@ export default function Services() {
                             {ServiceDetails?.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="cursor-pointer whitespace-nowrap my-1 ps-10 tracking-wider  hover:text-secondary_light"
+                                    className="cursor-pointer whitespace-nowrap my-1 ps-10 flex items-center gap-3 tracking-wider  hover:text-secondary_light"
                                     onClick={() => { handleServiceClick(item.title) }}
                                 >
+                                    <BsChevronDoubleRight />
                                     {item?.title}
                                 </li>
                             ))}

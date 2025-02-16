@@ -102,21 +102,6 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-
-                <section className=' bg-background_light dark:bg-background_dark mt-14 pb-16'>
-                    <div className='w-[87%] pt-10 m-auto'>
-                        <header className='text-left sm:text-[40px] text-[25px] border-b-[1.3px] pb-3 border-primary capitalize text-rose-700 dark:text-rose-500'>Get rich with our referral program</header>
-                        <div className=' text-zinc-600 dark:text-zinc-300 text-justify sm:grid grid-cols-2 gap-10 sm:text-lg text-[16px] py-8'>
-                            <p>
-                                Haven & Hive Interiors is poised to become a premier interior design firm in Nigeria, offering a full spectrum of services from initial concept to final execution. Our mission is to deliver seamless and stress-free interior solutions to clients in Abuja, Lagos, Port Harcourt, and Anambra, with plans for nationwide expansion. Leveraging a team of skilled professionals and a commitment to excellence, we aim to transform spaces and exceed client expectations.
-                            </p>
-                            <p className=' max-sm:pt-4'>
-                                Haven & Hive Interiors is dedicated to providing comprehensive interior design services that blend functionality with aesthetic appeal. We strive to create environments that reflect our clients' personalities and needs, ensuring satisfaction through meticulous attention to detail and innovative design solutions. Our long-term vision includes expanding our services to encompass complete building projects and developing a line of customized interior products under our brand.
-                            </p>
-                        </div>
-                    </div>
-                    <img src={IMAGES.solutionImageThree} alt="" className=' xxl:h-[500px] object-cover w-full' />
-                </section>
             </section>
         </div>
     )

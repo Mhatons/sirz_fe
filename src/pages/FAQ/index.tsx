@@ -100,7 +100,7 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <div key={index} className=" rounded-lg p-4 bg-gray-50 dark:bg-background_dark">
                             <button
-                                className="flex justify-between w-full text-justify text-lg"
+                                className="flex justify-between w-full text-left text-lg"
                                 onClick={() => toggleFAQ(index)}
                             >
                                 {faq.question}

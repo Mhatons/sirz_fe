@@ -72,8 +72,8 @@ export default function CoreValues() {
                     {
                         coreValues.map((value, index) => (
                             <div className=' px-2'>
-                                <li key={index} className=" shadow-inner rounded-lg px-4 py-2 h-24 border">
-                                    <header className=" text-primary_dark text-[20px] font-semibold  pb-1 rounded-sm">{value.title}</header>
+                                <li key={index} className=" rounded-lg px-4 py-2 h-24 border border-primary_dark">
+                                    <header className=" text-primary_dark dark:text-primary_light text-[17px] font-semibold  pb-1 rounded-sm">{value.title}</header>
                                     <div>{value.description}</div>
                                 </li>
                             </div>
