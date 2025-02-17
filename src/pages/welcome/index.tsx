@@ -9,7 +9,7 @@ import { allReduxSliceInfo } from "../../features/reduxSlice";
 export default function WelcomePage() {
     const navigate = useNavigate();
     const { isDarkMode } = useAppSelector(allReduxSliceInfo)
-    const [welcome, setWelcome] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
     const [redirecting, setRedirecting] = useState<boolean>(false);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function WelcomePage() {
         }, 5000);
 
         setTimeout(() => {
-            setWelcome(true);
+            setLoading(true);
         }, 500);
 
         return () => clearTimeout(timer);
@@ -33,8 +33,8 @@ export default function WelcomePage() {
                 <div className="xxxm:w-[150px] w-[100px] m-auto mb-5">
                     <img src={isDarkMode ? IMAGES.logo_dark : IMAGES.logo_light} className="w-full flipClass" alt="" />
                 </div>
-                <h1 className={` ${welcome && "tracking-normal "} uppercase welcome-text whitespace-nowrap tracking-[2em] duration-[4s] font-Canela-light xxxm:text-2xl sm:text-lg text-sm`}>
-                    Welcome to Haven & Hive Interiors Ltd
+                <h1 className={` ${loading && "tracking-normal font-semibold text-primary "} uppercase welcome-text whitespace-nowrap tracking-[2em] font-comfortaa duration-[4s] xxxm:text-2xl sm:text-lg text-sm`}>
+                    Welcome to Haven & Hive Interiors
                 </h1>
             </div>
         </div>
