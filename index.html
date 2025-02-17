@@ -9,5 +9,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      fetch(`https://api.havenandhiveinteriors.com/api/v1/visits`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url: window.location.href,
+          referrer: document.referrer,
+          userAgent: navigator.userAgent,
+        }),
+      })
+    </script>
   </body>
 </html>
