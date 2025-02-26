@@ -7,7 +7,8 @@ import { allReduxSliceInfo, setIsOpen, setShowServices } from "../../features/re
 import { ROUTES } from "../../constants/routes/desc";
 import NavbarDropdown from "../../constants/navbardropdown";
 import { IoMdClose } from "react-icons/io";
-import { IMAGES } from "../../assets";
+import { sirzLogo, sirzLogoWhite } from "../../assets";
+import Button from "../common/button";
 
 export default function NavBar() {
     // const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,12 @@ export default function NavBar() {
     const location = useLocation();
     const { isDarkMode, isOpen } = useAppSelector(allReduxSliceInfo)
     const navigate = useNavigate();
+
     const menuItem = [
-        // {
-        //     title: 'Home',
-        //     action: ROUTES.HOME.PATH,
-        // },
+        {
+            title: 'Home',
+            action: ROUTES.HOME.PATH,
+        },
         {
             title: "About us",
             action: ROUTES.ABOUT.PATH,
@@ -35,23 +37,19 @@ export default function NavBar() {
         {
             title: <NavbarDropdown />,
             icon: "",
-            action: 'services'
+            action: 'Our services'
         },
         {
-            title: "Projects",
+            title: "Our projects",
             action: ROUTES.PROJECTS.PATH,
         },
         {
-            title: "Careers",
+            title: "Our blog",
             action: ROUTES.CAREER.PATH,
         },
         {
-            title: "Refer & earn",
+            title: "Contact us",
             action: ROUTES.REFERRAL.PATH,
-        },
-        {
-            title: "FAQs",
-            action: ROUTES.FAQ.PATH,
         },
     ];
 
@@ -63,28 +61,28 @@ export default function NavBar() {
     console.log("location.pathname", location.pathname)
 
     return (
-        <div className={` absolute top-0  w-full z-40`}>
+        <div className={`  w-full z-40 bg-colorDefaultLight dark:bg-colorDark shadow-md`}>
             <div
-                className={` text-white sm:w-[95%] w-[90%] m-auto pt-4 flex justify-between transition-all duration-300 h-[60px] items-center `}
+                className={` text-white sm:w-[95%] w-[90%] m-auto  flex justify-between transition-all duration-300 h-[60px] items-center `}
             >
                 <div
                     onClick={() => navigate(ROUTES.HOME.PATH)}
-                    className={`cursor-pointer sm:w-16 w-12  transition-all duration-300 `}
+                    className={`cursor-pointer sm:w-20 w-12  transition-all duration-300 `}
                 >
                     <img
-                        src={isDarkMode ? IMAGES.logo_dark : IMAGES.logo_light}
+                        src={isDarkMode ? sirzLogoWhite : sirzLogo}
                         alt=""
                         className={` w-full rounded-full`}
                     />
                 </div>
                 <ul
-                    className={`flex max-lg:hidden items-center dark:text-white text-background_dark font-normal text-[15px] gap-5 justify-between  font-comfortaa transition-all`}
+                    className={`flex max-lg:hidden items-center dark:text-white text-black w-[55%] text-background_dark font-normal text-[15px] gap-5 justify-between transition-all`}
                 >
                     {menuItem.map((item, index) => (
                         <li
-                            className={`whitespace-nowrap flex items-center gap-2 hover:border-rose-700 
+                            className={`whitespace-nowrap flex items-center gap-2 hover:text-colorBlueDeep 
                                 ${location.pathname === item.action
-                                    ? "border-rose-700" : ""}
+                                    ? "text-colorBlueDeep" : ""}
                                 border-transparent border-b-2 cursor-pointer`}
                             // ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
                             // ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
@@ -103,10 +101,13 @@ export default function NavBar() {
                             {item.icon}
                         </li>
                     ))}
-                    <li>
-                        <DarkModeToggle />
-                    </li>
+
                 </ul>
+
+                <div className="flex items-center max-lg:hidden ">
+                    <DarkModeToggle />
+                    <Button text='Schedule a demo' className="" onClick={() => { }} />
+                </div>
 
                 {/* display on smaller screen sizes */}
                 <div className="lg:hidden flex items-center text-black dark:text-white">
@@ -125,7 +126,7 @@ export default function NavBar() {
 
                 </div>
                 <div
-                    className={`flex absolute bg-[#f4f5f7] text-black dark:text-white dark:bg-[#1b1f23] transform ${isOpen ? 'translate-y-00' : '-translate-y-[800px]'
+                    className={`flex absolute bg-[#cd7227] text-black dark:text-white dark:bg-[#4c9528] transform ${isOpen ? 'translate-y-00' : '-translate-y-[800px]'
                         } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
                 >
                     <ul className=" w-[80%] relative m-auto">
@@ -150,6 +151,10 @@ export default function NavBar() {
                             <DarkModeToggle />
                         </li>
                     </ul>
+                    <div className="flex items-center lg:hidden ">
+                        <DarkModeToggle />
+                        <Button text='Schedule a demo' className="" onClick={() => { }} />
+                    </div>
                 </div>
             </div>
         </div>

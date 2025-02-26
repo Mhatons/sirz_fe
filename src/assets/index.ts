@@ -70,8 +70,89 @@ import curtainVideo from './videos/_storage_emulated_0_Android_data_com.fawazapp
 import referralVideo from './videos/vid (2).mp4'
 // import teamVideo from './videos/'
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // _________________________________________________________________________
+import slatedFrame from './imgs/Frame 15.svg';
+import sirz from './imgs/sirz logo png 1 (1).svg';
+import sirz_2 from './imgs/sirz logo png 1.svg';
+
+import starHalf from './imgs/Star 1 (1).svg';
+import starSmall from './imgs/Star 1.svg';
+import starFull from './imgs/Star 2 (1).svg';
+import rectangle1 from './imgs/Rectangle 2 (1).svg';
+import rectangle3 from './imgs/Rectangle 2.svg';
+import greatImg from './imgs/greatBg.svg';
+import greatImgBorder from './imgs/greatBgBorder.svg';
+import elipse from './imgs/Ellipse 2 (1).svg';
+import blueBox from './imgs/Frame 52.svg';
+
+import iroseImage from './imgs/Frame 42 (1).svg';
+import domesticiaImage from './imgs/Frame 42.svg';
+import socialSupportImage from './imgs/Frame 57.svg';
+
+import sampleImgMain from './imgs/sampleImg.jpg'
+
+
+
+
+export const slatedFrameImg = slatedFrame;
+export const sirzLogo = sirz;
+export const sirzLogoWhite = sirz_2;
+
+export const starFullImg = starFull;
+export const startHalfImg = starHalf;
+export const startSmallImg = starSmall;
+
+export const rectangleBlue = rectangle3;
+export const rectangleDarkBlue = rectangle1;
+export const greatBg = greatImg;
+export const greatBgBorder = greatImgBorder;
+
+export const elipseImg = elipse;
+export const blueBoxImg = blueBox;
+
+export const iroseImg = iroseImage;
+export const domesticiaImg = domesticiaImage;
+export const socialSupportImg = socialSupportImage;
+
+export const sampleImgNew = sampleImgMain
 // _________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // export icons
 export const ICONS = {

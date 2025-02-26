@@ -12,11 +12,11 @@ export default function Button({ type, text, className, onClick, loading, disabl
   disabled?: boolean
 }) {
   return (
-    <button className={` font-comfortaa tracking-widest
-    ${type === "inverted" ? " bg-[#fff]  text-[#F29254] rounded-full " :
-        "bg-[#F29254] text-[#ffffff]  rounded-full "}  
+    <button className={` tracking-widest
+    ${type === "inverted" ? " bg-[#fff]  text-colorBlueDeep rounded-full " :
+        " bg-colorBlueDeep text-colorDefaultLight  rounded-full "}  
     ${className?.length ? ` ${className}` :
-        'w-full'} flex align-center justify-center py-4 cursor-pointer text-sm font-bold floating-button 
+        'w-full'} flex align-center justify-center py-4 cursor-pointer text-[12px] px-8 font-normal floating-button 
     ${loading || disabled ? "opacity-25" : ""} `}
       style={{ cursor: `${loading || disabled ? "not-allowed" : ""}` }}
       onClick={onClick}>

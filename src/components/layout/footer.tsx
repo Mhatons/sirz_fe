@@ -1,115 +1,119 @@
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '../../constants/routes/desc';
-import { ICONS, IMAGES } from '../../assets';
+import { sirzLogoWhite } from '../../assets';
 import { socialLinks } from '../../utils';
-import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from 'react-icons/bs';
+import { FacebookIcon, InstagramIcon, LinkedlnIcon } from '../../assets/icons/svg';
+
+const company = [
+  "Company",
+  "Home",
+  "About us",
+  "Our Blog",
+  "Contact us",
+];
+
+const services = [
+  "Our Services",
+  "E-commerce",
+  "Branding",
+  "Digital Marketing",
+];
+
+const projects = [
+  "Our Projects",
+  "E-commerce",
+  "E-book Designs",
+  "Branding",
+  "Social Media Posts",
+];
+
+const links = [
+  "Quick Links",
+  "Terms & Conditions",
+  "Privacy Policy",
+];
 
 export default function Footer() {
-  const navigate = useNavigate()
-  const textVariants = {
-    initial: { fontSize: '4.5rem', fontWeight: '300' },
-    hovered: { fontSize: '5.1rem', fontWeight: '600' },
-  };
 
   return (
     <>
       <footer
-        style={{ backgroundImage: `url(${IMAGES.overlayImage})`, backgroundSize: 'cover' }}
-        className="bg-[#333333] pt-24 pb-8"
+        className=" bg-colorGreenDeeper pt-4 pb-8"
       >
-        <div className="w-full pb-12 border-b border-white max-w-[80vw] lg:max-w-[90vw] mx-auto">
-          <div className="relative w-full flex flex-col md:flex-row items-center md:items-start justify-between">
-            <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className="relative cursor-pointer w-fit">
-              <motion.div
-                variants={textVariants}
-                initial="initial"
-                whileHover="hovered"
-                transition={{ duration: 0.2 }}
-              >
-                <h3 className="relative text-[#fff] font-nexa duration-300">
-                  Let's Talk
-                </h3>
-              </motion.div>
-              <img
-                src={ICONS.RIGHT_DIRECTION_ARROW_ICON}
-                alt=" "
-                className="w-[30px] md:w-[55px] absolute -top-5 left-3/4 sm:left-auto sm:-right-8 md:-right-16 md:-top-14"
-              />
-            </div>
+        <div className='w-[90%] bg-colorBlueDeep m-auto rounded-2xl sm:px-10 px-5 py-16'>
+          <div className=" pb-12 border-b border-gray-400 mx-auto">
+            <section className=' flex items-start max-sm:flex-col justify-between m-auto'>
+              <h4 className='text-[30px] max-sm:text-center font-bold sm:w-[70%] text-white'>Grow Your Online Business With the Most Reliable Team and Strategy.</h4>
+              <button className={` tracking-widest bg-white rounded-full sm:w-[23%] w-full max-sm:mt-5
+                  'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
+                  `}
+                onClick={() => { }}>
+                Get started now!
+              </button>
+            </section>
 
-            <div className="hidden text-right md:block">
-              <p
-                onClick={() => navigate(ROUTES.ABOUT.PATH)}
-                className="text-xs font-nexa text-[#fff] cursor-pointer"
-
-              >
-                About us
-              </p>
-
-              <div className="text-xs pt-6 font-nexa-light">
-                <p className="text-[#fff] mb-2.5">General enquiries</p>
-                <a
-                  className="text-[#fff]"
-                  href="mailto:mailto:havenandhiveinteriors@gmail.com"
-                >
-                  mailto:havenandhiveinteriors@gmail.com
-                </a>
+            <section className=' py-10 grid sm:grid-cols-5 sm:gap-10'>
+              <div className='sm:col-span-2 pt-16'>
+                <img src={sirzLogoWhite} alt="" />
+                <div className=' text-[20px] text-white pt-5'>SIRz is your one-stop shop for E-commerce, Branding, and Digital Marketing, we help businesses launch, scale, and dominate in the digital space.</div>
               </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-y-14 w-full items-start justify-between mt-10">
-            <div className="flex flex-col gap-y-14 md:gap-y-5">
-
-              <div className="text-xs font-nexa-light mt-10">
-                <p className="text-[#fff] mb-1">Locations</p>
-                <p className="text-[#fff]">
-                  {/* 4th Floor, Ocean Centre,
-                  <br />
-                  Ahmodu Bello Ex Rd, Wuse, */}
-                  <br />
-                  Abuja | Lagos | Ph | Asaba | Anambra.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-y-5">
-              <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
-                <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p>
-                <div className="flex text-white flex-row items-center justify-center gap-x-10">
-                  {/* <img src={ICONS.LINKEDIN_ICON} alt="LinkedIn" /> */}
-                  {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <img src={ICONS.TWITTER_ICON} alt="Twitter" />
-                  </a> */}
-                  <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
-                    {/* <img src={ICONS.FACEBOOK_ICON} alt="Facebook" /> */}
-                    <BsFacebook className='text-xl' />
-                  </a>
-                  <a href={socialLinks.Instagram} target="_blank" rel="noopener noreferrer">
-                    {/* <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" /> */}
-                    <BsInstagram className='text-xl' />
-                  </a>
-                  <a href={socialLinks.Whatsapp} target="_blank" rel="noopener noreferrer">
-                    <BsWhatsapp className='text-xl' />
-                  </a>
-                  <a href={socialLinks.TikTok} target="_blank" rel="noopener noreferrer">
-                    <BsTiktok className='text-xl' />
-                  </a>
+              <div className='sm:col-span-3 max-sm:pt-10 grid sm:grid-cols-4 grid-cols-2 gap-4'>
+                <div>
+                  {
+                    company.map((item, index) => (
+                      <ul key={index} className='text-white first:font-bold'>
+                        <li className='pt-8'>{item}</li>
+                      </ul>
+                    ))
+                  }
+                </div>
+                <div>
+                  {
+                    services.map((item, index) => (
+                      <ul key={index} className='text-white first:font-bold'>
+                        <li className='pt-8'>{item}</li>
+                      </ul>
+                    ))
+                  }
+                </div>
+                <div>
+                  {
+                    projects.map((item, index) => (
+                      <ul key={index} className='text-white first:font-bold'>
+                        <li className='pt-8'>{item}</li>
+                      </ul>
+                    ))
+                  }
+                </div>
+                <div>
+                  {
+                    links.map((item, index) => (
+                      <ul key={index} className='text-white first:font-bold'>
+                        <li className='pt-8'>{item}</li>
+                      </ul>
+                    ))
+                  }
                 </div>
               </div>
-              <div className="flex flex-col text-[#fff] sm:flex-row items-start gap-y-3 sm:items-center justify-center text-xs font-nexa-light mt-7 gap-x-10">
-                <p>Terms and Conditions</p>
-                <p>Privacy Policy</p>
-              </div>
-            </div>
+            </section>
           </div>
-        </div>
 
-        <div className="mt-10">
-          <h4 className="text-[#fff] font-nexa-light text-sm text-center font-thin">
-            All Rights Reserved <span className="text-lg font-thin">&copy;</span> Haven & Hive Interiors Ltd 2025
-          </h4>
+          <div className="mt-10 sm:flex items-center justify-between">
+            <div className="flex text-white flex-row items-center justify-center gap-x-5">
+              <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
+                <LinkedlnIcon />
+              </a>
+              <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
+                <FacebookIcon />
+              </a>
+              <a href={socialLinks.Instagram} target="_blank" rel="noopener noreferrer">
+                <InstagramIcon />
+              </a>
+            </div>
+            <h4 className="text-[#fff] max-sm:pt-5 font-nexa-light text-[13px] text-center max-sm:flex-col flex items-center sm:gap-8 gap-2 font-thin">
+              <p>17 Barmouth Road marine parade LL42 1NA</p>
+              <p>074 07245685</p>
+              <p>support@sirz.co.uk</p>
+            </h4>
+          </div>
         </div>
       </footer>
     </>

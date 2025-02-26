@@ -1,15 +1,24 @@
-import { useAppSelector } from "../../../app/hook";
-import { allReduxSliceInfo } from "../../../features/reduxSlice";
 import { useEffect, useRef } from 'react';
-import spinImg from '../../../assets/images/Haven___Hive_logomark_2-removebg-preview.png';
-import { CgArrowsExpandUpRight } from 'react-icons/cg';
-import { useNavigate } from 'react-router-dom';
-import { ROUTES } from '../../../constants/routes/desc';
-import { VIDEO } from "../../../assets";
+import { slatedFrameImg, starFullImg } from "../../../assets";
+import Button from "../../../components/common/button";
+import PlainCard from "../../../components/layout/cards/plainCard";
+
+const cardContent = [
+    {
+        title: "Customized Strategies",
+        description: "No cookie-cutter solutions here! We tailor every strategy to fit your business needs, ensuring you get the best results for your brand’s growth."
+    },
+    {
+        title: "Dedicated Support",
+        description: "Forget bots—our expert team is here to guide you every step of the way. We are real people, with real solutions and we deliver real success!"
+    },
+    {
+        title: "Proven Growth",
+        description: "We don’t just promise results—we deliver them. Our data-driven approach has helped businesses scale and thrive in the digital space. Yours is next!"
+    },
+]
 
 export default function Hero() {
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
-    const navigate = useNavigate()
     // const videoRef = useRef(null);
     const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
 
@@ -20,58 +29,31 @@ export default function Hero() {
         }
     }, []);
     return (
-        <section className={` min-h-screen h-screen relative`}>
-            <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
-                <div className="text-left max-w-[90%] m-auto sm:pt-32 pt-24 max-sm:m-auto ">
-                    <div className=' max-sm:ps-3'>
-                        <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">Haven & Hive Interiors</h1>
-                        <div className="sm:text-[25px] sm:max-w-[65%] pt-2 text-[17px] tracking-wider text-left font-light ">Crafting spaces, Shaping Future</div>
-                    </div>
-                    <div className=' max-sm:px-2 max-sm:text-center m-auto max-sm:pt-7 pt-0'>
-                        <div className='flex items-center w-full  '>
-                            <div className="h-[1px] dark:bg-white bg-[#424242] flex-grow"></div>
-                            <div className="w-8 h-8 border-white  rounded-full   mx-1">
-                                <img src={spinImg} alt="" className=' object-cover rounded-full  animate-spinSlow' />
-                            </div>
-                            <div className="h-[1px] dark:bg-white bg-[#424242] flex-grow"></div>
-                        </div>
-                        <div className='grid sm:grid-cols-7 gap-4'>
-                            <div className=' col-span-5'>
-                                <p className="text-lg max-sm:text-sm max-sm:leading-7 tracking-wide text-left text-black dark:text-white font-comfortaa sm:my-4">
-                                    We offer a full spectrum of services from initial concept to final execution, and
-                                    We're dedicated to providing comprehensive interior design services that blend functionality with aesthetic appeal
-                                </p>
-                                <div className=" dark:text-zinc-400 max-sm:hidden text-zinc-600 max-sm:text-[16px] text-justify font-normal">Integrity | Professionalism | Eco-friendly | Client-Centered </div>
-                            </div>
-
-                            <div className=" flex items-center justify-center col-span-2 ">
-                                <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className=' heroButtonContainer relative border sm:w-[60%] w-[180px] cursor-pointer h-24 rounded-lg dark:text-white text-white max-sm:text-primary_dark border-white max-sm:border-primary_dark dark:border-white  items-start gap-3'>
-                                    <p className=' absolute bottom-1 left-1 mt-6 text-lg '>Contact Us</p>
-                                    <CgArrowsExpandUpRight className=' heroButton  absolute ' />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+        <section className={` bg-colorLight dark:bg-colorDefaultDark relative`}>
+            <section className=" relative text-center sm:w-[70%] w-[90%] m-auto pt-10">
+                <header className="sm:text-[50px] text-[30px] leading-tight font-bold">Power Up Your <i className=" text-colorBlueDeep">Brand</i> with Expert <br /> E-commerce, Branding & Marketing <br /> Solutions!</header>
+                <div className="sm:w-[30%] w-[80%] py-6 m-auto">
+                    <Button text="Get started" onClick={() => { }} />
                 </div>
-            </div>
-            <video
-                ref={videoRef}
-                className=' absolute top-0 h-full z-0 object-cover w-full'
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload='auto'
-            >
-                <source src={VIDEO.HOME_HERO_VIDEO} type="video/mp4" className="  object-cover" />
-                Your browser does not support the video tag.
-            </video>
-            {
-                isDarkMode && (
-                    <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
-                )
-            }
+                <img src={starFullImg} alt="" className='absolute top-0' />
+            </section>
+            <section>
+                <img src={slatedFrameImg} alt="" />
+            </section>
+            <section className="">
+                <div className=" grid sm:grid-cols-3 gap-5 w-[90%] py-8 m-auto">
+                    {
+                        cardContent.map((item, index) => (
+                            <div key={index}>
+                                <PlainCard
+                                    title={item.title}
+                                    description={item.description}
+                                />
+                            </div>
+                        ))
+                    }
+                </div>
+            </section>
         </section>
     )
 

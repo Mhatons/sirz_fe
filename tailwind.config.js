@@ -15,27 +15,24 @@ export default {
         spinSlow: 'spin 3s linear infinite', // Customize speed
       },
       colors: {
-        // primary
-        primary: '#2A85A0',
-        primary_light: '#39d0fe',
-        primary_dark: '#1d5668',
+        // blue
+        colorBlueDeep: '#3752E9',
+        colorBlueLight: '#CED7FE',
 
-        // secondary
-        secondary: '#D4A657',
-        secondary_light: '#ffb637',
-        secondary_dark: '#8c6521', 
+        // green
+        colorGreen: "#3ACBCC",
+        colorGreenLight: "#71D9DA",
+        colorGreenDeeper: "#001F3E",
+
+        colorNeutra: "#EBE6E6",
 
         // light mode
-        background_light: '#F4F5F7', // Grayish blue
+        colorLight: '#F4FAFA',
+        colorDefaultLight: '#FFFFFF',
 
         // dark mode
-        background_dark: '#1B1F23', // Grayish blue
-        background_darker: '#000000', // Grayish blue
-
-        accent: '#10B981', // Green
-        background: '#F1F5F9', // Light background
-        danger: '#EF4444', // Red for error messages or alerts
-        button: '#162D46'
+        colorDark: '#1B1F23',
+        colorDefaultDark: '#000000',
       },
       screens: {
         xxm: "950px",

@@ -39,8 +39,8 @@
 }
 
 .floating-button:hover {
-  background-color: #eca269;
-  color: #fff;
+  background-color: #576ef4;
+  color: #ffffff;
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

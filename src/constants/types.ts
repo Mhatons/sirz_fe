@@ -40,3 +40,25 @@ export interface ICard {
     isClickable?: boolean,
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
+
+
+
+// new types
+export interface IPlainCard {
+    title?: string,
+    icon?: string,
+    description?: string,
+    classNames?: string;
+    isClickable?: boolean,
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+export interface IImageCard {
+    title?: string,
+    icon?: string,
+    description?: string,
+    classNames?: string;
+    isClickable?: boolean,
+    image: string
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
