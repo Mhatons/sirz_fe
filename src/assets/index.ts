@@ -5,83 +5,6 @@ import linkedin from './icons/la-icons/linkedin-icon.svg';
 import instagram from './icons/la-icons/instagram.svg';
 import rightArrow from './icons/la-icons/upside-right-arrow.svg';
 
-// image section
-import logo2 from './images/Haven & Hive logomark 1_bf.png';
-import logo1 from './images/Haven___Hive_logomark_2-removebg-preview.png';
-import overlayImg from './images/overlay-img-UwG0G81_.png';
-import serviceDropdownImg from './images/teams.jpg';
-import teamImage from './images/pexels-tima-miroshnichenko-6195121.jpg';
-import teamImage_black_white from './images/teaams.jpg';
-
-// solution images
-import solutionImg_one from './images/globalImg.jpg';
-import solutionImg_two from './images/pexels-thomas-scarso-224286-1915906.jpg';
-import solutionImg_three from './images/pexels-mikhail-nilov-6930542.jpg';
-
-// services
-import industrialcleaning from './images/pexels-tima-miroshnichenko-6474196.jpg';
-import cleaningTable from './images/cleaning..jpg';
-
-// treatment
-import treatmentImage_1 from './images/treatment_1.jpg';
-import treatmentImage_2 from './images/treatment_2.jpg';
-import treatmentImage_3 from './images/treatment_3.jpg';
-
-// design consultation
-import design_consult_1 from './images/d_consult_1.jpg';
-import design_consult_2 from './images/d_consult_2.jpg';
-import design_consult_3 from './images/d_consult_3.jpg';
-
-// space planning
-import spacePlanninImage_1 from './images/space_planning_1.jpg';
-import spacePlanninImage_2 from './images/space_planning_2.jpg';
-import spacePlanninImage_3 from './images/space_planning_3.jpg';
-
-// procurement
-import procureImage_1 from "./images/procure_1.jpg";
-import procureImage_2 from "./images/procure_2.jpg";
-import procureImage_3 from "./images/procure_3.jpg";
-
-// project management
-import proMg_1 from './images/promag_1.jpg';
-import proMg_2 from './images/promag_2.jpg';
-import proMg_3 from './images/promag_3.jpg';
-
-// custom signage
-import signageImage_1 from './images/signage_1.jpg';
-import signageImage_2 from './images/signage_2.jpg';
-import signageImage_3 from './images/signage_3.jpg';
-
-// curtain/blind
-import curtain_blind_1 from './images/curtains.jpg';
-import curtain_blind_2 from './images/the-art-of-layering-drapes-blinds-and-shades-1200px-3.jpg';
-import curtain_blind_3 from './images/curtain_blind_2b.jpg';
-
-
-
-import sampleImg from './images/pexels-fotoaibe-1743226.jpg';
-
-// video section
-import homevideo from './videos/vid (1).mp4';
-import aboutvideo from './videos/3770054-hd_1920_1080_25fps.mp4';
-import servicevideo from './videos/vid (4).mp4';
-import curtainVideoMission from './videos/2025-01-27-083118842.mp4';
-import curtainVideo from './videos/_storage_emulated_0_Android_data_com.fawazapp.blackhole_files_DCIM_blackhole_4DAGAVWSO1DJRLTD59AF.mp4';
-import referralVideo from './videos/vid (2).mp4'
-// import teamVideo from './videos/'
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // _________________________________________________________________________
@@ -92,18 +15,63 @@ import sirz_2 from './imgs/sirz logo png 1.svg';
 import starHalf from './imgs/Star 1 (1).svg';
 import starSmall from './imgs/Star 1.svg';
 import starFull from './imgs/Star 2 (1).svg';
-import rectangle1 from './imgs/Rectangle 2 (1).svg';
+import starHalfTop from './imgs/Star(half-top).svg';
+import starMultiple from './imgs/Star 4.svg';
+import starMultipleSmall from './imgs/Star 5 (1).svg';
+
+import rectangle1 from './imgs/Rectangle 2.png';
 import rectangle3 from './imgs/Rectangle 2.svg';
 import greatImg from './imgs/greatBg.svg';
 import greatImgBorder from './imgs/greatBgBorder.svg';
 import elipse from './imgs/Ellipse 2 (1).svg';
 import blueBox from './imgs/Frame 52.svg';
 
+import mainCardBg from './imgs/Frame 78.svg'
+
+import aboutBg from './imgs/Frame 90.svg';
+import aboutStoryBg from './imgs/Frame 96.svg';
+import aboutofferBg from './imgs/image 20.svg';
+
+import blogheroBg from './imgs/96aec9683a51a31c975244d6b6425770.jpeg';
+import projectVector from './imgs/Vector 4.svg';
+import greenVector from './imgs/Vector 5.svg';
+import projectWebBg from './imgs/Frame 1745.svg';
+
+import contactBg from './imgs/Group 1.svg';
+
 import iroseImage from './imgs/Frame 42 (1).svg';
 import domesticiaImage from './imgs/Frame 42.svg';
 import socialSupportImage from './imgs/Frame 57.svg';
 
-import sampleImgMain from './imgs/sampleImg.jpg'
+import sampleImgMain from './imgs/sampleImg.jpg';
+
+import blogCardOne from './imgs/image 14.svg';
+import blogCardTwo from './imgs/image 15.svg';
+import blogCardThree from './imgs/image 16.svg';
+import blogCardFour from './imgs/image 17.svg';
+
+import projOne from "./imgs/Frame 78 (1).svg";
+import projTwo from "./imgs/Frame 78 (2).svg";
+import projThree from "./imgs/Frame 78 (3).svg";
+import projFour from "./imgs/Frame 78 (4).svg";
+import projFive from "./imgs/Frame 78 (5).svg";
+import projSix from "./imgs/Frame 78 (6).svg";
+
+import brandImgOne from './imgs/Frame 1750.png';
+import brandImgTwo from './imgs/Frame 1751.svg';
+
+import brandImgBg from './imgs/Frame 1705.svg';
+import brandImgBgTwo from './imgs/image 29.svg';
+import ecommerceImgBg from './imgs/Group 2.svg';
+import ecommerceImgBgTwo from './imgs/image 25.svg';
+
+import experticeImgOne from "./imgs/Frame 86.svg";
+import experticeImgTwo from "./imgs/Frame 87.svg";
+import experticeImgThree from "./imgs/Frame 88.svg";
+
+import brandSilderOne from './imgs/image 31.svg';
+import brandSilderTwo from './imgs/image 32.svg';
+import brandSilderThree from './imgs/image 33.svg';
 
 
 
@@ -115,6 +83,9 @@ export const sirzLogoWhite = sirz_2;
 export const starFullImg = starFull;
 export const startHalfImg = starHalf;
 export const startSmallImg = starSmall;
+export const StarMultipleSmall = starMultipleSmall;
+export const StarMultiple = starMultiple;
+export const StarHalfTop = starHalfTop;
 
 export const rectangleBlue = rectangle3;
 export const rectangleDarkBlue = rectangle1;
@@ -123,35 +94,58 @@ export const greatBgBorder = greatImgBorder;
 
 export const elipseImg = elipse;
 export const blueBoxImg = blueBox;
+export const ContactBg = contactBg;
 
 export const iroseImg = iroseImage;
 export const domesticiaImg = domesticiaImage;
 export const socialSupportImg = socialSupportImage;
 
-export const sampleImgNew = sampleImgMain
+export const sampleImgNew = sampleImgMain;
+
+export const AboutHeroBg = aboutBg;
+export const AboutStoryBg = aboutStoryBg;
+export const AboutOfferBg = aboutofferBg;
+
+export const HeroOfferBg = blogheroBg;
+export const MainCardBg = mainCardBg;
+export const ProjectVector = projectVector;
+export const GreenVector = greenVector;
+export const ProjectWebBg = projectWebBg;
+
+export const BlogCardOne = blogCardOne;
+export const BlogCardTwo = blogCardTwo;
+export const BlogCardThree = blogCardThree;
+export const BlogCardFour = blogCardFour;
+
+export const projectImg = {
+    projOne: projOne,
+    projTwo: projTwo,
+    projThree: projThree,
+    projFour: projFour,
+    projFive: projFive,
+    projSix: projSix,
+}
+
+export const brandImg = [
+    brandImgOne,
+    brandImgTwo
+];
+export const brandSliderImg = [
+    brandSilderOne,
+    brandSilderTwo,
+    brandSilderThree,
+];
+
+export const BrandImgBg = brandImgBg;
+export const BrandImgBgTwo = brandImgBgTwo;
+export const EcommerceImgBg = ecommerceImgBg;
+export const EcommerceImgBgTwo = ecommerceImgBgTwo;
+
+export const ExperticeImgOne = experticeImgOne;
+export const ExperticeImgTwo = experticeImgTwo;
+export const ExperticeImgThree = experticeImgThree;
+
 // _________________________________________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // export icons
@@ -161,75 +155,4 @@ export const ICONS = {
     INSTAGRAM_ICON: instagram,
     LINKEDIN_ICON: linkedin,
     RIGHT_DIRECTION_ARROW_ICON: rightArrow
-}
-
-
-// export images
-export const IMAGES = {
-    logo_dark: logo1,
-    logo_light: logo2,
-    sampleImage: sampleImg,
-    overlayImage: overlayImg,
-    serviceDropImg: serviceDropdownImg,
-    onboardingImg: teamImage,
-    solutionImageOne: solutionImg_one,
-    solutionImageTwo: solutionImg_two,
-    solutionImageThree: solutionImg_three,
-    teamImgBlackWhite: teamImage_black_white
-}
-
-
-// services
-export const SERVICES = {
-
-    // cleaning
-    IndustrialCleaningBg: industrialcleaning,
-    industrialcleaning2: cleaningTable,
-
-
-    // treatment
-    treatmentImg_1: treatmentImage_1,
-    treatmentImg_2: treatmentImage_2,
-    treatmentImg_3: treatmentImage_3,
-
-    // design consultation
-    design_consultImg_1: design_consult_1,
-    design_consultImg_2: design_consult_2,
-    design_consultImg_3: design_consult_3,
-
-    // space planning
-    spacePlanningImg_1: spacePlanninImage_1,
-    spacePlanningImg_2: spacePlanninImage_2,
-    spacePlanningImg_3: spacePlanninImage_3,
-
-    // procurement
-    procureImg_1: procureImage_1,
-    procureImg_2: procureImage_2,
-    procureImg_3: procureImage_3,
-
-    // project management
-    proMgImg_1: proMg_1,
-    proMgImg_2: proMg_2,
-    proMgImg_3: proMg_3,
-
-    // custom signage
-    signageImg_1: signageImage_1,
-    signageImg_2: signageImage_2,
-    signageImg_3: signageImage_3,
-
-    // curtain & blind
-    curtainBlindImg_1: curtain_blind_1,
-    curtainBlindImg_2: curtain_blind_2,
-    curtainBlindImg_3: curtain_blind_3,
-}
-
-
-// export videos
-export const VIDEO = {
-    HOME_HERO_VIDEO: homevideo,
-    ABOUT_HERO_VIDEO: aboutvideo,
-    SERVICE_HERO_VIDEO: servicevideo,
-    CURTAIN_VIDEO: curtainVideo,
-    REFERRAL_VIDEO: referralVideo,
-    MISSIONVIDEO: curtainVideoMission,
 }

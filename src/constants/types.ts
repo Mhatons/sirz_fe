@@ -7,7 +7,7 @@ export interface IButtonProps {
 }
 
 export interface IInputProps {
-    label: string,
+    label?: string,
     name: string,
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     type: 'text' | 'number' | 'email' | 'password' | 'checkbox' | 'radio';

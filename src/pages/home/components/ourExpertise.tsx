@@ -1,4 +1,4 @@
-import { elipseImg, rectangleBlue, sampleImgNew } from "../../../assets";
+import { elipseImg, ExperticeImgOne, ExperticeImgThree, ExperticeImgTwo, rectangleBlue } from "../../../assets";
 import HeaderFormat from "../../../components/header";
 import ImageCard from "../../../components/layout/cards/imageCard";
 
@@ -8,17 +8,17 @@ export default function OurExpertise() {
         {
             title: "E-commerce",
             description: "Launch & Scale Your Online Store with Ease",
-            image: ""
+            image: ExperticeImgOne
         },
         {
             title: "Branding",
             description: "Build a Brand that Stands Out & Sells",
-            image: ""
+            image: ExperticeImgTwo
         },
         {
             title: "Digital Marketing",
             description: " Get Noticed. Get Customers. Get Results",
-            image: ""
+            image: ExperticeImgThree
         },
     ];
 
@@ -45,7 +45,7 @@ export default function OurExpertise() {
                             data.map((item, index) => (
                                 <div key={index}>
                                     <ImageCard
-                                        image={sampleImgNew}
+                                        image={item.image}
                                         description={item.description}
                                         title={item.title}
                                     />

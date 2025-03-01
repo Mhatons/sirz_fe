@@ -1,26 +1,20 @@
 import Layout from "../../components/layout/layout";
 import About from "../../pages/about";
-import Career from "../../pages/career";
 import Contact from "../../pages/contact";
-import FAQ from "../../pages/FAQ";
+import OurBlogPage from "../../pages/blog";
 import Home from "../../pages/home";
-import ProjectDetails from "../../pages/projectDetails";
 import Projects from "../../pages/projects";
-import Referral from "../../pages/referral";
-import Services from "../../pages/services";
-import Welcome from "../../pages/welcome";
+import Branding from "../../pages/services/branding";
+import DigitalMarketing from "../../pages/services/digitalMarketing";
+import Ecommerce from "../../pages/services/ecommerce";
 
 export const ROUTES = {
     LAYOUT: {
         PATH: "/",
         ELEMENT: <Layout />
     },
-    WELCOME: {
-        PATH: "",
-        ELEMENT: <Welcome />
-    },
     HOME: {
-        PATH: "/home",
+        PATH: "",
         ELEMENT: <Home />
     },
     // sample test page for the user object
@@ -32,32 +26,28 @@ export const ROUTES = {
         PATH: "/about",
         ELEMENT: <About />
     },
-    FAQ: {
-        PATH: "/faq",
-        ELEMENT: <FAQ />
+    BLOG: {
+        PATH: "/blog",
+        ELEMENT: <OurBlogPage />
     },
     CONTACT: {
         PATH: "/contact",
         ELEMENT: <Contact />
     },
-    SERVICES: {
-        PATH: "/services/:title",
-        ELEMENT: <Services />
+    SERVICE_BRANDING: {
+        PATH: "/services-branding",
+        ELEMENT: <Branding />
+    },
+    SERVICE_DIGITALMARKETING: {
+        PATH: "/services-digital-marketing",
+        ELEMENT: <DigitalMarketing />
+    },
+    SERVICE_ECOMMERCE: {
+        PATH: "/services-ecommerce",
+        ELEMENT: <Ecommerce />
     },
     PROJECTS: {
         PATH: "/projects",
         ELEMENT: <Projects />
-    },
-    PROJECTDETAILS: {
-        PATH: "/project-details/:title",
-        ELEMENT: <ProjectDetails />
-    },
-    CAREER: {
-        PATH: "/career",
-        ELEMENT: <Career />
-    },
-    REFERRAL: {
-        PATH: "/referral",
-        ELEMENT: <Referral />
     },
 }

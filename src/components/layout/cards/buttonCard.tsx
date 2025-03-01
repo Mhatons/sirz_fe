@@ -9,7 +9,7 @@ interface Idata {
 
 export default function ButtonCard({ text, buttonText, title }: Idata) {
     return (
-        <div className="bg-colorNeutra py-10 px-5 rounded-3xl ">
+        <div className="bg-colorNeutra dark:bg-colorDark py-10 px-5 rounded-3xl ">
             <HeaderFormat title={title} />
             <div className="py-10 text-[20px] text-justify">
                 {text}

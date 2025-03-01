@@ -1,107 +1,186 @@
-import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../constants/routes/desc";
-import { CgArrowsExpandUpRight } from "react-icons/cg";
-import { useAppSelector } from "../../app/hook";
-import { allReduxSliceInfo } from "../../features/reduxSlice";
-import { useEffect, useRef } from "react";
-import { VIDEO } from "../../assets";
-import ProjectCard from "../../components/layout/projectCards";
-import { ProjectData } from "../../constants/projectData";
+import { ImArrowRight2 } from "react-icons/im";
+import { AboutHeroBg, BlogCardFour, BlogCardOne, BlogCardThree, BlogCardTwo, brandImg, GreenVector, projectImg, ProjectVector, ProjectWebBg } from "../../assets";
+import Button from "../../components/common/button";
+import HeaderFormat from "../../components/header";
 
 export default function Projects() {
-    const navigate = useNavigate();
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
 
-    const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
+    const data = [
+        {
+            image: projectImg.projOne,
+            title: "Grow Your Brand",
+            text: "Anyone with a brand! Seriously, if you’re running a business, leading a team, or trying to figure out.."
+        },
+        {
+            image: projectImg.projTwo,
+            title: "Secrets to selling as a business owner",
+            text: "Struggling to Boost Your Online Sales? Let’s Fix That!"
+        },
+        {
+            image: projectImg.projThree,
+            title: "Grow your corporate brand",
+            text: "Building a corporate brand is tough we know because we’ve been there too"
+        },
+        {
+            image: projectImg.projFour,
+            title: "Secrets to selling as a business owner",
+            text: "Struggling to Boost Your Online Sales? Let’s Fix That!"
+        },
+        {
+            image: projectImg.projFive,
+            title: "Grow your Service Branding",
+            text: "This isn’t another dry business book, it’s a straightforward guide packed with tips that work. "
+        },
+        {
+            image: projectImg.projSix,
+            title: "Popular Types Of Social Media Content To Grow Your Brand",
+            text: "This eBook is your step-by-step guide to creating....."
+        },
+    ]
 
-    useEffect(() => {
-        if (videoRef.current) {
-            // Set the playback speed
-            videoRef.current.playbackRate = 0.5; // Adjust the speed (e.g., 0.5 for half-speed)
-        }
-    }, []);
-
+    const dataImg = [
+        BlogCardOne,
+        BlogCardTwo,
+        BlogCardThree,
+        BlogCardFour,
+    ]
 
 
     return (
-        <div>
-            <section className={` min-h-screen h-screen relative`}>
-                <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
-                    <div className="text-left max-w-[90%] m-auto sm:pt-48 pt-60 max-sm:m-auto ">
-                        <div className=' max-sm:ps-3'>
-                            <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">Our Recently Done Projects</h1>
+        <div className='pt-8'>
+            <section className="relative">
+                <div className=' sm:w-[75%] w-[90%] m-auto pb-10'>
+                    <div className=" sm:w-[50%] w-[90%] m-auto relative">
+                        <header className="sm:text-[50px] text-[30px] leading-tight text-center font-bold">Our Projects</header>
+                        <div className=" text-center pt-6 pb-3 ">
+                            <i>Discover how we’ve helped brands grow through digital marketing, branding, and design.</i>
                         </div>
-                        <div className=' max-sm:px-2 max-sm:text-center m-auto'>
-                            <div className='flex items-center w-full py-5  '>
-                                <div className="h-[1px] dark:bg-zinc-400 bg-[#424242] flex-grow"></div>
-                            </div>
-                            <div className='grid sm:grid-cols-7 gap-4'>
-                                <div className=' col-span-5'>
-                                    <p className="text-lg max-sm:text-sm max-sm:leading-6 tracking-wide text-justify text-black dark:text-white font-comfortaa sm:my-4">
-                                        Checkout the catalog of our recent projects below, cutting across different fields and sectors including commercial, residential, institutions and hospitalities.
-                                    </p>
-                                </div>
-
-                                <div className=" flex items-center justify-center col-span-2 ">
-                                    <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className=' heroButtonContainer relative border sm:w-[60%] w-[180px] cursor-pointer h-24 rounded-lg dark:text-white text-white max-sm:text-primary_dark border-white max-sm:border-primary_dark dark:border-white  items-start gap-3'>
-                                        <p className=' absolute bottom-1 left-1 mt-6 text-lg '>Contact Us</p>
-                                        <CgArrowsExpandUpRight className=' heroButton  absolute ' />
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        <img src={GreenVector} alt="" className=" absolute sm:top-[-10px] top-[-45px] bottom-0 left-0 m-auto right-0" />
+                    </div>
+                    <div className='py-4 relative z-10'>
+                        <img
+                            src={AboutHeroBg}
+                            alt="" className=' border rounded-3xl p-2 border-colorBlueDeep h-full w-full object-cover'
+                        />
                     </div>
                 </div>
-                <video
-                    ref={videoRef}
-                    className=' absolute top-0 h-full z-0 object-cover w-full'
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload='auto'
-                >
-                    <source src={VIDEO.SERVICE_HERO_VIDEO} type="video/mp4" className="  object-cover" />
-                    Your browser does not support the video tag.
-                </video>
-                {
-                    isDarkMode && (
-                        <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
-                    )
-                }
+                <img src={ProjectVector} alt="" className=" absolute sm:top-28 top-40 bottom-0 left-0 right-0" />
             </section>
-            <section>
-                <div className='w-[87%] m-auto pt-10'>
-                    <header className='text-left sm:text-[40px] text-[25px] border-b-[1.3px] pb-3 border-primary text-[#424242] dark:text-zinc-300'>Overview</header>
-                    <div className=' text-zinc-600 dark:text-zinc-400 text-justify sm:grid grid-cols-2 gap-10 sm:text-lg text-[16px] py-8'>
-                        <p>
-                            Haven and Hive Interiors is a premier interior design company based in Abuja, Nigeria, with a growing presence across Lagos, Asaba, Port Harcourt, and Anambra. Renowned for creating sophisticated and functional spaces, we bring a blend of creativity, elegance, and comfort to every project.
-                        </p>
-                        <p className=' max-sm:pt-4'>
-                            From residential havens to commercial masterpieces, we pride ourselves on delivering designs that elevate lifestyles and redefine interiors. Whether it’s a chic private residence, a luxurious multiunit development, or a dynamic office or restaurant, we embrace every challenge with passion and precision.
-                        </p>
-                        <p className=' max-sm:pt-4'>
-                            Experience the art of spatial transformation through our holistic approach to design. Witness the seamless interplay of styles, colors, and textures that define our work. Feel the harmony in every space, thoughtfully crafted to enhance your well-being and create a lasting impression.
-                        </p>
-                        <p className=' max-sm:pt-4'>
-                            At Haven and Hive Interiors, balance is the cornerstone of our philosophy. When every element aligns perfectly, the result is not just a design—it’s a feeling. A space where everything feels just right.
-                        </p>
+            <section className='sm:w-[85%] w-[90%] m-auto'>
+                <div className=''>
+                    <HeaderFormat title="E-Commerce Websites" classNames="text-black dark:text-white" />
+                    <h4 className=" sm:font-bold max-sm:text-justify sm:py-6 py-4 sm:text-[27px] text-[17px] sm:leading-9">
+                        We create high-converting, user-friendly online stores that drive sales and enhance the shopping experience.
+                    </h4>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-8">
+                    <div>
+                        <img src={ProjectWebBg} alt="" />
+                    </div>
+                    <div className=" max-sm:text-justify">
+                        <header className=" font-bold text-[20px] text-left">Domestica - Elevating Home Essentials Shopping</header>
+                        <div>
+                            <header className=" font-bold py-4">About the Brand:</header>
+                            <p>
+                                Domestica is an e-commerce platform that offers a curated selection of premium home essentials.
+                                From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease.
+                            </p>
+                        </div>
+                        <div>
+                            <header className=" font-bold py-4">Our Work:</header>
+                            <p>
+                                We developed a visually appealing, user-friendly e-commerce website for Domestica, ensuring a smooth shopping experience with intuitive navigation,
+                                engaging product displays, and a seamless checkout process. Our focus was on creating a modern, functional design that enhances user engagement and drives conversions.
+                            </p>
+                        </div>
+                        <Button text="Visit the website" onClick={() => { }} className="sm:w-[40%] w-[90%] m-auto mt-8" />
                     </div>
                 </div>
+            </section>
 
-                <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-1 w-[90%] m-auto">
+            <section className=" bg-colorLight dark:bg-colorDark pt-10 mt-10">
+                <div className='sm:w-[85%] w-[90%] m-auto'>
+                    <div className=''>
+                        <HeaderFormat title="E-book covers" classNames="text-black dark:text-white" />
+                        <h4 className=" sm:font-bold max-sm:text-justify pb-8 pt-4 sm:text-[22px] text-[17px] sm:leading-9">
+                            Bringing stories to life with visually compelling and marketable ebook cover designs.
+                        </h4>
+                    </div>
+                    <div className=" grid sm:grid-cols-3 gap-8 pb-10">
+                        {
+                            data.map((item, index) => (
+                                <div key={index} className=" bg-white dark:bg-colorDefaultDark p-2 rounded-2xl pb-2">
+                                    <img src={item.image} alt="" className="w-full rounded-2xl object-cover h-[350px]" />
+                                    <section className=" font-light text-[14px]">
+                                        <div className="pt-4 pb-1">
+                                            <header className=" font-bold">{item.title}</header>
+                                        </div>
+                                        <div className="text-[12px]">
+                                            {item.text}
+                                        </div>
+                                        <button
+                                            className="flex items-center gap-1 text-colorBlueDeep font-normal text-[17px] pt-2">
+                                            Get now
+                                            <ImArrowRight2 />
+                                        </button>
+                                    </section>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <section className=" sm:w-[85%] w-[90%] m-auto py-10">
+                <div className=''>
+                    <HeaderFormat title="Branding" classNames="text-black dark:text-white" />
+                    <h4 className=" sm:font-bold max-sm:text-justify pb-8 pt-4 sm:text-[22px] text-[17px] sm:leading-9">
+                        Bringing stories to life with visually compelling and marketable ebook cover designs.
+                    </h4>
+                </div>
+                <div className=" flex items-center hideScrollBar overflow-x-scroll gap-5">
                     {
-                        ProjectData.map((project, index) => (
-                            <div onClick={() => navigate(`/project-details/${project.title}`)} key={index}>
-                                <ProjectCard
-                                    title={project.title}
-                                    desc={project.description}
-                                    image={project.image[0]}
-                                />
-                            </div>
+                        brandImg.map((img, index) => (
+                            <img key={index} src={img} alt="" className="sm:min-w-[350px] min-w-[300px] rounded-2xl h-[350px]" />
                         ))
                     }
+                </div>
+            </section>
+
+            <section className="bg-colorLight dark:bg-colorDark pt-6">
+                <div className=" sm:w-[85%] w-[90%] m-auto py-10">
+                    <div className=''>
+                        <HeaderFormat title="Social Media Management" classNames="text-black dark:text-white" />
+                        <h4 className=" sm:font-bold max-sm:text-justify pb-8 pt-4 sm:text-[22px] text-[17px] sm:leading-9">
+                            Helping brands grow their online presence through engaging content, strategy, and community management.                    </h4>
+                    </div>
+                    <div className=" grid lg:grid-cols-4 sm:grid-cols-2 gap-0">
+                        {
+                            dataImg.map((img, index) => (
+                                <img key={index} src={img} alt="" className="" />
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <section className=" bg-colorGreenDeeper text-white ">
+                <div className="sm:w-[85%] w-[90%] m-auto py-10">
+                    <div className='sm:w-[60%] max-sm:text-center'>
+                        <HeaderFormat title="Better together" />
+                        <h4 className=" pt-4 sm:text-[16px] text-[17px]">
+                            Want to Elevant Your Brand?
+                        </h4>
+                        <div className=" pb-8 text-[15px] ">
+                            Helping brands grow their online presence through engaging content, strategy, and community management.
+                        </div>
+                    </div>
+                    <button className={` bg-white text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
+                        'w-full flex align-center justify-center py-4 cursor-pointer text-[20px] px-8 font-medium floating-button  
+                        `}
+                        onClick={() => { }}>
+                        Get in touch
+                    </button>
                 </div>
             </section>
         </div>

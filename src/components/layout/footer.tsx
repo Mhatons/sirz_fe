@@ -38,11 +38,11 @@ export default function Footer() {
       <footer
         className=" bg-colorGreenDeeper pt-4 pb-8"
       >
-        <div className='w-[90%] bg-colorBlueDeep m-auto rounded-2xl sm:px-10 px-5 py-16'>
+        <div className='w-[90%] bg-colorBlueDeep m-auto sm:rounded-2xl sm:px-10 px-5 py-16'>
           <div className=" pb-12 border-b border-gray-400 mx-auto">
             <section className=' flex items-start max-sm:flex-col justify-between m-auto'>
-              <h4 className='text-[30px] max-sm:text-center font-bold sm:w-[70%] text-white'>Grow Your Online Business With the Most Reliable Team and Strategy.</h4>
-              <button className={` tracking-widest bg-white rounded-full sm:w-[23%] w-full max-sm:mt-5
+              <h4 className='sm:text-[30px] max-sm:text-center font-bold sm:w-[70%] text-white'>Grow Your Online Business With the Most Reliable Team and Strategy.</h4>
+              <button className={` tracking-widest bg-white dark:text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                   'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                   `}
                 onClick={() => { }}>
@@ -50,12 +50,12 @@ export default function Footer() {
               </button>
             </section>
 
-            <section className=' py-10 grid sm:grid-cols-5 sm:gap-10'>
+            <section className=' sm:py-10 grid sm:grid-cols-5 sm:gap-10'>
               <div className='sm:col-span-2 pt-16'>
                 <img src={sirzLogoWhite} alt="" />
-                <div className=' text-[20px] text-white pt-5'>SIRz is your one-stop shop for E-commerce, Branding, and Digital Marketing, we help businesses launch, scale, and dominate in the digital space.</div>
+                <div className=' sm:text-[20px] text-white pt-5'>SIRz is your one-stop shop for E-commerce, Branding, and Digital Marketing, we help businesses launch, scale, and dominate in the digital space.</div>
               </div>
-              <div className='sm:col-span-3 max-sm:pt-10 grid sm:grid-cols-4 grid-cols-2 gap-4'>
+              <div className='sm:col-span-3 max-sm:hidden max-sm:pt-10 grid sm:grid-cols-4 grid-cols-2 gap-4'>
                 <div>
                   {
                     company.map((item, index) => (

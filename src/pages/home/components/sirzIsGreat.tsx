@@ -37,7 +37,7 @@ export default function SirzIsGreat() {
                 <section className=" grid sm:grid-cols-3 pt-7 gap-x-5 gap-y-8">
                     {
                         data.map((item, index) => (
-                            <div key={index} className=" bg-colorDefaultLight flex px-8 text-center items-center justify-center flex-col h-[270px] rounded-3xl">
+                            <div key={index} className=" bg-colorDefaultLight dark:bg-colorDark flex px-8 text-center items-center justify-center flex-col h-[270px] rounded-3xl">
                                 <img src={blueBoxImg} alt="" />
                                 <div className="text-[20px] pt-4">{item.description}</div>
                             </div>

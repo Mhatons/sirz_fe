@@ -27,7 +27,7 @@ export default {
         colorNeutra: "#EBE6E6",
 
         // light mode
-        colorLight: '#F4FAFA',
+        colorLight: '#FAFAFA',
         colorDefaultLight: '#FFFFFF',
 
         // dark mode

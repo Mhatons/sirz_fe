@@ -6,7 +6,7 @@ import ButtonCard from "../../../components/layout/cards/buttonCard";
 export default function OurProjects() {
     return (
         <div className="py-10 w-[90%] m-auto">
-            <HeaderFormat title="Explore our projects" classNames="text-black" />
+            <HeaderFormat title="Explore our projects" classNames="text-black dark:text-white" />
             <section className="sm:flex items-start justify-between gap-6">
                 <h4 className=" font-bold py-6 text-[27px] sm:w-[80%] w-[100%] leading-9">
                     We take ideas and turn them into powerful digital solutions. Check out some of our latest projects and see how we help businesses thrive!

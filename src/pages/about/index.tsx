@@ -1,109 +1,121 @@
-import { useEffect, useRef } from 'react';
-import { CgArrowsExpandUpRight } from 'react-icons/cg';
-import { useNavigate } from 'react-router-dom';
-import { useAppSelector } from '../../app/hook';
-import { allReduxSliceInfo } from '../../features/reduxSlice';
-import { ROUTES } from '../../constants/routes/desc';
-import { IMAGES, VIDEO } from '../../assets';
+import { AboutHeroBg, AboutOfferBg, AboutStoryBg, elipseImg, rectangleDarkBlue, startHalfImg } from '../../assets';
+import HeaderFormat from '../../components/header';
+import Button from '../../components/common/button';
+
+const data = [
+    {
+        title: "01 What we're creating",
+        text: "SIRz is an innovative E-business management solution designed to empower small, medium and big businesses. We provide the expertise, support, and strategies needed to streamline your online operations, save time, and boost profitability"
+    },
+    {
+        title: "02 We give the best results",
+        text: "SIRz combines technology, expertise, and a seamless, fully-managed process to help your business thrive online. We are dedicated to providing high-quality services at a price that works for you."
+    },
+    {
+        title: "03 E-business management",
+        text: "Our unique approach, streamlined processes, and team structure are the backbone of our effective strategy and one of the key reasons we’re able to achieve results for our customers that outperform industry standards."
+    },
+]
 
 export default function About() {
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
-    const navigate = useNavigate()
-    // const videoRef = useRef(null);
-    const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
-
-    useEffect(() => {
-        if (videoRef.current) {
-            // Set the playback speed
-            videoRef.current.playbackRate = 0.5; // Adjust the speed (e.g., 0.5 for half-speed)
-        }
-    }, []);
     return (
-        <div>
-            <section className={` min-h-screen h-screen relative`}>
-                <div className={`h-full w-full  ${!isDarkMode && "backgroundGradient"} z-10 absolute flex items-center `}>
-                    <div className="text-left max-w-[90%] m-auto sm:pt-48 pt-60 max-sm:m-auto ">
-                        <div className=' max-sm:ps-3'>
-                            <h1 className="sm:text-[55px] sm:max-w-[65%] leading-snug text-[40px] tracking-wider text-background_dark text-left max-sm:font-light dark:text-zinc-200 ">About Us</h1>
+        <div className='pt-8'>
+            <section className=' sm:w-[75%] w-[90%] m-auto pb-10'>
+                <header className="sm:text-[50px] text-[30px] leading-tight text-center font-bold">Affordable E-Business <i className=" text-colorBlueDeep">Solutions</i> For Busy Owners</header>
+                <div className='py-4'>
+                    <img
+                        src={AboutHeroBg}
+                        alt="" className=' border rounded-3xl p-2 border-colorBlueDeep h-full w-full object-cover' />
+                </div>
+            </section>
+            <section className=' bg-colorGreenDeeper py-10 text-white font-normal italic'>
+                <p className='sm:w-[70%] sm:text-[30px] w-[90%] text-[15px] m-auto text-center'>
+                    We understand the effort it takes to keep up with the demands of digital marketing, e-commerce, and online presence while <br className='' /> juggling countless responsibilities. <br />
+                    That's why we offer a better way—a unique approach, data-driven strategies, and an experienced team—all at affordable prices based on your specific needs.
+                </p>
+            </section>
+            <section className='py-10'>
+                <div className='sm:w-[85%] w-[90%] m-auto'>
+                    <HeaderFormat title="About us.." classNames="text-black" />
+                    <h4 className=" sm:font-bold max-sm:text-justify py-6 sm:text-[27px] text-[17px] sm:leading-9">
+                        Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
+                    </h4>
+                </div>
+                <div className=' grid bg-colorLight dark:bg-colorDark sm:grid-cols-5 sm:gap-12 m-auto max-sm:w-[90%]'>
+                    <div className=' sm:col-span-3 relative sm:px-16 sm:py-10'>
+                        <header className='sm:text-[45px] text-[30px] italic font-bold'>The Story Behind Sirz</header>
+                        <div className='pt-4 text-[18px] max-sm:text-justify'>
+                            The Story Behind Sirz
+                            In 2021, the founder of Sirz launched a small online fashion store with a simple dream: to build something meaningful that could generate passive income while managing a full-time 9-5 job.
+                            Like many, the goal was financial freedom. But the focus was off. Hours went into perfecting the website, arranging photoshoots, and stocking inventory—while the most important aspect was overlooked:
+                            understanding the customer. It didn’t take long for the reality to set in. The business never gained traction, despite investments running into Thousands of Dollars. The turning point came with a crucial realization:
+                            the business didn’t fail because of bad products, but because of a flawed approach—building without knowing who it was for. The founder understood that it’s easier to sell what the market already wants than to create
+                            something and hope it sells. This hard-earned lesson led to a deeper question: why do so many small businesses with great ideas fall short? Motivated by this, the founder immersed himself in learning the ins and outs of e-commerce,
+                            focusing on one key principle: success isn’t just about a good product or a well-designed website—it’s about truly understanding customers and executing with a clear, strategic plan.
                         </div>
-                        <div className=' max-sm:px-2 max-sm:text-center m-auto'>
-                            <div className='flex items-center w-full py-5  '>
-                                <div className="h-[1px] dark:bg-zinc-400 bg-[#424242] flex-grow"></div>
-                            </div>
-                            <div className='grid sm:grid-cols-7 gap-4'>
-                                <div className=' col-span-5'>
-                                    <p className="text-lg max-sm:text-sm max-sm:leading-6 tracking-wide text-justify text-black dark:text-white font-comfortaa sm:my-4">
-                                        We are a highly dedicated team of interior design professionals offering expert guidance and innovative solutions to transforming spaces to elegant havens
-                                    </p>
-                                </div>
-
-                                <div className=" flex items-center justify-center col-span-2 ">
-                                    <div onClick={() => navigate(ROUTES.CONTACT.PATH)} className=' heroButtonContainer relative border sm:w-[60%] w-[180px] cursor-pointer h-24 rounded-lg dark:text-white text-white max-sm:text-primary_dark border-white max-sm:border-primary_dark dark:border-white  items-start gap-3'>
-                                        <p className=' absolute bottom-1 left-1 mt-6 text-lg '>Contact Us</p>
-                                        <CgArrowsExpandUpRight className=' heroButton  absolute ' />
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div className='sm:w-[40%] w-[90%] max-sm:m-auto pt-6 max-sm:pb-20'>
+                            <Button text="Schedule demo" onClick={() => { }} />
                         </div>
+                        <div>
+                            <img src={startHalfImg} alt="" className=' absolute left-0 bottom-0' />
+                        </div>
+                    </div>
+                    <div className=' col-span-2'>
+                        <img src={AboutStoryBg} alt="" />
                     </div>
                 </div>
-                <video
-                    ref={videoRef}
-                    className=' absolute top-0 h-full z-0 object-cover w-full'
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload='auto'
-                >
-                    <source src={VIDEO.ABOUT_HERO_VIDEO} type="video/mp4" className="  object-cover" />
-                    Your browser does not support the video tag.
-                </video>
-                {
-                    isDarkMode && (
-                        <div className=" absolute top-0 left-0 right-0 bottom-0 bg-[#000000a8]"></div>
-                    )
-                }
             </section>
-
-            <section className=' pt-10'>
-                <section>
-                    <div className='w-[87%] m-auto'>
-                        <header className='text-left sm:text-[40px] text-[25px] border-b-[1.3px] pb-3 border-primary text-[#424242] dark:text-zinc-300'>Welcome to Haven and Hive Interiors</header>
-                        <div className=' text-zinc-600 dark:text-zinc-400 text-justify sm:grid grid-cols-2 gap-10 sm:text-lg text-[16px] py-8'>
-                            <p>
-                                Haven & Hive Interiors is poised to become a premier interior design firm in Nigeria, offering a full spectrum of services from initial concept to final execution. Our mission is to deliver seamless and stress-free interior solutions to clients in Abuja, Lagos, Port Harcourt, and Anambra, with plans for nationwide expansion. Leveraging a team of skilled professionals and a commitment to excellence, we aim to transform spaces and exceed client expectations.
-                            </p>
-                            <p className=' max-sm:pt-4'>
-                                Haven & Hive Interiors is dedicated to providing comprehensive interior design services that blend functionality with aesthetic appeal. We strive to create environments that reflect our clients' personalities and needs, ensuring satisfaction through meticulous attention to detail and innovative design solutions. Our long-term vision includes expanding our services to encompass complete building projects and developing a line of customized interior products under our brand.
-                            </p>
-                        </div>
+            < section
+                style={{
+                    backgroundImage: `url(${rectangleDarkBlue})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+                className=" max-sm:pb-8 relative sm:h-[570px]" >
+                <div className="sm:pt-48 pt-36 text-white">
+                    <div className=" absolute top-10 m-auto right-0 left-0 flex justify-center">
+                        <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
                     </div>
-                    <img src={IMAGES.serviceDropImg} alt="" className=' xxl:h-[500px] object-cover w-full' />
-                </section>
 
-                <section className='w-[87%] pt-14 m-auto'>
-                    <header className='text-left sm:text-[40px] text-[25px] pb-3 border-primary text-[#424242] dark:text-zinc-300 capitalize'>We're exeperts in the interior space</header>
-                    <p>With years of experience and a deep understanding of the job market, our team of experts provides personalised career mentoring to help individuals achieve their professional goals. To access our expertise, individuals can choose from the following options:</p>
-                    <p>OUR NETWORK of collaborating professionals, formed over more than twenty years of practice, includes architects, builders, artists, and artisans who share our vision.</p>
-                </section>
-
-
-                <section className=' bg-background_light dark:bg-background_dark mt-14 pb-16'>
-                    <div className='w-[87%] pt-10 m-auto'>
-                        <header className='text-left sm:text-[40px] text-[25px] border-b-[1.3px] pb-3 border-primary capitalize text-rose-700 dark:text-rose-500'>Our Approach</header>
-                        <div className=' text-zinc-600 dark:text-zinc-300 text-justify sm:grid grid-cols-2 gap-10 sm:text-lg text-[16px] py-8'>
-                            <p>
-                                is dynamic and thorough. We understand that our clients’ needs and preferences are unique. This drives us to design each project from scratch, which keeps us in a constant state of creative discovery. We work holistically and consider every detail. This involves establishing an overall aesthetic direction, thinking through the circulation and layout of each space, designing interior architectural elements, specifying finishes, fixtures, furniture, accessories, and art. 
-                                To ensure the design intent is seen through to the very end, we know our involvement in every phase is key. From conceptual design through construction administration to the very last furniture installation, we want to be there.
-                            </p>
-                            <img src={IMAGES.solutionImageThree} alt="" className=' xxl:h-full object-cover w-full' />
-                        </div>
+                    <div className="flex items-center justify-center flex-col text-center m-auto">
+                        <header className='sm:text-[45px] text-[30px] italic font-bold'>Let's grow your business together</header>
+                        <div className='text-[20px] sm:w-[50%] w-[90%] m-auto pt-4'>Let us manage your online business, processes, marketting, and strategy for an affordable monthly fee</div>
                     </div>
-                </section>
+                    <div className=' sm:w-[20%] w-[90%] m-auto pt-10'>
+                        <button className={` tracking-widest bg-white text-black rounded-full w-full max-sm:mt-5
+                            'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
+                            `}
+                            onClick={() => { }}>
+                            Get started now!
+                        </button>
+                    </div>
+                </div>
+            </section >
+            <section className='py-10'>
+                <div className='sm:w-[85%] w-[90%] m-auto'>
+                    <HeaderFormat title="About us.." classNames="text-black" />
+                    <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[17px] max-sm:text-justify sm:leading-9">
+                        Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
+                    </h4>
+                </div>
+                <div className=' sm:grid grid-cols-5 gap-10 m-auto sm:w-[85%]'>
+                    <div className=' col-span-2 w-full'>
+                        <img src={AboutOfferBg} alt="" className='w-full' />
+                    </div>
+                    <div className=' col-span-3 relative px-4 py-10'>
+                        {
+                            data.map((item, index) => (
+                                <div key={index} className=' border-b pt-3 pb-7'>
+                                    <header className='sm:text-[35px] text-[20px] italic font-bold text-colorGreen'>{item.title}</header>
+                                    <div className='pt-4 text-[17px] sm:ps-12'>
+                                        {item.text}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
             </section>
         </div>
     )
-
 }

@@ -1,12 +1,10 @@
 import { ImArrowRight2 } from "react-icons/im";
-import { sampleImgNew } from "../../../assets";
+import { MainCardBg } from "../../../assets";
 
 export default function MainCard() {
     return (
-        <div className=" bg-colorLight p-2 rounded-2xl pb-5">
-            <div>
-                <img src={sampleImgNew} alt="" className="w-full rounded-2xl h-[250px]" />
-            </div>
+        <div className=" bg-colorLight dark:bg-colorDark p-2 rounded-2xl pb-5">
+                <img src={MainCardBg} alt="" className="w-full object-cover rounded-2xl h-[250px]" />
             <section className=" font-light text-[14px]">
                 <div className="pt-4 pb-6">
                     <header className=" font-bold">Digital Marketing Trends You Can’t Ignore in 2024</header>

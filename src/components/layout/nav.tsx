@@ -26,10 +26,10 @@ export default function NavBar() {
             title: "About us",
             action: ROUTES.ABOUT.PATH,
         },
-        {
-            title: "Contact",
-            action: ROUTES.CONTACT.PATH,
-        },
+        // {
+        //     title: "Contact",
+        //     action: ROUTES.CONTACT.PATH,
+        // },
         // {
         //     title: "Market place",
         //     action: ROUTES.CONTACT.PATH,
@@ -37,7 +37,7 @@ export default function NavBar() {
         {
             title: <NavbarDropdown />,
             icon: "",
-            action: 'Our services'
+            action: 'services'
         },
         {
             title: "Our projects",
@@ -45,11 +45,11 @@ export default function NavBar() {
         },
         {
             title: "Our blog",
-            action: ROUTES.CAREER.PATH,
+            action: ROUTES.BLOG.PATH,
         },
         {
             title: "Contact us",
-            action: ROUTES.REFERRAL.PATH,
+            action: ROUTES.CONTACT.PATH,
         },
     ];
 
@@ -58,10 +58,8 @@ export default function NavBar() {
         dispatch(setShowServices(false));
     };
 
-    console.log("location.pathname", location.pathname)
-
     return (
-        <div className={`  w-full z-40 bg-colorDefaultLight dark:bg-colorDark shadow-md`}>
+        <div className={`fixed w-full z-40 bg-colorDefaultLight dark:bg-colorDark shadow-md`}>
             <div
                 className={` text-white sm:w-[95%] w-[90%] m-auto  flex justify-between transition-all duration-300 h-[60px] items-center `}
             >
@@ -76,11 +74,11 @@ export default function NavBar() {
                     />
                 </div>
                 <ul
-                    className={`flex max-lg:hidden items-center dark:text-white text-black w-[55%] text-background_dark font-normal text-[15px] gap-5 justify-between transition-all`}
+                    className={`flex max-md:hidden items-center dark:text-white text-black lg:w-[55%] w-[50%] text-background_dark font-normal text-[15px] gap-5 justify-between transition-all`}
                 >
                     {menuItem.map((item, index) => (
                         <li
-                            className={`whitespace-nowrap flex items-center gap-2 hover:text-colorBlueDeep 
+                            className={`whitespace-nowrap flex items-center gap-2 lg:text-sm text-[12px] hover:text-colorBlueDeep 
                                 ${location.pathname === item.action
                                     ? "text-colorBlueDeep" : ""}
                                 border-transparent border-b-2 cursor-pointer`}
@@ -104,13 +102,13 @@ export default function NavBar() {
 
                 </ul>
 
-                <div className="flex items-center max-lg:hidden ">
+                <div className="flex items-center max-md:hidden ">
                     <DarkModeToggle />
                     <Button text='Schedule a demo' className="" onClick={() => { }} />
                 </div>
 
                 {/* display on smaller screen sizes */}
-                <div className="lg:hidden flex items-center text-black dark:text-white">
+                <div className="md:hidden flex items-center text-black dark:text-white">
                     {
                         !isOpen && <FaBars
                             className="text-[30px] cursor-pointer"
@@ -126,8 +124,8 @@ export default function NavBar() {
 
                 </div>
                 <div
-                    className={`flex absolute bg-[#cd7227] text-black dark:text-white dark:bg-[#4c9528] transform ${isOpen ? 'translate-y-00' : '-translate-y-[800px]'
-                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-28 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
+                    className={`flex absolute bg-colorLight text-black dark:bg-colorDark dark:text-white transform ${isOpen ? 'translate-y-00' : '-translate-y-[800px]'
+                        } transition-transform duration-1000 ease-out w-full left-0 right-0 -z-30 top-0 pb-16 pt-20 shadow-lg lg:hidden flex-col items-left lg:text-[18px] justify-between font-comfortaa`}
                 >
                     <ul className=" w-[80%] relative m-auto">
                         {menuItem.map((item, index) => (
@@ -151,8 +149,8 @@ export default function NavBar() {
                             <DarkModeToggle />
                         </li>
                     </ul>
-                    <div className="flex items-center lg:hidden ">
-                        <DarkModeToggle />
+                    <div className="flex items-center lg:hidden w-[90%] m-auto pt-8 ">
+                        {/* <DarkModeToggle /> */}
                         <Button text='Schedule a demo' className="" onClick={() => { }} />
                     </div>
                 </div>

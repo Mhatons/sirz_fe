@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { slatedFrameImg, starFullImg } from "../../../assets";
 import Button from "../../../components/common/button";
 import PlainCard from "../../../components/layout/cards/plainCard";
@@ -19,19 +18,11 @@ const cardContent = [
 ]
 
 export default function Hero() {
-    // const videoRef = useRef(null);
-    const videoRef = useRef<HTMLVideoElement | null>(null); // Explicitly type the ref
 
-    useEffect(() => {
-        if (videoRef.current) {
-            // Set the playback speed
-            videoRef.current.playbackRate = 0.5; // Adjust the speed (e.g., 0.5 for half-speed)
-        }
-    }, []);
     return (
-        <section className={` bg-colorLight dark:bg-colorDefaultDark relative`}>
+        <section className={` bg-colorLight pt-10 dark:bg-colorDefaultDark relative`}>
             <section className=" relative text-center sm:w-[70%] w-[90%] m-auto pt-10">
-                <header className="sm:text-[50px] text-[30px] leading-tight font-bold">Power Up Your <i className=" text-colorBlueDeep">Brand</i> with Expert <br /> E-commerce, Branding & Marketing <br /> Solutions!</header>
+                <header className="sm:text-[50px] text-[30px] relative z-10 leading-tight font-bold">Power Up Your <i className=" text-colorBlueDeep">Brand</i> with Expert <br /> E-commerce, Branding & Marketing <br /> Solutions!</header>
                 <div className="sm:w-[30%] w-[80%] py-6 m-auto">
                     <Button text="Get started" onClick={() => { }} />
                 </div>
