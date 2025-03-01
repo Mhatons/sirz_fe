@@ -1,4 +1,4 @@
-import { elipseImg, ExperticeImgOne, ExperticeImgThree, ExperticeImgTwo, rectangleDarkBlue } from "../../../assets";
+import { elipseImg, ExperticeImgOne, ExperticeImgThree, ExperticeImgTwo, rectangleBlue } from "../../../assets";
 import HeaderFormat from "../../../components/header";
 import ImageCard from "../../../components/layout/cards/imageCard";
 
@@ -25,7 +25,7 @@ export default function OurExpertise() {
     return (
         < section
             style={{
-                backgroundImage: `url(${rectangleDarkBlue})`,
+                backgroundImage: `url(${rectangleBlue})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
