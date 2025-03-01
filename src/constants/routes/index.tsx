@@ -47,8 +47,12 @@ const routes = (user: Iuser) =>
                     path: (ROUTES.PROJECTS.PATH),
                     element: (ROUTES.PROJECTS.ELEMENT),
                 },
-            ]
-        }
+                {
+                    path: (ROUTES.WELCOME.PATH),
+                    element: (ROUTES.WELCOME.ELEMENT),
+                },
+            ],
+        },
     ])
 
 export default routes;

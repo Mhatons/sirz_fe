@@ -79,13 +79,10 @@ export default function NavBar() {
                     {menuItem.map((item, index) => (
                         <li
                             className={`whitespace-nowrap flex items-center gap-2 lg:text-sm text-[12px] hover:text-colorBlueDeep 
-                                ${location.pathname === item.action
-                                    ? "text-colorBlueDeep" : ""}
-                                border-transparent border-b-2 cursor-pointer`}
-                            // ${location.pathname === item.action || item.action === 'services' && location.pathname.includes('/services/') || item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details") ? "border-rose-700" : ""} 
-                            // ${location.pathname.toLowerCase() === item.action.toLowerCase() ||
-                            //     item.action.toLowerCase() === 'services' && location.pathname.toLowerCase().includes('/services/') ||
-                            //     item.action === ROUTES.PROJECTS.PATH && location.pathname.includes("project-details")
+                                ${location.pathname.startsWith(item.action) && item.action !== ""
+                                    ? "text-colorBlueDeep"
+                                    : ""
+                                } cursor-pointer`}
                             onClick={() => {
                                 if (item.action === 'services') {
                                     // toggleShowServices() 
