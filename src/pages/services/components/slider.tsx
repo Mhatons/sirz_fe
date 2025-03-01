@@ -16,10 +16,10 @@ export default function Slider() {
     }, [totalCards]);
 
     return (
-        <section className="relative w-full dark:bg-background_dark bg-background_light pb-16">
+        <section className="relative w-full dark:bg-background_dark bg-background_light pb-1">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <div className="relative flex items-center justify-center w-full ">
-                    <div className="relative flex justify-center w-[900px] overflow-x-scroll h-[250px]">
+                    <div className="relative flex justify-center w-full overflow-x-scroll hideScrollBar h-[400px]">
                         {brandSliderImg.map((serviceImg, index) => {
                             const relativeIndex = (index - currentIndex + totalCards) % totalCards;
                             const isActive = relativeIndex === Math.floor(visibleCards / 2); // Center card
