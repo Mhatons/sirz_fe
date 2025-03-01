@@ -1,37 +1,41 @@
 import { sirzLogoWhite } from '../../assets';
 import { socialLinks } from '../../utils';
 import { FacebookIcon, InstagramIcon, LinkedlnIcon } from '../../assets/icons/svg';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../constants/routes/desc';
 
-const company = [
-  "Company",
-  "Home",
-  "About us",
-  "Our Blog",
-  "Contact us",
-];
-
-const services = [
-  "Our Services",
-  "E-commerce",
-  "Branding",
-  "Digital Marketing",
-];
-
-const projects = [
-  "Our Projects",
-  "E-commerce",
-  "E-book Designs",
-  "Branding",
-  "Social Media Posts",
-];
-
-const links = [
-  "Quick Links",
-  "Terms & Conditions",
-  "Privacy Policy",
-];
 
 export default function Footer() {
+  const company = [
+    { label: "Company", url: "#" },
+    { label: "Home", url: ROUTES.HOME.PATH },
+    { label: "About us", url: ROUTES.ABOUT.PATH },
+    { label: "Our Blog", url: ROUTES.BLOG.PATH },
+    { label: "Contact us", url: ROUTES.CONTACT.PATH },
+  ];
+
+  const services = [
+    { label: "Our Services", url: "#" },
+    { label: "E-commerce", url: ROUTES.SERVICE_ECOMMERCE.PATH },
+    { label: "Branding", url: ROUTES.SERVICE_BRANDING.PATH },
+    { label: "Digital Marketing", url: ROUTES.SERVICE_DIGITALMARKETING.PATH },
+  ];
+
+  const projects = [
+    { label: "Our Projects", url: "#" },
+    { label: "E-commerce", url: ROUTES.SERVICE_ECOMMERCE.PATH },
+    { label: "E-book Designs", url: "/projects/ebooks" },
+    { label: "Branding", url: ROUTES.SERVICE_BRANDING.PATH },
+    { label: "Social Media Posts", url: "/projects/social-media" },
+  ];
+
+  const links = [
+    { label: "Quick Links", url: "#" },
+    { label: "Terms & Conditions", url: "/terms" },
+    { label: "Privacy Policy", url: "/privacy" },
+  ];
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -60,7 +64,7 @@ export default function Footer() {
                   {
                     company.map((item, index) => (
                       <ul key={index} className='text-white first:font-bold'>
-                        <li className='pt-8'>{item}</li>
+                        <li onClick={() => navigate(item.url)} className=' cursor-pointer pt-8'>{item.label}</li>
                       </ul>
                     ))
                   }
@@ -69,7 +73,7 @@ export default function Footer() {
                   {
                     services.map((item, index) => (
                       <ul key={index} className='text-white first:font-bold'>
-                        <li className='pt-8'>{item}</li>
+                        <li onClick={() => navigate(item.url)} className='pt-8 cursor-pointer'>{item.label}</li>
                       </ul>
                     ))
                   }
@@ -78,7 +82,7 @@ export default function Footer() {
                   {
                     projects.map((item, index) => (
                       <ul key={index} className='text-white first:font-bold'>
-                        <li className='pt-8'>{item}</li>
+                        <li onClick={() => navigate(item.url)} className='pt-8 cursor-pointer'>{item.label}</li>
                       </ul>
                     ))
                   }
@@ -87,11 +91,31 @@ export default function Footer() {
                   {
                     links.map((item, index) => (
                       <ul key={index} className='text-white first:font-bold'>
-                        <li className='pt-8'>{item}</li>
+                        <li onClick={() => navigate(item.url)} className='pt-8 cursor-pointer'>{item.label}</li>
                       </ul>
                     ))
                   }
                 </div>
+                {/* <div className="sm:col-span-3 max-sm:hidden max-sm:pt-10 grid sm:grid-cols-4 grid-cols-2 gap-4">
+                  {[company, services, projects, links].map((menu, menuIndex) => (
+                    <div key={menuIndex}>
+                      {menu.map((item, index) => (
+                        <ul key={index} className="text-white first:font-bold">
+                          <li className="pt-8">
+                            {item.url.startsWith("http") ? (
+                              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                {item.label}
+                              </a>
+                            ) : (
+                              // <Link to={item.url}>{item.label}</Link>
+                              <div></div>
+                            )}
+                          </li>
+                        </ul>
+                      ))}
+                    </div>
+                  ))}
+                </div> */}
               </div>
             </section>
           </div>

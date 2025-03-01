@@ -60,5 +60,6 @@ export interface IImageCard {
     classNames?: string;
     isClickable?: boolean,
     image: string
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    // onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }

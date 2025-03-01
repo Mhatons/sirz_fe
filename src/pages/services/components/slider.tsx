@@ -19,7 +19,7 @@ export default function Slider() {
         <section className="relative w-full dark:bg-background_dark bg-background_light pb-16">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <div className="relative flex items-center justify-center w-full ">
-                    <div className="relative flex justify-center w-[900px] h-[250px]">
+                    <div className="relative flex justify-center w-[900px] overflow-x-scroll h-[250px]">
                         {brandSliderImg.map((serviceImg, index) => {
                             const relativeIndex = (index - currentIndex + totalCards) % totalCards;
                             const isActive = relativeIndex === Math.floor(visibleCards / 2); // Center card

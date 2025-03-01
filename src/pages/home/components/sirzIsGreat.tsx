@@ -24,7 +24,7 @@ const data = [
 
 export default function SirzIsGreat() {
     return (
-        <div className=" relative pt-10 pb-20">
+        <div className=" relative sm:pt-10 pb-20">
             <div>
                 <img src={greatBgBorder} alt="" className="mb-[-90px]" />
                 <img src={greatBg} alt="" />
@@ -34,10 +34,10 @@ export default function SirzIsGreat() {
                     title="SIRz is great for people who..."
                     classNames="text-black"
                 />
-                <section className=" grid sm:grid-cols-3 pt-7 gap-x-5 gap-y-8">
+                <section className=" grid sm:grid-cols-3 pt-7 gap-x-5 gap-y-8 max-sm:w-[90%] max-sm:m-auto">
                     {
                         data.map((item, index) => (
-                            <div key={index} className=" bg-colorDefaultLight dark:bg-colorDark flex px-8 text-center items-center justify-center flex-col h-[270px] rounded-3xl">
+                            <div key={index} className=" bg-colorDefaultLight border dark:bg-colorDark flex px-8 text-center items-center justify-center flex-col h-[270px] rounded-3xl">
                                 <img src={blueBoxImg} alt="" />
                                 <div className="text-[20px] pt-4">{item.description}</div>
                             </div>
