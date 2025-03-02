@@ -24,8 +24,8 @@ export default function WhySirz() {
     return (
         <div className="sm:w-[85%] w-[90%] m-auto my-20">
             <HeaderFormat title="Why Sirz" classNames="text-black dark:text-white" />
-            <h4 className=" font-bold py-6 text-[27px] leading-9">The truth is, agencies are slow, pricey, and impersonal. Freelancers tend to provide inconsistent results. DIY tools? Barely scratch your itch like you want. We built SIRz for a better way, we offer;</h4>
-            <section className={`pr-4 py-6 rounded-xl grid sm:grid-cols-2 gap-8`}>
+            <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[20px] leading-9">The truth is, agencies are slow, pricey, and impersonal. Freelancers tend to provide inconsistent results. DIY tools? Barely scratch your itch like you want. We built SIRz for a better way, we offer;</h4>
+            <section className={`sm:pr-4 py-6 rounded-xl grid sm:grid-cols-2 gap-8`}>
                 {
                     data.map((item, index) => (
                         <section

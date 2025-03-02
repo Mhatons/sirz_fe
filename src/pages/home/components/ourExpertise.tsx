@@ -30,23 +30,25 @@ export default function OurExpertise() {
 
     return (
         < section
-            style={{
-                backgroundImage: `url(${rectangleBlue})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            className=" max-sm:pb-8 relative lg:h-[700px]" >
-            <div className="sm:pt-48 pt-36">
-                {/* <img src={rectangleBlue} alt="" className="w-full h-full object-cover object-center " /> */}
-                <div className=" absolute top-10 m-auto right-0 left-0 flex justify-center">
-                    <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
+            // style={{
+            //     backgroundImage: `url(${rectangleBlue})`,
+            //     backgroundSize: "cover",
+            //     backgroundPosition: "center",
+            // }}
+            className=" relative " >
+            <div className=" ">
+                <div className="">
+                    <img src={rectangleBlue} alt="" className="w-full sm:h-[200px] md:h-[150px] h-[100px] object-top object-cover " />
+                    <div className=" absolute top-3 z-10 m-auto right-0 left-0 flex justify-center">
+                        <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
+                    </div>
                 </div>
 
-                <div className=" ps-24 pb-10 text-left">
-                    <HeaderFormat title="Our Expertise" classNames="text-white" />
-                </div>
-                <div className="flex items-center justify-center m-auto">
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:w-[85%] w-[90%] gap-8">
+                <div className=" bg-colorBlueDeep pb-5 ">
+                    <div className=" sm:ps-24 ps-5 pb-10 text-left">
+                        <HeaderFormat title="Our Expertise" classNames="text-white" />
+                    </div>
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 sm:w-[85%] w-[90%] m-auto gap-8">
                         {
                             data.map((item, index) => (
                                 <div key={index}>

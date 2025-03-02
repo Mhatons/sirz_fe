@@ -66,39 +66,41 @@ export default function Projects() {
                 </div>
                 <img src={ProjectVector} alt="" className=" absolute sm:top-28 top-40 bottom-0 left-0 right-0" />
             </section>
-            <section className='sm:w-[85%] w-[90%] m-auto'>
-                <div className=''>
-                    <HeaderFormat title="E-Commerce Websites" classNames="text-black dark:text-white" />
-                    <h4 className=" sm:font-bold max-sm:text-justify sm:py-6 py-4 sm:text-[27px] text-[17px] sm:leading-9">
-                        We create high-converting, user-friendly online stores that drive sales and enhance the shopping experience.
-                    </h4>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-8">
-                    <div>
-                        <img src={ProjectWebBg} alt="" />
+            <section className=" dark:bg-colorGreenDeeper py-10">
+                <div className='sm:w-[85%] w-[90%] m-auto'>
+                    <div className=''>
+                        <HeaderFormat title="E-Commerce Websites" classNames="text-black dark:text-white" />
+                        <h4 className=" sm:font-bold max-sm:text-justify sm:py-6 py-4 sm:text-[27px] text-[17px] sm:leading-9">
+                            We create high-converting, user-friendly online stores that drive sales and enhance the shopping experience.
+                        </h4>
                     </div>
-                    <div className=" max-sm:text-justify">
-                        <header className=" font-bold text-[20px] text-left">Domestica - Elevating Home Essentials Shopping</header>
+                    <div className="grid sm:grid-cols-2 gap-8">
                         <div>
-                            <header className=" font-bold py-4">About the Brand:</header>
-                            <p>
-                                Domestica is an e-commerce platform that offers a curated selection of premium home essentials.
-                                From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease.
-                            </p>
+                            <img src={ProjectWebBg} alt="" />
                         </div>
-                        <div>
-                            <header className=" font-bold py-4">Our Work:</header>
-                            <p>
-                                We developed a visually appealing, user-friendly e-commerce website for Domestica, ensuring a smooth shopping experience with intuitive navigation,
-                                engaging product displays, and a seamless checkout process. Our focus was on creating a modern, functional design that enhances user engagement and drives conversions.
-                            </p>
+                        <div className=" max-sm:text-justify">
+                            <header className=" font-bold text-[20px] text-left">Domestica - Elevating Home Essentials Shopping</header>
+                            <div>
+                                <header className=" font-bold py-4">About the Brand:</header>
+                                <p>
+                                    Domestica is an e-commerce platform that offers a curated selection of premium home essentials.
+                                    From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease.
+                                </p>
+                            </div>
+                            <div>
+                                <header className=" font-bold py-4">Our Work:</header>
+                                <p>
+                                    We developed a visually appealing, user-friendly e-commerce website for Domestica, ensuring a smooth shopping experience with intuitive navigation,
+                                    engaging product displays, and a seamless checkout process. Our focus was on creating a modern, functional design that enhances user engagement and drives conversions.
+                                </p>
+                            </div>
+                            <Button text="Visit the website" onClick={() => { }} className="sm:w-[40%] w-[90%] m-auto mt-8" />
                         </div>
-                        <Button text="Visit the website" onClick={() => { }} className="sm:w-[40%] w-[90%] m-auto mt-8" />
                     </div>
                 </div>
             </section>
 
-            <section className=" bg-colorLight dark:bg-colorDark pt-10 mt-10">
+            <section className=" bg-colorLight dark:bg-colorDark pt-10 ">
                 <div className='sm:w-[85%] w-[90%] m-auto'>
                     <div className=''>
                         <HeaderFormat title="E-book covers" classNames="text-black dark:text-white" />
@@ -154,7 +156,7 @@ export default function Projects() {
                         <h4 className=" sm:font-bold max-sm:text-justify pb-8 pt-4 sm:text-[22px] text-[17px] sm:leading-9">
                             Helping brands grow their online presence through engaging content, strategy, and community management.                    </h4>
                     </div>
-                    <div className=" grid lg:grid-cols-4 sm:grid-cols-2 gap-0">
+                    <div className=" grid lg:grid-cols-4 grid-cols-2 gap-0">
                         {
                             dataImg.map((img, index) => (
                                 <img key={index} src={img} alt="" className="" />

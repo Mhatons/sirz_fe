@@ -4,7 +4,7 @@ import HeaderFormat from "../../../components/header";
 export default function WhoAreWe() {
 
     return (
-        <div className="sm:w-[85%] w-[95%] m-auto pt-8 ">
+        <div className="sm:w-[85%] w-[90%] m-auto pt-8 ">
             <section className=" sm:grid grid-cols-2 gap-12 items-center text-sm justify-between pb-10">
                 <div className=" text-left pt-10">
                     <section className="flex items-center gap-3  pb-5">

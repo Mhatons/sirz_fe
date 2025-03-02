@@ -41,10 +41,10 @@ export default function About() {
                         Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
                     </h4>
                 </div>
-                <div className=' grid bg-colorLight dark:bg-colorDark sm:grid-cols-5 sm:gap-12 m-auto max-sm:w-[90%]'>
+                <div className=' md:grid bg-colorLight dark:bg-colorDark md:grid-cols-5 sm:gap-12 m-auto max-sm:p-5'>
                     <div className=' sm:col-span-3 relative sm:px-16 sm:py-10'>
                         <header className='sm:text-[45px] text-[30px] italic font-bold'>The Story Behind Sirz</header>
-                        <div className='pt-4 text-[18px] max-sm:text-justify'>
+                        <div className='pt-4 text-[18px] max-md:text-justify'>
                             The Story Behind Sirz
                             In 2021, the founder of Sirz launched a small online fashion store with a simple dream: to build something meaningful that could generate passive income while managing a full-time 9-5 job.
                             Like many, the goal was financial freedom. But the focus was off. Hours went into perfecting the website, arranging photoshoots, and stocking inventory—while the most important aspect was overlooked:
@@ -57,50 +57,54 @@ export default function About() {
                             <Button text="Schedule demo" onClick={() => { }} />
                         </div>
                         <div>
-                            <img src={startHalfImg} alt="" className=' absolute left-0 bottom-0' />
+                            <img src={startHalfImg} alt="" className=' absolute left-0 bottom-0 max-sm:w-[60px]' />
                         </div>
                     </div>
-                    <div className=' col-span-2'>
-                        <img src={AboutStoryBg} alt="" />
+                    <div className=' col-span-2 w-full'>
+                        <img src={AboutStoryBg} alt="" className=' object-cover w-full h-full' />
                     </div>
                 </div>
             </section>
             < section
-                style={{
-                    backgroundImage: `url(${rectangleDarkBlue})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-                className=" max-sm:pb-8 relative sm:h-[570px]" >
-                <div className="sm:pt-48 pt-36 text-white">
-                    <div className=" absolute top-10 m-auto right-0 left-0 flex justify-center">
+                // style={{
+                //     backgroundImage: `url(${rectangleDarkBlue})`,
+                //     backgroundSize: "cover",
+                //     backgroundPosition: "center",
+                // }}
+                className=" max-sm:pb-8 relative " >
+                <img src={rectangleDarkBlue} alt="" className=" w-full sm:h-[200px] md:h-[150px] h-[100px] object-top object-cover" />
+                <div className="  text-white  ">
+
+                    <div className=" absolute top-3 m-auto right-0 left-0 flex justify-center">
                         <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
                     </div>
 
-                    <div className="flex items-center justify-center flex-col text-center m-auto">
-                        <header className='sm:text-[45px] text-[30px] italic font-bold'>Let's grow your business together</header>
-                        <div className='text-[20px] sm:w-[50%] w-[90%] m-auto pt-4'>Let us manage your online business, processes, marketting, and strategy for an affordable monthly fee</div>
-                    </div>
-                    <div className=' sm:w-[20%] w-[90%] m-auto pt-10'>
-                        <button className={` tracking-widest bg-white text-black rounded-full w-full max-sm:mt-5
+                    <div className=' bg-colorGreenDeeper pb-10 right-0 left-0 flex items-center justify-center flex-col text-center m-auto'>
+                        <div className="flex items-center justify-center flex-col text-center m-auto">
+                            <header className='sm:text-[45px] text-[30px] italic font-bold'>Let's grow your business together</header>
+                            <div className='text-[20px] sm:w-[50%] w-[90%] m-auto pt-4'>Let us manage your online business, processes, marketting, and strategy for an affordable monthly fee</div>
+                        </div>
+                        <div className=' lg:w-[20%] sm:w-[40%] w-[90%] m-auto pt-10'>
+                            <button className={` tracking-widest bg-white text-black rounded-full w-full max-sm:mt-5
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                             `}
-                            onClick={() => { }}>
-                            Get started now!
-                        </button>
+                                onClick={() => { }}>
+                                Get started now!
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section >
             <section className='py-10'>
                 <div className='sm:w-[85%] w-[90%] m-auto'>
-                    <HeaderFormat title="About us.." classNames="text-black" />
+                    <HeaderFormat title="About us.." classNames="text-black dark:text-white" />
                     <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[17px] max-sm:text-justify sm:leading-9">
                         Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
                     </h4>
                 </div>
-                <div className=' sm:grid grid-cols-5 gap-10 m-auto sm:w-[85%]'>
+                <div className=' md:grid grid-cols-5 gap-10 m-auto sm:w-[85%]'>
                     <div className=' col-span-2 w-full'>
-                        <img src={AboutOfferBg} alt="" className='w-full' />
+                        <img src={AboutOfferBg} alt="" className='w-full h-full object-cover' />
                     </div>
                     <div className=' col-span-3 relative px-4 py-10'>
                         {

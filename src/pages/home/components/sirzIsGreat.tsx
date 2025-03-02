@@ -29,7 +29,7 @@ export default function SirzIsGreat() {
                 <img src={greatBgBorder} alt="" className="mb-[-90px]" />
                 <img src={greatBg} alt="" />
             </div>
-            <section className="sm:w-[85%] sm:absolute sm:top-40 max-sm:mt-[-160px] right-0 left-0 m-auto">
+            <section className="sm:w-[85%] bg-colorLight pb-10 sm:absolute sm:top-40 max-sm:mt-[-160px] right-0 left-0 m-auto">
                 <HeaderFormat
                     title="SIRz is great for people who..."
                     classNames="text-black"

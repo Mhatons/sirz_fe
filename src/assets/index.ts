@@ -73,6 +73,8 @@ import brandSilderOne from './imgs/image 31.svg';
 import brandSilderTwo from './imgs/image 32.svg';
 import brandSilderThree from './imgs/image 33.svg';
 
+// video
+import homeBg from './videos/shutterstock_1053576530-1.mov'
 
 
 
@@ -144,6 +146,10 @@ export const EcommerceImgBgTwo = ecommerceImgBgTwo;
 export const ExperticeImgOne = experticeImgOne;
 export const ExperticeImgTwo = experticeImgTwo;
 export const ExperticeImgThree = experticeImgThree;
+
+export const videos = {
+    HomeBg: homeBg
+}
 
 // _________________________________________________________________________
 
