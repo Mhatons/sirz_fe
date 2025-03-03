@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../../../components/common/button";
 import HeaderFormat from "../../../components/header";
+import { ROUTES } from "../../../constants/routes/desc";
 
 export default function WhoAreWe() {
+    const navigate = useNavigate()
 
     return (
         <div className="sm:w-[85%] w-[90%] m-auto pt-8 ">
@@ -12,7 +15,7 @@ export default function WhoAreWe() {
                     </section>
                     <header className="sm:text-[40px] text-[30px] leading-tight font-bold">Ready to build a <i className=" text-colorBlueDeep">brand</i> that thrives? Let's make it happen!</header>
                     <div className="sm:w-[40%] w-[80%] py-8 ">
-                        <Button text="Learn more" onClick={() => { }} />
+                        <Button text="Learn more" onClick={() => navigate(ROUTES.SERVICE_BRANDING.PATH)} />
                     </div>
                 </div>
                 <div className="text-[20px] leading-8 text-zinc-500 text-justify font-normal ">

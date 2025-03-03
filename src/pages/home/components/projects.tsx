@@ -2,8 +2,11 @@ import Button from "../../../components/common/button";
 import HeaderFormat from "../../../components/header";
 import { domesticiaImg, iroseImg, socialSupportImg } from "../../../assets";
 import ButtonCard from "../../../components/layout/cards/buttonCard";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../constants/routes/desc";
 
 export default function OurProjects() {
+    const navigate = useNavigate();
     return (
         <div className="py-10 w-[90%] m-auto">
             <HeaderFormat title="Explore our projects" classNames="text-black dark:text-white" />
@@ -12,7 +15,7 @@ export default function OurProjects() {
                     We take ideas and turn them into powerful digital solutions. Check out some of our latest projects and see how we help businesses thrive!
                 </h4>
                 <div className="sm:w-[20%] w-[80%]">
-                    <Button text="View all projects" onClick={() => { }} />
+                    <Button text="View all projects" onClick={() => navigate(ROUTES.PROJECTS.PATH)} />
                 </div>
             </section>
 
@@ -22,6 +25,7 @@ export default function OurProjects() {
                     title="Domesticia"
                     text="Domestica is an e-commerce platform that offers a curated selection of premium home essentials. From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease."
                     buttonText="view projects"
+                    onClick={() => navigate(ROUTES.PROJECTS.PATH)}
                 />
             </section>
 
@@ -31,6 +35,7 @@ export default function OurProjects() {
                     title="Irose Fashion"
                     text="Domestica is an e-commerce platform that offers a curated selection of premium home essentials. From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease."
                     buttonText="view projects"
+                    onClick={() => navigate(ROUTES.PROJECTS.PATH)}
                 />
                 <img src={iroseImg} alt="" className="  max-sm:hidden sm:col-span-2" />
             </section>
@@ -41,6 +46,7 @@ export default function OurProjects() {
                     title="Social media support"
                     text="Social Media Management Helping brands grow their online presence through engaging content, strategy, and community management."
                     buttonText="view projects"
+                    onClick={() => navigate(ROUTES.PROJECTS.PATH)}
                 />
             </section>
         </div>
