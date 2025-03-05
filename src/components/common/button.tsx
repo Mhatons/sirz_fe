@@ -13,7 +13,7 @@ export default function Button({ type, text, className, onClick, loading, disabl
 }) {
   return (
     <button className={` tracking-widest
-    ${type === "inverted" ? " bg-[#fff]  text-colorBlueDeep rounded-full " :
+    ${type === "inverted" ? " bg-[#fff] text-colorBlueDeep  rounded-full " :
         " bg-colorBlueDeep text-colorDefaultLight  rounded-full "}  
     ${className?.length ? ` ${className}` :
         'w-full'} flex align-center justify-center py-4 cursor-pointer text-[12px] px-8 font-normal floating-button 

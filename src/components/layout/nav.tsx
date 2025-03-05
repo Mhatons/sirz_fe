@@ -48,6 +48,10 @@ export default function NavBar() {
             action: ROUTES.BLOG.PATH,
         },
         {
+            title: "Case Studies",
+            action: ROUTES.CASE_STUDIES.PATH,
+        },
+        {
             title: "Contact us",
             action: ROUTES.CONTACT.PATH,
         },
@@ -61,7 +65,7 @@ export default function NavBar() {
     return (
         <div className={`fixed w-full z-40 bg-colorDefaultLight dark:bg-colorDark shadow-md`}>
             <div
-                className={` text-white sm:w-[95%] w-[90%] m-auto  flex justify-between transition-all duration-300 h-[60px] items-center `}
+                className={` text-white sm:w-[95%] w-[90%] m-auto flex justify-between transition-all duration-300 h-[70px] items-center `}
             >
                 <div
                     onClick={() => navigate(ROUTES.HOME.PATH)}

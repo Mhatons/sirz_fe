@@ -50,9 +50,9 @@ export default function Projects() {
         <div className='pt-8'>
             <section className="relative">
                 <div className=' sm:w-[75%] w-[90%] m-auto pb-10'>
-                    <div className=" sm:w-[50%] w-[90%] m-auto relative">
+                    <div className=" sm:w-[70%] w-[90%] m-auto relative">
                         <header className="sm:text-[50px] text-[30px] leading-tight text-center font-bold">Our Projects</header>
-                        <div className=" text-center pt-6 pb-3 ">
+                        <div className=" text-center pt-6 pb-3 sm:text-[25px] text-[18px] ">
                             <i>Discover how we’ve helped brands grow through digital marketing, branding, and design.</i>
                         </div>
                         <img src={GreenVector} alt="" className=" absolute sm:top-[-10px] top-[-45px] bottom-0 left-0 m-auto right-0" />
@@ -60,11 +60,11 @@ export default function Projects() {
                     <div className='py-4 relative z-10'>
                         <img
                             src={AboutHeroBg}
-                            alt="" className=' border rounded-3xl p-2 border-colorBlueDeep h-full w-full object-cover'
+                            alt="" className=' border rounded-[100px] p-2 border-colorBlueDeep h-full w-full object-cover'
                         />
                     </div>
                 </div>
-                <img src={ProjectVector} alt="" className=" absolute sm:top-28 top-40 bottom-0 left-0 right-0" />
+                <img src={ProjectVector} alt="" className=" absolute sm:top-36 top-40 bottom-0 left-0 right-0" />
             </section>
             <section className=" dark:bg-colorGreenDeeper py-10">
                 <div className='sm:w-[85%] w-[90%] m-auto'>
@@ -143,7 +143,7 @@ export default function Projects() {
                 <div className=" flex items-center hideScrollBar overflow-x-scroll gap-5">
                     {
                         brandImg.map((img, index) => (
-                            <img key={index} src={img} alt="" className="sm:min-w-[350px] min-w-[300px] rounded-2xl h-[350px]" />
+                            <img key={index} src={img} alt="" className="sm:w-[350px] min-w-[300px] rounded-2xl h-[350px]" />
                         ))
                     }
                 </div>

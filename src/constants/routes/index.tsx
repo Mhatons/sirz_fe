@@ -48,6 +48,22 @@ const routes = (user: Iuser) =>
                     element: (ROUTES.PROJECTS.ELEMENT),
                 },
                 {
+                    path: (ROUTES.CASE_STUDIES.PATH),
+                    element: (ROUTES.CASE_STUDIES.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH),
+                    element: (ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDIES_WELLNESS_STUDIO.PATH),
+                    element: (ROUTES.CASE_STUDIES_WELLNESS_STUDIO.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDIES_BRANDCOM.PATH),
+                    element: (ROUTES.CASE_STUDIES_BRANDCOM.ELEMENT),
+                },
+                {
                     path: (ROUTES.WELCOME.PATH),
                     element: (ROUTES.WELCOME.ELEMENT),
                 },

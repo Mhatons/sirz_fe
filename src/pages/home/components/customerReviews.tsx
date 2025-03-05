@@ -4,7 +4,7 @@ import HeaderFormat from "../../../components/header";
 export default function CustomerReviews() {
     return (
         <div className="bg-colorGreenDeeper text-colorDefaultLight py-10">
-            <div className=" w-[85%] m-auto relative">
+            <div className=" sm:w-[85%] w-[90%] m-auto relative">
                 <HeaderFormat title="Customer success stories" />
                 <h4 className=" sm:font-bold py-6 sm:text-[33px] text-[20px] max-sm:text-center">
                     "SIRz has been an exceptional partner for us. Their team is professional, knowledgeable,

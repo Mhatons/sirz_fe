@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { elipseImg, ExperticeImgOne, ExperticeImgThree, ExperticeImgTwo, rectangleBlue } from "../../../assets";
+import { ExperticeImgOne, ExperticeImgThree, ExperticeImgTwo, rectangleBlue, sirzLogo } from "../../../assets";
 import HeaderFormat from "../../../components/header";
 import ImageCard from "../../../components/layout/cards/imageCard";
 import { ROUTES } from "../../../constants/routes/desc";
@@ -39,8 +39,8 @@ export default function OurExpertise() {
             <div className=" ">
                 <div className="">
                     <img src={rectangleBlue} alt="" className="w-full sm:h-[200px] md:h-[150px] h-[100px] object-top object-cover " />
-                    <div className=" absolute top-3 z-10 m-auto right-0 left-0 flex justify-center">
-                        <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
+                    <div className=" bg-white absolute top-5 z-10 h-24 w-24 m-auto right-0 left-0 flex justify-center rounded-full">
+                        <img src={sirzLogo} alt="" className="w-[60px]" />
                     </div>
                 </div>
 

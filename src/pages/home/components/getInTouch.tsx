@@ -3,7 +3,7 @@ import { BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import { AiOutlineMail } from "react-icons/ai";
 import { TbClockHour5 } from "react-icons/tb";
-import { sampleImgNew } from "../../../assets";
+import { GetInTouchBg } from "../../../assets";
 
 const cardData = [
     {
@@ -32,7 +32,7 @@ export default function GetInTouch() {
     return (
         <div
             style={{
-                backgroundImage: `url(${sampleImgNew})`,
+                backgroundImage: `url(${GetInTouchBg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}

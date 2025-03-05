@@ -1,6 +1,8 @@
-import { AboutHeroBg, AboutOfferBg, AboutStoryBg, elipseImg, rectangleDarkBlue, startHalfImg } from '../../assets';
+import { AboutHeroBg, AboutOfferBg, AboutStoryBg, rectangleDarkBlue, sampleImgNew, sirzLogo, startHalfImg } from '../../assets';
 import HeaderFormat from '../../components/header';
 import Button from '../../components/common/button';
+import { ROUTES } from '../../constants/routes/desc';
+import { useNavigate } from 'react-router-dom';
 
 const data = [
     {
@@ -15,9 +17,28 @@ const data = [
         title: "03 E-business management",
         text: "Our unique approach, streamlined processes, and team structure are the backbone of our effective strategy and one of the key reasons we’re able to achieve results for our customers that outperform industry standards."
     },
+];
+
+const teamData = [
+    {
+        name: "Babafemi Sanusi",
+        position: "Business Growth Analyst",
+        image: sampleImgNew
+    },
+    {
+        name: "Babafemi Sanusi",
+        position: "Business Growth Analyst",
+        image: sampleImgNew
+    },
+    {
+        name: "Babafemi Sanusi",
+        position: "Business Growth Analyst",
+        image: sampleImgNew
+    },
 ]
 
 export default function About() {
+    const navigate = useNavigate()
     return (
         <div className='pt-8'>
             <section className=' sm:w-[75%] w-[90%] m-auto pb-10'>
@@ -36,7 +57,7 @@ export default function About() {
             </section>
             <section className='py-10'>
                 <div className='sm:w-[85%] w-[90%] m-auto'>
-                    <HeaderFormat title="About us.." classNames="text-black" />
+                    <HeaderFormat title="About us.." classNames="" />
                     <h4 className=" sm:font-bold max-sm:text-justify py-6 sm:text-[27px] text-[17px] sm:leading-9">
                         Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
                     </h4>
@@ -75,8 +96,8 @@ export default function About() {
                 <img src={rectangleDarkBlue} alt="" className=" w-full sm:h-[200px] md:h-[150px] h-[100px] object-top object-cover" />
                 <div className="  text-white  ">
 
-                    <div className=" absolute top-3 m-auto right-0 left-0 flex justify-center">
-                        <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
+                    <div className=" bg-white absolute top-5 z-10 h-20 w-20 m-auto right-0 left-0 flex justify-center rounded-full">
+                        <img src={sirzLogo} alt="" className="w-[60px]" />
                     </div>
 
                     <div className=' bg-colorGreenDeeper pb-10 right-0 left-0 flex items-center justify-center flex-col text-center m-auto'>
@@ -96,12 +117,6 @@ export default function About() {
                 </div>
             </section >
             <section className='py-10'>
-                <div className='sm:w-[85%] w-[90%] m-auto'>
-                    <HeaderFormat title="About us.." classNames="text-black dark:text-white" />
-                    <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[17px] max-sm:text-justify sm:leading-9">
-                        Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
-                    </h4>
-                </div>
                 <div className=' md:grid grid-cols-5 gap-10 m-auto sm:w-[85%]'>
                     <div className=' col-span-2 w-full'>
                         <img src={AboutOfferBg} alt="" className='w-full h-full object-cover' />
@@ -117,6 +132,46 @@ export default function About() {
                                 </div>
                             ))
                         }
+                    </div>
+                </div>
+            </section>
+
+            <section className='sm:w-[85%] w-[90%] m-auto'>
+                <div className=''>
+                    <HeaderFormat title="Meet the team" classNames="" />
+                    <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[17px] max-sm:text-justify sm:leading-9">
+                        Get to know the passionate minds shaping brands and delivering exceptional results
+                    </h4>
+                </div>
+                <div className=' grid md:grid-cols-3 sm:grid-cols-2 gap-3 pt-5 '>
+                    {
+                        teamData.map((item, index) => (
+                            <div key={index} className=' text-center'>
+                                <img src={item.image} alt="" className=' h-[350px] w-full object-cover' />
+                                <div className='py-4'>
+                                    <h4 className=' font-bold uppercase tracking-wider'>{item.name}</h4>
+                                    <p className='tracking-wider'>{item.position}</p>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </section>
+            <section>
+                <div className="bg-colorGreenDeeper text-colorDefaultLight py-10">
+                    <div className=" w-[85%] m-auto relative">
+                        <HeaderFormat title="Better together" />
+                        <h4 className=" py-6 sm:text-[33px] text-[20px] max-sm:text-center">
+                            We know that work is important, but so is play! We respect all of our partnerships,
+                            and we make every effort to engage in fun ways that solve critical problems and leave a smile on your face at the same time.
+                            We love our job and love helping our clients. Life is just too short to not enjoy every minute!
+                        </h4>
+                        <button className={` tracking-widest bg-white dark:text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
+                                                'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
+                                                `}
+                            onClick={() => navigate(ROUTES.CONTACT.PATH)}>
+                            Get in touch
+                        </button>
                     </div>
                 </div>
             </section>

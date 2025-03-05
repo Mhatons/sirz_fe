@@ -1,5 +1,4 @@
-import { blueBoxImg, greatBg, greatBgBorder } from "../../../assets";
-import HeaderFormat from "../../../components/header";
+import { greatBg } from "../../../assets";
 
 const data = [
     {
@@ -24,22 +23,23 @@ const data = [
 
 export default function SirzIsGreat() {
     return (
-        <div className=" relative sm:pt-10 pb-20">
-            <div>
-                <img src={greatBgBorder} alt="" className="mb-[-90px]" />
-                <img src={greatBg} alt="" />
-            </div>
-            <section className="sm:w-[85%] bg-colorLight pb-10 sm:absolute sm:top-40 max-sm:mt-[-160px] right-0 left-0 m-auto">
-                <HeaderFormat
-                    title="SIRz is great for people who..."
-                    classNames="text-black"
-                />
-                <section className=" grid sm:grid-cols-3 pt-7 gap-x-5 gap-y-8 max-sm:w-[90%] max-sm:m-auto">
+        <div
+            style={{
+                backgroundImage: `url(${greatBg})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+
+            }} className=" sm:pt-24 pt-36 pb-5">
+            <section className="sm:w-[85%] w-[90%] pb-10 m-auto">
+                <h4 className="text-white font-semibold">SIRz is great for people who?</h4>
+                <section className=" grid sm:grid-cols-3 pt-7 gap-x-5 gap-y-8 max-sm:m-auto">
                     {
                         data.map((item, index) => (
-                            <div key={index} className=" bg-colorDefaultLight border dark:bg-colorDark flex px-8 text-center items-center justify-center flex-col h-[270px] rounded-3xl">
-                                <img src={blueBoxImg} alt="" />
-                                <div className="text-[20px] pt-4">{item.description}</div>
+                            <div className="flex items-center justify-center bg-colorDefaultLight dark:bg-colorDark h-[200px] rounded-3xl">
+                                <div key={index} className=" grid grid-cols-5 m-auto gap-2  px-8 text-left">
+                                    <div className=" font-bold text-[30px] col-span-1 text-colorBlueDeep">0{index + 1}</div>
+                                    <div className="text-[20px] col-span-4 ">{item.description}</div>
+                                </div>
                             </div>
                         ))
                     }
