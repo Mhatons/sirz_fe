@@ -59,7 +59,7 @@ export default function OurProjects() {
             >
                 <div className=" bg-[#000000a8] py-8 ">
                     <div className=" w-[90%] m-auto grid sm:grid-cols-2 grid-cols-1 gap-8 ">
-                        <div className="sm:w-[90%] sm:pt-20">
+                        <div className="sm:w-[90%] sm:pt-20 text-white">
                             <HeaderFormat title={'Social media Management'} />
                             <div className="sm:py-10 py-2 sm:text-[30px] text-[20px] font-semibold">
                                 Helping brands grow their online presence through engaging content, strategy, and community management.

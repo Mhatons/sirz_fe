@@ -22,7 +22,7 @@ export default function MossGlowBeauty() {
             <section className="w-[90%] m-auto">
                 <img src={MossGlowBg2} alt="" />
             </section>
-            <section className=" bg-[#F0F2BC] my-10">
+            <section className=" bg-[#F0F2BC] text-black my-10">
                 <div className=" w-[90%] m-auto sm:grid grid-cols-2 pt-12">
                     <div>
                         <header className=" font-bold text-2xl col-span-1">The Client's Aim</header>
