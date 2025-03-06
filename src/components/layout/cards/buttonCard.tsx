@@ -6,7 +6,7 @@ export default function ButtonCard({ text, buttonText, title, onClick }: IButton
     return (
         <div className="bg-colorNeutra dark:bg-colorDark py-10 px-5 rounded-3xl ">
             <HeaderFormat title={title} />
-            <div className="py-10 text-[20px] text-justify">
+            <div className="py-10 text-[20px] text-center">
                 {text}
             </div>
             <div className="w-[80%] m-auto">

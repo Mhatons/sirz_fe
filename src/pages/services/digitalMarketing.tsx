@@ -40,7 +40,7 @@ export default function DigitalMarketing() {
     return (
         <section>
             <div className=" bg-colorLight dark:bg-colorDark">
-                <div className="w-full bg-colorGreenDeeper min-h-[60vh] flex items-center">
+                <div className="w-full bg-colorGreenDeeper sm:min-h-[60vh] min-h-[45vh] flex items-center">
                     <section className="w-[90%] sm:w-[80%] m-auto sm:p-6 text-center relative text-white">
                         <h1 className="text-[30px] sm:text-3xl lg:text-4xl relative z-10 font-medium mb-4 leading-tight">
                             Digital Marketing for <span className="italic text-colorGreen">Brands</span>
@@ -63,7 +63,7 @@ export default function DigitalMarketing() {
 
                 </div>
                 {/* Image Grid - Digital Hero Cards */}
-                <section className="w-[90%] mt-[-60px] m-auto grid sm:grid-cols-3 lg:grid-cols-4 sm:gap-6">
+                <section className="w-[90%] mt-[-60px] m-auto grid grid-cols-2 lg:grid-cols-4 sm:gap-6">
                     {DigitalHeroCard.map((item, index) => (
                         <div key={index} className="relative mb-6">
                             <img src={item} alt="" className="w-full h-auto" />

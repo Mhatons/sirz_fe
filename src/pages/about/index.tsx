@@ -1,4 +1,4 @@
-import { AboutHeroBg, AboutOfferBg, AboutStoryBg, rectangleDarkBlue, sampleImgNew, sirzLogo, startHalfImg } from '../../assets';
+import { AboutHeroBg, AboutOfferBg, AboutStoryBg, rectangleDarkBlue, sirzLogo, startHalfImg, TeamImgs } from '../../assets';
 import HeaderFormat from '../../components/header';
 import Button from '../../components/common/button';
 import { ROUTES } from '../../constants/routes/desc';
@@ -23,17 +23,17 @@ const teamData = [
     {
         name: "Babafemi Sanusi",
         position: "Business Growth Analyst",
-        image: sampleImgNew
+        image: TeamImgs.femiImg
+    },
+    {
+        name: "Araga Dominic",
+        position: " Growth Strategist",
+        image: TeamImgs.dominicImg
     },
     {
         name: "Babafemi Sanusi",
         position: "Business Growth Analyst",
-        image: sampleImgNew
-    },
-    {
-        name: "Babafemi Sanusi",
-        position: "Business Growth Analyst",
-        image: sampleImgNew
+        image: TeamImgs.emptyImg
     },
 ]
 
@@ -150,7 +150,7 @@ export default function About() {
                                 <img src={item.image} alt="" className=' h-[350px] w-full object-cover' />
                                 <div className='py-4'>
                                     <h4 className=' font-bold uppercase tracking-wider'>{item.name}</h4>
-                                    <p className='tracking-wider'>{item.position}</p>
+                                    <p className='tracking-wider capitalize'>{item.position}</p>
                                 </div>
                             </div>
                         ))

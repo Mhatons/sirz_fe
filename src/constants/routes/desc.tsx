@@ -12,6 +12,9 @@ import CaseStudies from "../../pages/caseStudies";
 import MossGlowBeauty from "../../pages/caseStudies/moss";
 import WellnessStudio360 from "../../pages/caseStudies/wellnessStudio";
 import BrandCom from "../../pages/caseStudies/brandcom";
+import DentiQ from "../../pages/caseStudies/dentiQ";
+import Nureva from "../../pages/caseStudies/nureva";
+import Purvia from "../../pages/caseStudies/purvia";
 
 export const ROUTES = {
     LAYOUT: {
@@ -59,20 +62,32 @@ export const ROUTES = {
         PATH: "/projects",
         ELEMENT: <Projects />
     },
-    CASE_STUDIES: {
-        PATH: "/case-studies",
+    CASE_STUDY: {
+        PATH: "/case-study",
         ELEMENT: <CaseStudies />
     },
-    CASE_STUDIES_MOSS_GLOW_BEAUTY: {
-        PATH: "/case-studies-moss-glow-beauty",
+    CASE_STUDY_MOSS_GLOW_BEAUTY: {
+        PATH: "/case-study-moss-glow-beauty",
         ELEMENT: <MossGlowBeauty />
     },
-    CASE_STUDIES_WELLNESS_STUDIO: {
-        PATH: "/case-studies-wellness_studio",
+    CASE_STUDY_WELLNESS_STUDIO: {
+        PATH: "/case-study-wellness_studio",
         ELEMENT: <WellnessStudio360 />
     },
-    CASE_STUDIES_BRANDCOM: {
-        PATH: "/case-studies-brandcom",
+    CASE_STUDY_BRANDCOM: {
+        PATH: "/case-study-brandcom",
         ELEMENT: <BrandCom />
+    },
+    CASE_STUDY_DENTIQ: {
+        PATH: "/case-study-dentiQ",
+        ELEMENT: <DentiQ />
+    },
+    CASE_STUDY_NUREVA: {
+        PATH: "/case-study-nureva",
+        ELEMENT: <Nureva />
+    },
+    CASE_STUDY_PURVIA: {
+        PATH: "/case-study-purvia",
+        ELEMENT: <Purvia />
     },
 }

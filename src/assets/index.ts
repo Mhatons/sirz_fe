@@ -35,6 +35,17 @@ import blogheroBg from './imgs/96aec9683a51a31c975244d6b6425770.jpeg';
 import projectVector from './imgs/Vector 4.svg';
 import greenVector from './imgs/Vector 5.svg';
 import projectWebBg from './imgs/Frame 1745.svg';
+import iroseBg from './imgs/iroseBg.png';
+
+import grProOne from './imgs/grPro (1).png';
+import grProTwo from './imgs/grPro (2).png';
+import grProThree from './imgs/grPro (3).png';
+import grProFour from './imgs/grPro (4).png';
+import grProFive from './imgs/grPro (5).png';
+
+import ebookDesignOne from './imgs/ebookDesign (1).png';
+import ebookDesignTwo from './imgs/ebookDesign (2).png';
+import ebookDesignThree from './imgs/ebookDesign (3).png';
 
 import contactBg from './imgs/Group 1.svg';
 import getInTouchBg from './imgs/getInTouchBg.svg';
@@ -122,6 +133,39 @@ import achievementImg_Three from './imgs/image 43.svg';
 import achievementImg_Four from './imgs/image 44.svg';
 import achievementImg_Five from './imgs/image 42.svg';
 
+// dentiQ
+import dentiqBg from './imgs/Frame 1817.png';
+import dentiqTeethImg from './imgs/Screenshot 2025-03-03 at 16.30.39 1.png';
+import dentiqWomanTeethImg from './imgs/image 60.png';
+import dentiqAchievedImgOne from './imgs/Screenshot 2025-03-03 at 16.19.27 2.png';
+import dentiqAchievedImgTwo from './imgs/image 59 (2).png';
+import dentiqAchievedImgThree from './imgs/Screenshot 2025-03-03 at 16.43.23 1.png';
+import dentiqAchievedImgFour from './imgs/Screenshot 2025-03-03 at 16.43.08 1.png';
+import dentiqAchievedImgFive from './imgs/Screenshot 2025-03-03 at 16.48.59 1.png';
+
+// Nuvera
+import nuveraBg from './imgs/image 62.png';
+import nuveraSection2Bg from './imgs/Frame 1745.png';
+
+import nuveraAchievedImgOne from './imgs/image 58.png';
+import nuveraAchievedImgTwo from './imgs/image 55.png';
+import nuveraAchievedImgThree from './imgs/image 54.png';
+import nuveraAchievedImgFour from './imgs/image 59.png';
+import nuveraAchievedImgFive from './imgs/image 42.png';
+import nuveraAchievedImgSix from './imgs/image 59 (1).png';
+
+// Purvia
+import purviaBg from './imgs/image 65.png';
+import purviaSection2Bg from './imgs/Frame 1745 (1).png';
+
+import purviaAchievedImgOne from './imgs/image 3.png';
+import purviaAchievedImgTwo from './imgs/Screenshot 2025-02-28 at 03.29.57 1.png';
+import purviaAchievedImgThree from './imgs/Screenshot 2025-02-28 at 03.29.57 1 (1).png';
+import purviaAchievedImgFour from './imgs/image 51.png';
+import purviaAchievedImgFive from './imgs/image 65 (1).png';
+import purviaAchievedImgSix from './imgs/image 3 (1).png';
+
+
 // case studies
 import caseMoss from './imgs/caseMoss.svg';
 import caseDentiq from './imgs/caseDentiq.svg';
@@ -129,7 +173,18 @@ import caseBrandcom from './imgs/caseBrandcom.svg';
 import casePurvia from './imgs/casePurvia.svg';
 import caseWellness from './imgs/caseWellness.svg';
 
+// Team members
+import femiImg from './imgs/Frame 1772.png';
+import dominicImg from './imgs/image 34.png';
+import emptyImg from './imgs/image 34 (1).png';
 
+// export section
+export const TeamImgs = {
+    femiImg,
+    dominicImg,
+    emptyImg
+
+};
 
 export const slatedFrameImg = slatedFrame;
 export const sirzLogo = sirz;
@@ -166,6 +221,21 @@ export const MainCardBg = mainCardBg;
 export const ProjectVector = projectVector;
 export const GreenVector = greenVector;
 export const ProjectWebBg = projectWebBg;
+export const IroseBg = iroseBg
+
+export const graphicProjects = [
+    grProFour,
+    grProFive,
+    grProThree,
+    grProTwo,
+    grProOne,
+];
+export const ebookDesigns = [
+    ebookDesignThree,
+    ebookDesignTwo,
+    ebookDesignOne,
+]
+
 
 export const BlogCardOne = blogCardOne;
 export const BlogCardTwo = blogCardTwo;
@@ -237,6 +307,44 @@ export const AchievementImg_Two = achievementImg_Two;
 export const AchievementImg_Three = achievementImg_Three;
 export const AchievementImg_Four = achievementImg_Four;
 export const AchievementImg_Five = achievementImg_Five;
+
+// dentiQ
+export const DentiqBg = dentiqBg;
+export const DentiqTeethImg = dentiqTeethImg;
+export const DentiqWomanTeethImg = dentiqWomanTeethImg;
+export const DentiqAchievedImgs = {
+    dentiqAchievedImgOne,
+    dentiqAchievedImgTwo,
+    dentiqAchievedImgThree,
+    dentiqAchievedImgFour,
+    dentiqAchievedImgFive,
+}
+
+// Nuvera
+export const NuveraBg = nuveraBg;
+export const NuveraSection2Bg = nuveraSection2Bg;
+export const NuveraAchievedImgs = {
+    nuveraAchievedImgOne,
+    nuveraAchievedImgTwo,
+    nuveraAchievedImgThree,
+    nuveraAchievedImgFour,
+    nuveraAchievedImgFive,
+    nuveraAchievedImgSix,
+};
+
+
+// Purvia
+export const PurviaBg = purviaBg;
+export const PurviaSection2Bg = purviaSection2Bg;
+export const PurviaAchievedImgs = {
+    purviaAchievedImgOne,
+    purviaAchievedImgTwo,
+    purviaAchievedImgThree,
+    purviaAchievedImgFour,
+    purviaAchievedImgFive,
+    purviaAchievedImgSix,
+};
+
 
 export const CaseStudiesImg = {
     caseMoss,

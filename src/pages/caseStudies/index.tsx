@@ -10,38 +10,38 @@ export default function CaseStudies() {
     const caseStudies = [
         {
             image: CaseStudiesImg.caseMoss,
-            url: ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH,
+            url: ROUTES.CASE_STUDY_MOSS_GLOW_BEAUTY.PATH,
             title: "Moss & Glow Beauty",
             text: "Moss & Glow Beauty is a skincare brand dedicated to offering natural, sustainable, and eco-friendly products."
         },
         {
             image: CaseStudiesImg.caseWellness,
-            url: ROUTES.CASE_STUDIES_WELLNESS_STUDIO.PATH,
+            url: ROUTES.CASE_STUDY_WELLNESS_STUDIO.PATH,
             title: "Wellness Studio 360",
             text: "Wellness Studio 360 is a home fitness and wellbeing brand designed for busy individuals who want to stay healthy, fit..."
         },
         {
             image: CaseStudiesImg.caseDentiq,
-            url: ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH,
+            url: ROUTES.CASE_STUDY_DENTIQ.PATH,
             title: "DentiQ",
             text: "DentiQ is a premium, patient-focused dental clinic and oral care brand that combines advanced technology with a ..."
         },
         {
             image: CaseStudiesImg.caseBrandcom,
-            url: ROUTES.CASE_STUDIES_BRANDCOM.PATH,
+            url: ROUTES.CASE_STUDY_BRANDCOM.PATH,
             title: "Brandcom",
             text: "Moss & Glow Beauty is a skincare brand dedicated to offering natural, sustainable, and eco-friendly products."
         },
         {
             image: CaseStudiesImg.casePurvia,
-            url: ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH,
+            url: ROUTES.CASE_STUDY_PURVIA.PATH,
             title: "Purvia",
             text: "DentiQ is a premium, patient-focused dental clinic and oral care brand that combines advanced technology with a ..."
         },
         {
             image: CaseStudiesImg.caseBrandcom,
-            url: ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH,
-            title: "Brandcom",
+            url: ROUTES.CASE_STUDY_NUREVA.PATH,
+            title: "Nureva",
             text: "Moss & Glow Beauty is a skincare brand dedicated to offering natural, sustainable, and eco-friendly products."
         },
     ]
@@ -50,7 +50,7 @@ export default function CaseStudies() {
             <section className="relative">
                 <div className=' sm:w-[75%] w-[90%] m-auto pb-10'>
                     <div className=" sm:w-[70%] w-[90%] m-auto relative z-20">
-                        <header className="sm:text-[50px] text-[30px] leading-tight text-center font-bold">Care Studies</header>
+                        <header className="sm:text-[50px] text-[30px] leading-tight text-center font-bold">Case Study</header>
                         <div className=" text-center pt-6 pb-3 sm:text-[25px] text-[18px] ">
                             <i>Discover how we’ve helped brands grow through digital marketing, branding, and design.</i>
                         </div>
@@ -77,20 +77,20 @@ export default function CaseStudies() {
             </section>
 
             <section>
-                <div className=" grid sm:grid-cols-3 sm:w-[85%] w-[90%] py-14 m-auto xxxm:grid-cols-2 gap-8">
+                <div className=" grid sm:grid-cols-2 sm:w-[85%] w-[90%] py-14 m-auto xxxm:grid-cols-2 gap-8">
                     {
                         caseStudies.map((data, index) => (
                             <div key={index} className=" pb-5 bg-colorLight dark:bg-colorDark rounded-md">
-                                <img src={data.image} alt="" className="w-full object-cover rounded-t-md h-[250px]" />
+                                <img src={data.image} alt="" className="w-full object-cover rounded-t-md " />
                                 <section className=" w-[80%] px-3">
                                     <div className="pt-4 pb-4">
                                         <header className=" sm:text-[22px] font-bold">{data.title}</header>
-                                        <div className=" sm:text-[13px] text-[10px]">{data.text}</div>
+                                        <div className=" text-[13px]">{data.text}</div>
                                     </div>
                                     <div className=" grid grid-cols-3 gap-3 text-black font-light">
-                                        <div className="bg-[#CFD7FE] text-[10px] py-1 rounded-full flex items-center justify-center whitespace-nowrap">Branding</div>
-                                        <div className="bg-[#CFD7FE] text-[10px] py-1 rounded-full flex items-center justify-center whitespace-nowrap">Visual identity</div>
-                                        <div className="bg-[#CFD7FE] text-[10px] py-1 rounded-full flex items-center justify-center whitespace-nowrap">Logo design</div>
+                                        <div className="bg-[#CFD7FE] text-[10px] py-2 rounded-full flex items-center justify-center whitespace-nowrap">Branding</div>
+                                        <div className="bg-[#CFD7FE] text-[10px] py-2 rounded-full flex items-center justify-center whitespace-nowrap">Visual identity</div>
+                                        <div className="bg-[#CFD7FE] text-[10px] py-2 rounded-full flex items-center justify-center whitespace-nowrap">Logo design</div>
                                     </div>
                                     <button
                                         onClick={() => navigate(data?.url)}

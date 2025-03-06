@@ -9,7 +9,7 @@ const cardData = [
     {
         icon: <BsTelephone />,
         title: "Phone",
-        text: "074 07245685"
+        text: "+447407245685 | +2348100652013"
     },
     {
         icon: <SlLocationPin />,
@@ -24,7 +24,7 @@ const cardData = [
     {
         icon: <TbClockHour5 />,
         title: "Hours",
-        text: ". Mon-Fri 9:00AM - 5:00AM | Sat-Sun 10:00AM-6:00AM"
+        text: ". Mon-Fri 9:00AM - 5:00PM | Sat-Sun 10:00AM-6:00PM"
     },
 ]
 

@@ -40,7 +40,7 @@ export default function Branding() {
                         <h1 className="font-bold md:text-[40px] text-[20px] w-full mb-7 md:w-[95%] ">
                             Define, design and build a standout <span className="italic text-colorBlueDeep">identity</span> for your business or product, locally and globally.
                         </h1>
-                        <Button text="Request a propodal" onClick={() => { }} className="min:w-[30%] mb-7 md:mb-0" />
+                        <Button text="Request a proposal" onClick={() => { }} className="min:w-[30%] mb-7 md:mb-0" />
                     </div>
                 </section>
             </div>

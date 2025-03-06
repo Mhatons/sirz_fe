@@ -49,7 +49,7 @@ export default function NavBar() {
         },
         {
             title: "Case Studies",
-            action: ROUTES.CASE_STUDIES.PATH,
+            action: ROUTES.CASE_STUDY.PATH,
         },
         {
             title: "Contact us",

@@ -48,20 +48,32 @@ const routes = (user: Iuser) =>
                     element: (ROUTES.PROJECTS.ELEMENT),
                 },
                 {
-                    path: (ROUTES.CASE_STUDIES.PATH),
-                    element: (ROUTES.CASE_STUDIES.ELEMENT),
+                    path: (ROUTES.CASE_STUDY.PATH),
+                    element: (ROUTES.CASE_STUDY.ELEMENT),
                 },
                 {
-                    path: (ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.PATH),
-                    element: (ROUTES.CASE_STUDIES_MOSS_GLOW_BEAUTY.ELEMENT),
+                    path: (ROUTES.CASE_STUDY_MOSS_GLOW_BEAUTY.PATH),
+                    element: (ROUTES.CASE_STUDY_MOSS_GLOW_BEAUTY.ELEMENT),
                 },
                 {
-                    path: (ROUTES.CASE_STUDIES_WELLNESS_STUDIO.PATH),
-                    element: (ROUTES.CASE_STUDIES_WELLNESS_STUDIO.ELEMENT),
+                    path: (ROUTES.CASE_STUDY_WELLNESS_STUDIO.PATH),
+                    element: (ROUTES.CASE_STUDY_WELLNESS_STUDIO.ELEMENT),
                 },
                 {
-                    path: (ROUTES.CASE_STUDIES_BRANDCOM.PATH),
-                    element: (ROUTES.CASE_STUDIES_BRANDCOM.ELEMENT),
+                    path: (ROUTES.CASE_STUDY_BRANDCOM.PATH),
+                    element: (ROUTES.CASE_STUDY_BRANDCOM.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDY_DENTIQ.PATH),
+                    element: (ROUTES.CASE_STUDY_DENTIQ.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDY_NUREVA.PATH),
+                    element: (ROUTES.CASE_STUDY_NUREVA.ELEMENT),
+                },
+                {
+                    path: (ROUTES.CASE_STUDY_PURVIA.PATH),
+                    element: (ROUTES.CASE_STUDY_PURVIA.ELEMENT),
                 },
                 {
                     path: (ROUTES.WELCOME.PATH),

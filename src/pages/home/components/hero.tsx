@@ -1,5 +1,6 @@
-import { HomeBanner, HomeBg, HomeVector } from "../../../assets";
+import { HomeBanner, HomeVector } from "../../../assets";
 import Button from "../../../components/common/button";
+import bgImg from '../../../assets/imgs/Screenshot (599).png'
 
 
 const cardContent = [
@@ -22,7 +23,23 @@ export default function Hero() {
     return (
         <section className={` bg-colorGreenDeeper relative pt-6`}>
             <div className=" sm:w-[90%] m-auto">
-                <img src={HomeBg} alt="" className=" max-sm:w-[90%] m-auto pb-5"  />
+                <img src={bgImg} alt="" className=" max-sm:w-[90%] m-auto pb-5" />
+                {/* <div className=" pb-5">
+                    <div className=" text-[50px] font-comfortaa font-semibold text-white grid grid-cols-2 gap-4">
+                        <div className="flex items-center gap-4">
+                            <BsCheck2All className=" text-colorGreen text-[80px]" />
+                            <h4 className=" whitespace-nowrap">Fuelling Brands</h4>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <BsCheck2All className=" text-colorGreen text-[80px]" />
+                            <h4 className=" whitespace-nowrap">Driving Sales</h4>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4 text-[50px] font-comfortaa font-semibold text-white justify-center">
+                        <BsCheck2All className=" text-colorGreen text-[80px]" />
+                        <h4 className=" ">Elevating Digital Experiences.</h4>
+                    </div>
+                </div> */}
                 <div className="relative border-l-[5px]  max-sm:h-[300px] border-b-[10px] sm:rounded-3xl border-colorGreen overflow-hidden">
                     <img src={HomeBanner} alt="" className="h-full object-cover" />
                     <div className="absolute top-0 bottom-0 right-0 left-0 bg-[#000000a8] flex items-center sm:ps-20">
