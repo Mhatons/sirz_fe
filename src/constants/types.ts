@@ -66,6 +66,7 @@ export interface IImageCard {
 
 export interface IButtonCard {
     text: string,
+    text2?: string,
     buttonText: string,
     title: string
     onClick: () => void;

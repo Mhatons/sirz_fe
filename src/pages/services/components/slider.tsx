@@ -19,7 +19,7 @@ export default function Slider() {
         <section className="relative w-full dark:bg-background_dark bg-background_light pb-1">
             <div className="max-w-6xl mx-auto px-6 text-center">
                 <div className="relative flex items-center justify-center w-full ">
-                    <div className="relative flex justify-center w-full overflow-x-scroll hideScrollBar h-[400px]">
+                    <div className="relative flex justify-center w-full overflow-x-scroll hideScrollBar h-[500px]">
                         {brandSliderImg.map((serviceImg, index) => {
                             const relativeIndex = (index - currentIndex + totalCards) % totalCards;
                             const isActive = relativeIndex === Math.floor(visibleCards / 2); // Center card
@@ -35,11 +35,11 @@ export default function Slider() {
                                     animate={{
                                         opacity: isActive ? 1 : 0.6, // Dim non-active cards
                                         scale: isActive ? 1.1 : 0.9, // Zoom in active card
-                                        x: (relativeIndex - Math.floor(visibleCards / 2)) * 120, // Positioning
+                                        x: (relativeIndex - Math.floor(visibleCards / 2)) * 200, // Positioning
                                         filter: isActive ? "blur(0px)" : "blur(0px)", // Blur non-active cards
                                     }}
                                     transition={{ duration: 1 }}
-                                    className="absolute sm:w-[350px] w-[300px] min-h-[290px] h-auto p-2 shadow-lg rounded-md cursor-pointer"
+                                    className="absolute sm:w-[600px] w-[300px] min-h-[400px] h-auto p-2 shadow-lg rounded-md cursor-pointer"
                                     style={{
                                         zIndex: isActive ? 10 : 5 - Math.abs(Math.floor(visibleCards / 2) - relativeIndex),
                                     }}

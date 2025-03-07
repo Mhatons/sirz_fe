@@ -1,6 +1,6 @@
 import { TbClockHour5 } from "react-icons/tb";
 import { useAppSelector } from "../../app/hook";
-import { ContactBg, elipseImg, rectangleDarkBlue, sirzLogo, sirzLogoWhite, starFullImg } from "../../assets";
+import { ContactBg, rectangleDarkBlue, sirzLogo, sirzLogoWhite, starFullImg } from "../../assets";
 import HeaderFormat from "../../components/header";
 import { allReduxSliceInfo } from "../../features/reduxSlice";
 import { AiOutlineMail } from "react-icons/ai";
@@ -77,8 +77,8 @@ export default function Contact() {
                 }}
                 className=" max-sm:pb-8 relative sm:h-[570px]" >
                 <div className="sm:pt-48 pt-36 text-white">
-                    <div className=" absolute top-10 m-auto right-0 left-0 flex justify-center">
-                        <img src={elipseImg} alt="" className="sm:w-[120px] w-[50px]" />
+                    <div className=" bg-white absolute top-5 z-10 h-20 w-20 m-auto right-0 left-0 flex justify-center rounded-full">
+                        <img src={sirzLogo} alt="" className="w-[60px]" />
                     </div>
 
                     <div className="sm:w-[75%] w-[90%] m-auto">

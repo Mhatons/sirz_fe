@@ -1,4 +1,3 @@
-import HeaderFormat from "../../../components/header";
 import { BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import { AiOutlineMail } from "react-icons/ai";
@@ -43,15 +42,17 @@ export default function GetInTouch() {
                 <div
                     className=" w-[85%] m-auto "
                 >
-                    <HeaderFormat title="Get in touch with us!" />
-                    <h4 className=" font-bold py-6 text-[27px] leading-9">
-                        Whether you're launching a business or scaling one, our blog keeps you informed and inspired. Read the latest now!
-                    </h4>
+                    <div className="text-center">
+                        <header>Get in touch with us!</header>
+                        <h4 className=" font-bold pb-8 pt-3 text-[27px] leading-9">
+                            Whether you're launching a business or scaling one, our blog keeps you informed and inspired. Read the latest now!
+                        </h4>
+                    </div>
                     <section className=" grid sm:grid-cols-2 gap-8 ">
                         {
                             cardData.map((item, index) => (
-                                <div key={index} className="bg-colorBlueDeep text-colorDefaultLight rounded-xl py-5 px-5 flex items-center gap-4">
-                                    <div className=" h-12 w-12 bg-colorDefaultLight text-colorDefaultDark flex items-center justify-center rounded-full text-[20px] font-semibold">
+                                <div key={index} className="bg-white text-black rounded-xl py-5 px-5 flex items-center gap-4">
+                                    <div className=" h-12 w-12 bg-colorBlueDeep text-white flex items-center justify-center rounded-full text-[20px] font-semibold">
                                         {item.icon}
                                     </div>
                                     <div>

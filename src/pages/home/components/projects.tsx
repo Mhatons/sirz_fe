@@ -31,7 +31,8 @@ export default function OurProjects() {
                     <img src={domesticiaImg} alt="" className=" sm:col-span-2" />
                     <ButtonCard
                         title="Domesticia"
-                        text="Domestica is an e-commerce platform that offers a curated selection of premium home essentials. From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease."
+                        text="Domestica is an e-commerce platform that offers a curated selection of premium home essentials."
+                        text2="From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease."
                         buttonText="view projects"
                         onClick={() => navigate(ROUTES.PROJECTS.PATH)}
                     />
@@ -41,7 +42,8 @@ export default function OurProjects() {
                     <img src={iroseImg} alt="" className=" sm:hidden sm:col-span-2" />
                     <ButtonCard
                         title="Irose Fashion"
-                        text="Domestica is an e-commerce platform that offers a curated selection of premium home essentials. From stylish decor to everyday household items, Domestica makes online shopping seamless, delivering quality products with ease."
+                        text="Irose Fashion is a trendy e-commerce brand that offers stylish and affordable clothing for fashion-forward individuals.
+                            We designed and developed a modern, user-friendly e-commerce platform that enhances the shopping experience. The website features an intuitive interface, seamless navigation, and visually appealing product displays, making it easy for customers to browse and shop effortlessly."
                         buttonText="view projects"
                         onClick={() => navigate(ROUTES.PROJECTS.PATH)}
                     />

@@ -35,7 +35,7 @@ const teamData = [
         position: "Business Growth Analyst",
         image: TeamImgs.emptyImg
     },
-]
+];
 
 export default function About() {
     const navigate = useNavigate()
@@ -46,7 +46,7 @@ export default function About() {
                 <div className='py-4'>
                     <img
                         src={AboutHeroBg}
-                        alt="" className=' border rounded-3xl p-2 border-colorBlueDeep h-full w-full object-cover' />
+                        alt="" className=' border rounded-[100px] p-2 border-colorBlueDeep h-full w-full object-cover' />
                 </div>
             </section>
             <section className=' bg-colorGreenDeeper py-10 text-white font-normal italic'>
@@ -65,7 +65,7 @@ export default function About() {
                 <div className=' md:grid bg-colorLight dark:bg-colorDark md:grid-cols-5 sm:gap-12 m-auto max-sm:p-5'>
                     <div className=' sm:col-span-3 relative sm:px-16 sm:py-10'>
                         <header className='sm:text-[45px] text-[30px] italic font-bold'>The Story Behind Sirz</header>
-                        <div className='pt-4 text-[18px] max-md:text-justify'>
+                        <div className='pt-4 text-[18px] max-md:text-justify leading-9'>
                             The Story Behind Sirz
                             In 2021, the founder of Sirz launched a small online fashion store with a simple dream: to build something meaningful that could generate passive income while managing a full-time 9-5 job.
                             Like many, the goal was financial freedom. But the focus was off. Hours went into perfecting the website, arranging photoshoots, and stocking inventory—while the most important aspect was overlooked:
@@ -166,7 +166,7 @@ export default function About() {
                             and we make every effort to engage in fun ways that solve critical problems and leave a smile on your face at the same time.
                             We love our job and love helping our clients. Life is just too short to not enjoy every minute!
                         </h4>
-                        <button className={` tracking-widest bg-white dark:text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
+                        <button className={` tracking-widest bg-white text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                                 `}
                             onClick={() => navigate(ROUTES.CONTACT.PATH)}>

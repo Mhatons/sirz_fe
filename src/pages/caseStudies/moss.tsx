@@ -1,4 +1,4 @@
-import { AchievementImg_Five, AchievementImg_Four, AchievementImg_one, AchievementImg_Three, AchievementImg_Two, MossClientImg, MossGlowBg, MossGlowBg2 } from "../../assets";
+import { AchievementImg_Five, AchievementImg_Four, AchievementImg_one, AchievementImg_Three, AchievementImg_Two, MossClientImg, MossGlowBg, MossGlowBg2, MossGlowLastBg } from "../../assets";
 
 export default function MossGlowBeauty() {
     return (
@@ -95,7 +95,7 @@ export default function MossGlowBeauty() {
             </section>
 
             <section className="relative my-10">
-                <img src={MossGlowBg} alt="" className=" sm:h-[500px] h-[250px] w-full object-cover" />
+                <img src={MossGlowLastBg} alt="" className=" sm:h-[500px] h-[250px] w-full object-cover" />
                 <div className=" bg-[#030202d1] absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
                     <div className=" w-[70%] m-auto text-center flex justify-center flex-col items-center">
                         <h4 className="font-bold sm:text-[30px] text-[20px] text-white pb-8">

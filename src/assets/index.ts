@@ -54,8 +54,8 @@ import homeBanner from './imgs/Image 1.svg';
 import instagramBg from './imgs/instagramBg.svg';
 import homeVector from './imgs/homeVector.svg';
 
-import iroseImage from './imgs/Frame 42 (1).svg';
-import domesticiaImage from './imgs/Frame 42.svg';
+import iroseImage from './imgs/Frame 42.png';
+import domesticiaImage from './imgs/Frame 42 (2).png';
 import socialSupportImage from './imgs/Frame 57.svg';
 
 import sampleImgMain from './imgs/sampleImg.jpg';
@@ -103,6 +103,7 @@ export const InstagramBg = instagramBg;
 export const HomeVector = homeVector;
 
 import mossGlowBg from './imgs/Frame 1807.svg';
+import mossGlowLastBg from './imgs/Frame 1807.png';
 import mossGlowBg2 from './imgs/Group 11.svg';
 import mossClientImg from './imgs/image 35.svg';
 
@@ -172,6 +173,7 @@ import caseDentiq from './imgs/caseDentiq.svg';
 import caseBrandcom from './imgs/caseBrandcom.svg';
 import casePurvia from './imgs/casePurvia.svg';
 import caseWellness from './imgs/caseWellness.svg';
+import caseNuvera from './imgs/Frame 1781.png';
 
 // Team members
 import femiImg from './imgs/Frame 1772.png';
@@ -278,6 +280,7 @@ export const NoteDark = noteDark;
 export const Note = note;
 export const Note2 = note2;
 export const MossGlowBg = mossGlowBg;
+export const MossGlowLastBg = mossGlowLastBg;
 export const MossGlowBg2 = mossGlowBg2;
 export const MossClientImg = mossClientImg;
 
@@ -352,6 +355,7 @@ export const CaseStudiesImg = {
     caseBrandcom,
     casePurvia,
     caseWellness,
+    caseNuvera,
 }
 
 // _________________________________________________________________________

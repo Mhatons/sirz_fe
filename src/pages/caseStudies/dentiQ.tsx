@@ -76,11 +76,11 @@ export default function DentiQ() {
 
             <section className=" w-[90%] m-auto py-5">
                 <header className="sm:text-[40px] font-bold">Branch Personality</header>
-                <div className="text-white grid grid-cols-4 sm:gap-5 gap-32 py-5 overflow-x-scroll">
-                    <div className=" rounded-full flex items-center justify-center py-2 max-sm:w-[120px] bg-colorBlueDeep">Trustworthy</div>
-                    <div className=" rounded-full flex items-center justify-center py-2 max-sm:w-[120px] bg-[#FD7000]">Friendly</div>
-                    <div className=" rounded-full flex items-center justify-center py-2 max-sm:w-[120px] bg-colorBlueDeep">Educational</div>
-                    <div className=" rounded-full flex items-center justify-center py-2 max-sm:w-[120px] bg-[#FD7000]">Appreachable</div>
+                <div className="text-white grid grid-cols-4 sm:w-[80%] m-auto sm:gap-5 gap-32 py-5 max-sm:overflow-x-scroll">
+                    <div className=" rounded-full flex items-center justify-center sm:py-4 py-2 max-sm:w-[120px] bg-colorBlueDeep">Trustworthy</div>
+                    <div className=" rounded-full flex items-center justify-center sm:py-4 py-2 max-sm:w-[120px] bg-[#FD7000]">Friendly</div>
+                    <div className=" rounded-full flex items-center justify-center sm:py-4 py-2 max-sm:w-[120px] bg-colorBlueDeep">Educational</div>
+                    <div className=" rounded-full flex items-center justify-center sm:py-4 py-2 max-sm:w-[120px] bg-[#FD7000]">Appreachable</div>
                 </div>
             </section>
 

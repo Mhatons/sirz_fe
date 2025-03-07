@@ -56,10 +56,10 @@ export default function WellnessStudio360() {
             </section>
             <section className=" w-[90%] m-auto py-10">
                 <header className=" font-bold sm:text-[40px] col-span-1">Brand Values</header>
-                <div className=" grid grid-cols-3 sm:gap-8 gap-2 py-5">
-                    <div className=" rounded-full py-2 text-sm bg-[#F4EB64] flex items-center justify-center">Accessibility</div>
-                    <div className=" rounded-full py-2 text-sm bg-[#CC824A] flex items-center justify-center">Accessibility</div>
-                    <div className=" rounded-full py-2 text-sm bg-[#D9FF65] flex items-center justify-center">Accessibility</div>
+                <div className=" grid grid-cols-3 sm:gap-5 gap-2 py-5 sm:w-[60%] m-auto">
+                    <div className=" rounded-full sm:py-4 py-2 text-sm bg-[#F4EB64] flex items-center justify-center">Accessibility</div>
+                    <div className=" rounded-full sm:py-4 py-2 text-sm bg-[#CC824A] flex items-center justify-center">Accessibility</div>
+                    <div className=" rounded-full sm:py-4 py-2 text-sm bg-[#D9FF65] flex items-center justify-center">Accessibility</div>
                 </div>
             </section>
             <section className="bg-[#222222] h-[450px] flex items-center relative justify-center">

@@ -39,10 +39,10 @@ export default function CaseStudies() {
             text: "DentiQ is a premium, patient-focused dental clinic and oral care brand that combines advanced technology with a ..."
         },
         {
-            image: CaseStudiesImg.caseBrandcom,
+            image: CaseStudiesImg.caseNuvera,
             url: ROUTES.CASE_STUDY_NUREVA.PATH,
             title: "Nureva",
-            text: "Moss & Glow Beauty is a skincare brand dedicated to offering natural, sustainable, and eco-friendly products."
+            text: "Nureva is a modern healthcare brand dedicated to accessible, compassionate, and patient-centered healthcare solutions..."
         },
     ]
     return (
@@ -82,10 +82,10 @@ export default function CaseStudies() {
                         caseStudies.map((data, index) => (
                             <div key={index} className=" pb-5 bg-colorLight dark:bg-colorDark rounded-md">
                                 <img src={data.image} alt="" className="w-full object-cover rounded-t-md " />
-                                <section className=" w-[80%] px-3">
+                                <section className=" sm:w-[80%] px-3">
                                     <div className="pt-4 pb-4">
                                         <header className=" sm:text-[22px] font-bold">{data.title}</header>
-                                        <div className=" text-[13px]">{data.text}</div>
+                                        <div className=" sm:text-[15px] text-[13px]">{data.text}</div>
                                     </div>
                                     <div className=" grid grid-cols-3 gap-3 text-black font-light">
                                         <div className="bg-[#CFD7FE] text-[10px] py-2 rounded-full flex items-center justify-center whitespace-nowrap">Branding</div>

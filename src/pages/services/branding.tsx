@@ -161,7 +161,7 @@ export default function Branding() {
                     <div className="w-[90%] m-auto p-6 sm:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                         {SlSocialInsta.map((item, index) => (
                             <section key={index}
-                                className="h-[11vh] flex justify-center items-center rounded-lg 
+                                className="h-[11vh] flex justify-center first:bg-colorGreen items-center rounded-lg 
                                hover:bg-colorGreen shadow-md cursor-pointer transition-all 
                                bg-white hover:text-white text-[#001f3e] text-center hoverColor 
                                rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg"

@@ -78,7 +78,7 @@ export default function Purvia() {
 
             <section className=" sm:w-[90%] w-[95%] m-auto py-10">
                 <header className="sm:text-[40px] font-bold">Branch Values</header>
-                <div className="text-white grid grid-cols-3 sm:gap-5 gap-1 py-5 ">
+                <div className="text-white grid grid-cols-3 sm:w-[70%] m-auto sm:gap-5 gap-1 py-5 ">
                     <div className=" rounded-full flex items-center justify-center py-3 bg-[#022047]">Cleanliness</div>
                     <div className=" rounded-full flex items-center justify-center py-3 bg-colorBlueDeep">Sustainability</div>
                     <div className=" rounded-full flex items-center justify-center py-3 bg-[#022047]">Luxury</div>
