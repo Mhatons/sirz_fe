@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import { BlogCardFour, BlogCardOne, BlogCardThree, BlogCardTwo, StarMultiple, StarMultipleSmall, startSmallImg } from "../../assets";
 import HeaderFormat from "../../components/header";
+import { ROUTES } from "../../constants/routes/desc";
 
 const Methods = [
     { num: "01", header: "Consultation", detail: "We begin with a discovery session to understand your brand, goals, and target audience. You'll also complete a brief questionnaire to help us tailor the perfect strategy for your business.", },
@@ -36,6 +38,7 @@ const methodsData = [
 ];
 
 export default function DigitalMarketing() {
+    const navigate = useNavigate();
 
     return (
         <section>
@@ -211,7 +214,7 @@ export default function DigitalMarketing() {
                     </h1>
                     <button
                         className="tracking-widest bg-white text-black rounded-full w-full sm:w-auto sm:min-w-[200px] flex items-center justify-center py-3 sm:py-4 cursor-pointer text-sm px-6 sm:px-8 font-medium floating-button"
-                        onClick={() => { }}>
+                        onClick={() => navigate(ROUTES.CONTACT.PATH)}>
                         Contant Us now
                     </button>
                 </div>

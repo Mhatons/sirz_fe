@@ -2,6 +2,7 @@ import { AboutHeroBg, BlogCardFour, BlogCardOne, BlogCardThree, BlogCardTwo, ebo
 import Button from "../../components/common/button";
 import HeaderFormat from "../../components/header";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../constants/routes/desc";
 
 
     // const data = [
@@ -96,7 +97,10 @@ export default function Projects() {
                                     engaging product displays, and a seamless checkout process. Our focus was on creating a modern, functional design that enhances user engagement and drives conversions.
                                 </p>
                             </div>
+                            <a href="http://Domesticia.com">
+
                             <Button text="Visit the website" onClick={() => navigate('#')} className="sm:w-[40%] w-[90%] m-auto mt-8" />
+                            </a>
                         </div>
                     </div>
 
@@ -221,7 +225,7 @@ export default function Projects() {
                     <button className={` bg-white text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                         'w-full flex align-center justify-center py-4 cursor-pointer text-[20px] px-8 font-medium floating-button  
                         `}
-                        onClick={() => { }}>
+                        onClick={() => navigate(ROUTES.CONTACT.PATH)}>
                         Get in touch
                     </button>
                 </div>

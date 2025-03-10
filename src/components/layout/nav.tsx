@@ -9,6 +9,7 @@ import NavbarDropdown from "../../constants/navbardropdown";
 import { IoMdClose } from "react-icons/io";
 import { sirzLogo, sirzLogoWhite } from "../../assets";
 import Button from "../common/button";
+import { calendyLink } from "../../utils";
 
 export default function NavBar() {
     // const [isOpen, setIsOpen] = useState(false);
@@ -105,7 +106,10 @@ export default function NavBar() {
 
                 <div className="flex items-center max-md:hidden ">
                     <DarkModeToggle />
-                    <Button text='Schedule a demo' className="" onClick={() => { }} />
+                    {/* <Button text='Schedule a demo' className="" onClick={() => { }} /> */}
+                    <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                        <Button text='Schedule a demo' className="" onClick={() => { }} />
+                    </a>
                 </div>
 
                 {/* display on smaller screen sizes */}

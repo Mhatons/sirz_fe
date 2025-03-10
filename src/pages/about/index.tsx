@@ -3,6 +3,7 @@ import HeaderFormat from '../../components/header';
 import Button from '../../components/common/button';
 import { ROUTES } from '../../constants/routes/desc';
 import { useNavigate } from 'react-router-dom';
+import { calendyLink } from '../../utils';
 
 const data = [
     {
@@ -75,7 +76,9 @@ export default function About() {
                             focusing on one key principle: success isn’t just about a good product or a well-designed website—it’s about truly understanding customers and executing with a clear, strategic plan.
                         </div>
                         <div className='sm:w-[40%] w-[90%] max-sm:m-auto pt-6 max-sm:pb-20'>
-                            <Button text="Schedule demo" onClick={() => { }} />
+                            <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                                <Button text="Schedule demo" onClick={() => { }} />
+                            </a>
                         </div>
                         <div>
                             <img src={startHalfImg} alt="" className=' absolute left-0 bottom-0 max-sm:w-[60px]' />
@@ -109,7 +112,7 @@ export default function About() {
                             <button className={` tracking-widest bg-white text-black rounded-full w-full max-sm:mt-5
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                             `}
-                                onClick={() => { }}>
+                                onClick={() => navigate(ROUTES.CONTACT.PATH)}>
                                 Get started now!
                             </button>
                         </div>

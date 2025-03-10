@@ -47,7 +47,7 @@ export default function Purvia() {
                 <div className=" w-[90%] m-auto sm:grid grid-cols-3 gap-2 py-10">
                     <header className=" font-bold sm:text-[40px] text-[25px] col-span-1">Brand Overview</header>
                     <div className=" col-span-2 sm:text-[20px] text-sm sm:leading-10 leading-8 text-justify">
-                        urvia is a modern cleaning brand dedicated to providing eco-friendly, effective, and innovative cleaning solutions.
+                        Purvia is a modern cleaning brand dedicated to providing eco-friendly, effective, and innovative cleaning solutions.
                         With a focus on maintaining cleanliness, hygiene, and a healthier environment, Purvia ensures that both homes and businesses have access to safe and sustainable cleaning products and services.
                         The brand name, inspired by "pure" and "via," represents its mission of delivering a cleaner, healthier world through innovation and responsibility.
                     </div>
@@ -65,7 +65,7 @@ export default function Purvia() {
                         <div>
                             <img src={PurviaSection2Bg} alt="" />
                         </div>
-                        <div className="text-justify m-auto">
+                        <div className="text-justify sm:leading-10 m-auto">
                             <p>
                                 Purvia sought a strong visual identity and compelling messaging that aligns with its mission to provide high-quality, non-toxic, and professional cleaning solutions.
                                 The brand also wanted to emphasize eco-consciousness, hygiene maintenance, and tailored cleaning services, ensuring that individuals and businesses receive safe, effective, and reliable cleaning solutions.

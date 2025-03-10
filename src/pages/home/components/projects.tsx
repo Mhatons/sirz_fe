@@ -67,7 +67,7 @@ export default function OurProjects() {
                                 Helping brands grow their online presence through engaging content, strategy, and community management.
                             </div>
                             <div className="w-[80%]">
-                                <Button text='Contact us to get started' onClick={() => ROUTES.CONTACT.PATH} />
+                                <Button text='Contact us to get started' onClick={() => navigate(ROUTES.CONTACT.PATH)} />
                             </div>
                         </div>
                         <div className=" grid grid-cols-2">

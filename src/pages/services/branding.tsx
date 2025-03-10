@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { BrandImgBg, BrandImgBgTwo, startSmallImg } from "../../assets";
 import Button from "../../components/common/button";
 import Slider from "./components/slider";
+import { ROUTES } from "../../constants/routes/desc";
+import { calendyLink } from "../../utils";
 
 const Methods = [
     { num: "01", header: "Brand Discovery", detail: "We uncover the core identity, values, and target audience that make your brand unique.", },
@@ -25,6 +28,7 @@ const SlSocialInsta = [
 ];
 
 export default function Branding() {
+    const navigate = useNavigate()
 
     return (
         <section>
@@ -133,7 +137,7 @@ export default function Branding() {
                         <button className={` tracking-widest bg-white text-black rounded-full mb-0 sm:mb-6 sm:w-[30%] w-[80%] max-md:m-auto max-sm:mt-5
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                             `}
-                            onClick={() => { }}>
+                            onClick={() => navigate(ROUTES.CONTACT.PATH)}>
                             Get in touch
                         </button>
                     </div>
@@ -161,12 +165,12 @@ export default function Branding() {
                     <div className="w-[90%] m-auto p-6 sm:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                         {SlSocialInsta.map((item, index) => (
                             <section key={index}
-                                className="h-[11vh] flex justify-center first:bg-colorGreen items-center rounded-lg 
-                               hover:bg-colorGreen shadow-md cursor-pointer transition-all 
-                               bg-white hover:text-white text-[#001f3e] text-center hoverColor 
+                                className="h-[11vh] flex justify-center first:bg-colorGreenDeeper first:border-b-[6px] border-colorGreen items-center rounded-lg 
+                               hover:bg-colorGreen shadow-md cursor-pointer transition-all py-8
+                               bg-white first:text-white text-[#001f3e] text-center hoverColor 
                                rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg"
                             >
-                                <h1 className="font-medium hover:text-white m-auto h-[90%] w-[99.9%] showthis flex justify-center items-center rounded-tl-lg rounded-tr-lg text-[#001f3e] mt-0">{item.title}</h1>
+                                <h1 className="font-medium hover:text-white m-auto h-[90%] w-[99.9%] showthis flex justify-center items-center rounded-tl-lg rounded-tr-lg mt-0">{item.title}</h1>
                             </section>
                         ))}
                     </div>
@@ -181,11 +185,13 @@ export default function Branding() {
                     <h1 className="text-white text-xl italic font-bold sm:text-2xl md:text-3xl mb-5 sm:mb-7 w-full sm:w-[50%] m-auto">
                         Ready to Take your Brand to the next level?
                     </h1>
-                    <button
-                        className="tracking-widest m-auto bg-white text-black rounded-full w-full sm:w-auto sm:min-w-[200px] flex items-center justify-center py-3 sm:py-4 cursor-pointer text-sm px-6 sm:px-8 font-medium floating-button"
-                        onClick={() => { }}>
-                        Schedule demo
-                    </button>
+                    <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                        <button
+                            className="tracking-widest m-auto bg-white text-black rounded-full w-full sm:w-auto sm:min-w-[200px] flex items-center justify-center py-3 sm:py-4 cursor-pointer text-sm px-6 sm:px-8 font-medium floating-button"
+                            onClick={() => { }}>
+                            Schedule a demo
+                        </button>
+                    </a>
                 </div>
             </div>
 

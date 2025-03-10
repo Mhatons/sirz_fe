@@ -65,7 +65,7 @@ export default function Nureva() {
                         <div>
                             <img src={NuveraSection2Bg} alt="" />
                         </div>
-                        <div className="text-justify m-auto">
+                        <div className="text-justify m-auto sm:leading-10">
                             <p>
                                 {`The goal was to develop a trustworthy and approachable healthcare brand that embodies compassion, integrity, excellence, wellness, and community. 
                             Nureva sought a strong visual identity and messaging that aligns with its mission of providing high-quality, patient-first healthcare services. 

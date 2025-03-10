@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { domesticiaImg, EcommerceImgBg, EcommerceImgBgTwo, StarHalfTop, startSmallImg } from "../../assets";
 import Button from "../../components/common/button";
 import HeaderFormat from "../../components/header";
+import { ROUTES } from "../../constants/routes/desc";
+import { calendyLink } from "../../utils";
 
 export default function Ecommerce() {
+    const navigate = useNavigate();
 
     const Methods = [
         { num: "01", header: "Store Setup", detail: "From choosing the right platform (Shopify, Amazon, and more) to designing a visually appealing storefront, we handle it all.", },
@@ -41,7 +45,7 @@ export default function Ecommerce() {
                         <button className={` tracking-widest bg-white text-black rounded-full sm:w-[23%] w-full mt-10 max-sm:mt-5
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                             `}
-                            onClick={() => { }}>
+                            onClick={() => navigate(ROUTES.CONTACT.PATH)}>
                             Let's talk
                         </button>
                         <img src={StarHalfTop} alt="" className=" top-0 absolute left-0" />
@@ -61,12 +65,16 @@ export default function Ecommerce() {
                     <h1 className="font-bold text-1xl sm:text-3xl italic w-full my-6 ">
                         E-commerce Business Setup from only £99.99
                     </h1>
-                    <Button text='Get started' onClick={() => { }} className="w-full sm:w-[50%] md:w-[40%]" />
+                    <Button
+                        text='Get started'
+                        onClick={() => navigate(ROUTES.CONTACT.PATH)}
+                        className="w-full sm:w-[50%] md:w-[40%]"
+                    />
                 </section>
 
                 {/* Right Section */}
                 <section className="">
-                    <p className= " text-justify text-base sm:text-lg">
+                    <p className=" text-justify text-base sm:text-lg">
                         Bring your E-commerce business desire to reality with a hands-on, results-driven approach that covers it all—strategy, measurement,
                         execution, and operations. Our team of copywriters, developers, designers, store managers, and social media managers, is all at your disposal.
                     </p>
@@ -77,7 +85,7 @@ export default function Ecommerce() {
             <div className="bg-colorLight dark:bg-colorDark py-8">
                 {/* Intro Section */}
                 <section className="w-[90%] sm:w-[85%] mx-auto pt-7 mb-10 sm:mb-14">
-                <HeaderFormat title="How it Works" />
+                    <HeaderFormat title="How it Works" />
 
                     <div>
                         <h1 className="text-base sm:text-lg md:text-xl font-bold">
@@ -116,12 +124,14 @@ export default function Ecommerce() {
                         With SIRZ, you’re not just saving money; you’re investing in a high-quality e-commerce store that’ll
                         actually make you money. We offer the whole package – setup, management, and support – to give you value for your money.
                     </h1>
-                    <button
-                        className="mt-5 sm:mt-0 m-auto tracking-widest bg-white text-black rounded-full w-[90%] sm:w-[9cm] flex items-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button"
-                        onClick={() => { }}
-                    >
-                        Schedule demo
-                    </button>
+                    <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                        <button
+                            className="mt-5 sm:mt-0 m-auto tracking-widest bg-white text-black rounded-full w-[90%] sm:w-[9cm] flex items-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button"
+                            onClick={() => { }}
+                        >
+                            Schedule demo
+                        </button>
+                    </a>
                 </div>
             </div>
 
@@ -227,11 +237,13 @@ export default function Ecommerce() {
                         Elevate your e-commerce store with our setup services.
                         We handle everything for a low monthly price, so you can focus on growing your business.
                     </h1>
-                    <button
-                        className="tracking-widest bg-white text-black rounded-full w-full sm:w-auto sm:min-w-[200px] flex items-center justify-center py-3 sm:py-4 cursor-pointer text-sm px-6 sm:px-8 font-medium floating-button"
-                        onClick={() => { }}>
-                        Schedule demo
-                    </button>
+                    <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                        <button
+                            className="tracking-widest bg-white text-black rounded-full w-full sm:w-auto sm:min-w-[200px] flex items-center justify-center py-3 sm:py-4 cursor-pointer text-sm px-6 sm:px-8 font-medium floating-button"
+                            onClick={() => { }}>
+                            Schedule demo
+                        </button>
+                    </a>
                 </div>
             </div>
 

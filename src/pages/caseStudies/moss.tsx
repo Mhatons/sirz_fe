@@ -1,4 +1,5 @@
 import { AchievementImg_Five, AchievementImg_Four, AchievementImg_one, AchievementImg_Three, AchievementImg_Two, MossClientImg, MossGlowBg, MossGlowBg2, MossGlowLastBg } from "../../assets";
+import { calendyLink } from "../../utils";
 
 export default function MossGlowBeauty() {
     return (
@@ -101,12 +102,14 @@ export default function MossGlowBeauty() {
                         <h4 className="font-bold sm:text-[30px] text-[20px] text-white pb-8">
                             By crafting a compelling and nature-inspired brand identity, Moss & Glow Beauty now stands out as a trusted and sustainable skincare brand, appealing to consumers who value transparency, innovation, and holistic beauty
                         </h4>
-                        <button className={` bg-white text-black rounded-full sm:w-[30%] w-full max-sm:mt-5
+                        <a href={calendyLink} target="_blank" rel="noopener noreferrer" className={` bg-white text-black rounded-full sm:w-[30%] w-full max-sm:mt-5
                                     'w-full flex align-center justify-center py-3 cursor-pointer text-[16px] px-8 font-medium floating-button  
-                                    `}
-                            onClick={() => { }}>
-                            Schedule a demo
-                        </button>
+                                    `}>
+                            <button 
+                                onClick={() => { }}>
+                                Schedule a demo
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>

@@ -18,4 +18,6 @@ export const socialLinks = {
     Instagram: "https://www.instagram.com/havenhiveinteriors/",
     Whatsapp: `https://wa.me/2348160900616?text=Hello,%20I%20am%20interested%20in%20your%20services!`,
     TikTok: "https://www.tiktok.com/@haven_hive_interiors?_t=ZM-8tyYK4Yd6yl&_r=1"
-}
+};
+
+export const calendyLink = `https://calendly.com/sirz-support/1-hour-business-solutions-consult?month=2025-03`
