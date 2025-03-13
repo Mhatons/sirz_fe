@@ -16,6 +16,8 @@ import { socialLinks } from '../../utils';
 import { sirzLogoWhite } from '../../assets';
 import WaterflowCards from './slider';
 import WaterflowCardTwo from './slider2';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../constants/routes/desc';
 
 const expectationData = [
     `A consultative approach, where we listen to your business needs and tailor our services accordingly. `,
@@ -68,6 +70,7 @@ const steps = [
 ]
 
 export default function OnboardingPage() {
+    const navigate = useNavigate();
     return (
         <div>
             <section className=' p-2'>
@@ -89,7 +92,7 @@ export default function OnboardingPage() {
                             <button className={` tracking-widest bg-white dark:text-black rounded-full sm:w-[30%] w-[90%] max-sm:mt-5
                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                 `}
-                                onClick={() => { }}>
+                                onClick={() => navigate(ROUTES.HOME.PATH)}>
                                 Get started
                             </button>
                         </div>
@@ -118,7 +121,7 @@ export default function OnboardingPage() {
                                 ))
                             }
                         </ul>
-                        <Button text='Learn more about us' onClick={() => { }} className=' mt-10 sm:w-[30%] m-auto' />
+                        <Button text='Learn more about us' onClick={() => navigate(ROUTES.ABOUT.PATH)} className=' mt-10 sm:w-[30%] m-auto' />
                     </div>
                 </div>
             </section>
