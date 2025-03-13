@@ -6,8 +6,8 @@ import { allReduxSliceInfo } from "../../features/reduxSlice";
 import { AiOutlineMail } from "react-icons/ai";
 import { SlLocationPin } from "react-icons/sl";
 import { BsTelephone } from "react-icons/bs";
-import Input from "../../components/common/input";
-import Button from "../../components/common/button";
+import ContactLetterForm from "./components/contactForm";
+import NewsLetterFunction from "./components/newsLetterForm";
 
 const cardData = [
     {
@@ -33,7 +33,8 @@ const cardData = [
 ]
 
 export default function Contact() {
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo)
+    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
+
     return (
         <div>
             <section className="bg-colorLight dark:bg-colorDefaultDark py-16">
@@ -122,60 +123,13 @@ export default function Contact() {
                         <div className="absolute top-3 right-0"><img src={isDarkMode ? sirzLogoWhite : sirzLogo} alt="" className=" h-3" /></div>
                     </header>
                     <div>
-                        <div className=" grid sm:grid-cols-2 gap-5 py-8">
-                            <Input
-                                name="First name"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Eg Chinonye"
-                            />
-                            <Input
-                                name="Last name"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Eg Umeh"
-                            />
-                            <Input
-                                name="Phone number"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Eg 905 889 9842"
-                            />
-                            <Input
-                                name="Email address"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Eg chinonye@gmail.com"
-                            />
-                            <Input
-                                name="Business name"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Eg Chinonye Limited"
-                            />
-                            <Input
-                                name="Service interested in"
-                                onChange={() => { }}
-                                type="text"
-                                value={""}
-                                placeholder="Select service"
-                            />
-
-                        </div>
-                        <div className=" w-[100%] flex justify-end">
-                            <Button text="Send message" onClick={() => { }} className="sm:w-[30%] w-[80%] max-sm:m-auto" />
-                        </div>
+                        <ContactLetterForm />
                     </div>
                 </div>
             </section>
 
             <section className=" bg-colorGreenDeeper py-10">
-                <div className="sm:w-[50%] w-[90%] m-auto text-white">
+                {/* <div className="sm:w-[50%] w-[90%] m-auto text-white">
                     <div className="flex items-center justify-center flex-col text-center m-auto">
                         <header className='sm:text-[45px] text-[30px] italic font-bold'>Join Our Newsletter</header>
                         <div className='text-[20px] m-auto pt-4'>Subscribe to receive our latest updates in your inbox!</div>
@@ -189,7 +143,8 @@ export default function Contact() {
                             Sign up
                         </button>
                     </div>
-                </div>
+                </div> */}
+                <NewsLetterFunction />
             </section>
         </div>
     )

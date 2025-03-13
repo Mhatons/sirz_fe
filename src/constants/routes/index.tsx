@@ -81,6 +81,10 @@ const routes = (user: Iuser) =>
                 },
             ],
         },
+        {
+            path: (ROUTES.DASHBOARD.PATH),
+            element: (ROUTES.DASHBOARD.ELEMENT),
+        },
     ])
 
 export default routes;

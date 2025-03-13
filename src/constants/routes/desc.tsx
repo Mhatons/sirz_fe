@@ -15,6 +15,7 @@ import BrandCom from "../../pages/caseStudies/brandcom";
 import DentiQ from "../../pages/caseStudies/dentiQ";
 import Nureva from "../../pages/caseStudies/nureva";
 import Purvia from "../../pages/caseStudies/purvia";
+import OnboardingPage from "../../pages/dashboard";
 
 export const ROUTES = {
     LAYOUT: {
@@ -24,6 +25,10 @@ export const ROUTES = {
     WELCOME: {
         PATH: "",
         ELEMENT: <Welcome />
+    },
+    DASHBOARD: {
+        PATH: "/dashboard",
+        ELEMENT: <OnboardingPage />
     },
     HOME: {
         PATH: "/home",

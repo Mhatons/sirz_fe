@@ -1,181 +1,154 @@
-// ContactForm.jsx
-import React, { FormEvent, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import Input from '../../../components/common/input';
-import TextArea from '../../../components/common/textarea';
-import Button from '../../../components/common/button';
-import { CheckIcon, CloseIcon, Spinner } from '../../../assets/icons/svg';
+import { useState } from "react";
+import Button from "../../../components/common/button";
+import axios from "axios";
+import { BASE_URL } from "../../../utils";
+import { toast } from "react-toastify";
+import Loader from "../../../features/loader";
 
-export default function ContactForm() {
-    const [promt, setPromt] = useState<boolean | null>(false)
-    const [isLoading, setIsLoading] = useState<boolean | null>(false)
-    const [err, setErr] = useState<string | null>("")
+const ContactLetterForm = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        businessName: "",
+        serviceType: "",
     });
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = event.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsLoading(true)
+        setIsLoading(true);
 
-        const emailPayload = {
-            to_email: 'ebubeezi@gmail.com,mhatons@gmail.com',
-            from_name: `${formData.name}`,
-            from_email: formData.email,
-            phone: formData.phone,
-            message: formData.message,
-        };
-        // initial email sending to the admin
-        emailjs.send(
-            'service_lurufoo',
-            'template_sexf70q',
-            emailPayload,
-            'yUx6glCLOOWwArpF0'
-        ).then((response) => {
-            console.log("email successfully sent", response.status, response.text);
-            setPromt(true);
+        const payload = {
+            from: formData.email,
+            subject: "New Contact Request",
+            text: `
+                <div>
+                <p>firstName: ${formData.firstName}</p>
+                <p>lastName: ${formData.lastName}</p>
+                <p>email: ${formData.email}</p>
+                <p>phone: ${formData.phone}</p>
+                <p>businessName: ${formData.businessName}</p>
+                <p>service: ${formData.serviceType}</p>
+                </div>
+            `,
+            html: `
+                <div>
+                <p>firstName: ${formData.firstName}</p>
+                <p>lastName: ${formData.lastName}</p>
+                <p>email: ${formData.email}</p>
+                <p>phone: ${formData.phone}</p>
+                <p>businessName: ${formData.businessName}</p>
+                <p>service: ${formData.serviceType}</p>
+                </div>
+            `,
+        }
+
+        try {
+            const response = await axios.post(`${BASE_URL}/contact`, payload)
+            console.log("response", response);
+            toast.success("Message sent successfully");
             setIsLoading(false);
-
-            // Send automated response back to the user
-            const autoReplyEmailPayload = {
-                to_name: `${formData.name}`,
-                to_email: formData.email,
-                message: "Thank you for contacting us! We have received your message and will get back to you soon."
-            };
-
-            emailjs.send(
-                'service_lurufoo',
-                'template_0fmsuos',
-                autoReplyEmailPayload,
-                'yUx6glCLOOWwArpF0'
-            )
-                .then((response) => {
-                    console.log('Auto-reply sent successfully!', response.status, response.text);
-                    setFormData({
-                        name: '',
-                        email: '',
-                        phone: '',
-                        message: '',
-                    });
-                })
-                .catch((error) => {
-                    console.error('Failed to send auto-reply:', error);
-                    setErr(error)
-                });
-        }).catch((error) => {
-            console.error('Failed to send email:', error);
-            setErr(error)
-        });
+        } catch (error) {
+            console.error("Error:", error);
+            toast.error("Error sending message");
+            setIsLoading(false);
+        }
     };
+
 
     return (
-        <div className="flex items-center justify-center relative">
-            <div className=" p-8 sm:rounded-lg shadow-lg w-full relative">
-                <h2 className="text-2xl font-bold mb-6 text-primary dark:text-secondary text-center">Contact Us</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className=''>
-                        {/* <Input
-                            label="First name"
-                            name="firstName"
-                            type="text"
-                            placeholder="Enter your first name"
-                            required
-                            value={formData.firstName} // Pass value here
-                            onChange={handleChange}
-                        /> */}
-                        <Input
-                            label="Your name(s)"
-                            name="name"
-                            type="text"
-                            placeholder="Enter your name"
-                            required
-                            value={formData.name} // Pass value here
-                            onChange={handleChange}
-                        />
-                        <Input
-                            label="Contact number"
-                            name="phone"
-                            type="number"
-                            placeholder="Enter your contact number"
-                            required
-                            value={formData.phone} // Pass value here
-                            onChange={handleChange}
-                        />
-                        {/* <Input
-                            label="Product"
-                            name="product"
-                            type="text"
-                            placeholder="Enter your product"
-                            value={formData.product} // Pass value here
-                            onChange={handleChange}
-                        /> */}
-                        <Input
-                            label="Email"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            required
-                            value={formData.email} // Pass value here
-                            onChange={handleChange}
-                        />
-                        {/* <Input
-                            label="Address"
-                            name="address"
-                            type="text"
-                            placeholder="Enter address"
-                            value={formData.address} // Pass value here
-                            onChange={handleChange}
-                        /> */}
-                    </div>
-                    <TextArea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Your Message"
-                        label='Message'
-                        required
-                    />
+        <form onSubmit={handleSubmit} className=" grid sm:grid-cols-2 gap-5 py-8 ">
 
-                    <div className=' py-4'>
-                        <Button
-                            onClick={() => { }}
-                            // text={"send message"}
-                            text={isLoading ? <Spinner /> : "send message"}
-                        />
-                    </div>
-                    <span className=' text-center w-full text-red-500'>{err}</span>
-                </form>
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Eg Chinonye'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'First name'}</div>
             </div>
+
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Eg Umeh'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'Last name'}</div>
+            </div>
+
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Eg chinonye@gmail.com'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'Email address'}</div>
+            </div>
+
+
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Eg 905 889 9842'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'Phone number'}</div>
+            </div>
+
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="businessName"
+                    value={formData.businessName}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Eg Chinonye Limited'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'Business name'}</div>
+            </div>
+
+            <div className="relative pt-2">
+                <input
+                    type="text"
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleChange}
+                    className={`w-full p-3 border border-gray-300 dark:bg-colorDefaultDark rounded-lg bg-tranparent dark:bg-background_dark placeholder:text-[12px] focus:outline-none focus:ring-1 dark:focus:ring-secondary focus:border-none focus:ring-primary`}
+                    placeholder={'Select service'}
+                />
+                <div className=" absolute top-0 left-3 bg-white px-2 text-[12px] text-zinc-500 font-comfortaa dark:bg-colorDefaultDark">{'Service interested in'}</div>
+            </div>
+
             {
-                promt && (
-                    <div className='fixed w-full top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-[#000000a8]'>
-                        <div className='bg-white w-96 rounded-2xl relative flex items-center justify-center pb-8 pt-10 px-4'>
-                            <div className='flex items-start gap-3'>
-                                <div>
-                                    <CheckIcon />
-                                </div>
-                                <div className=' font-serif text-right text-[18px] text-primary_color font-semibold'>
-                                    Your message has been sent successfully! do expect a quick feedback from us
-                                </div>
-                            </div>
-                            <div onClick={() => setPromt(false)} className='absolute top-3 right-3 cursor-pointer'>
-                                <CloseIcon />
-                            </div>
-                        </div>
+                isLoading ? (
+                    <Loader />
+                ) : (
+                    <div className=" sm:w-[60%] w-[80%] max-sm:m-auto flex justify-end">
+                        <Button text="Send message" onClick={() => { }} className="" />
                     </div>
                 )
             }
-        </div>
+        </form>
     );
-}
+};
+
+export default ContactLetterForm;

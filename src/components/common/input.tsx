@@ -4,10 +4,6 @@ export default function Input(props: IInputProps) {
     const { onChange, name, type, placeholder, value } = props
     return (
         <div className="relative pt-2">
-            {/* <label htmlFor="name" className={`${!classNames ? "mt-4" : ""} text-gray-700 dark:text-gray-100 absolute top-0 flex items-center gap-1`}>
-                {label}
-                {required && <RequiredIcon />}
-            </label> */}
             <input
                 type={type}
                 name={name}
