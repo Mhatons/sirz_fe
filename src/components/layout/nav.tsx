@@ -156,7 +156,9 @@ export default function NavBar() {
                     </ul>
                     <div className="flex items-center lg:hidden w-[90%] m-auto pt-8 ">
                         {/* <DarkModeToggle /> */}
-                        <Button text='Schedule a demo' className="" onClick={() => { }} />
+                        <a href={calendyLink} target="_blank" rel="noopener noreferrer">
+                            <Button text='Schedule a demo' className="" onClick={() => { }} />
+                        </a>
                     </div>
                 </div>
             </div>
