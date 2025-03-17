@@ -16,6 +16,7 @@ import DentiQ from "../../pages/caseStudies/dentiQ";
 import Nureva from "../../pages/caseStudies/nureva";
 import Purvia from "../../pages/caseStudies/purvia";
 import OnboardingPage from "../../pages/dashboard";
+import SalesFunnel from "../../pages/salesFunnel";
 
 export const ROUTES = {
     LAYOUT: {
@@ -29,6 +30,10 @@ export const ROUTES = {
     DASHBOARD: {
         PATH: "/dashboard",
         ELEMENT: <OnboardingPage />
+    },
+    SALES_FUNNEL: {
+        PATH: "/sales-funnel",
+        ELEMENT: <SalesFunnel />
     },
     HOME: {
         PATH: "/home",

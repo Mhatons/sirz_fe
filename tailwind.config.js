@@ -34,6 +34,9 @@ export default {
         colorDark: '#1B1F23',
         colorDefaultDark: '#000000',
       },
+      backgroundImage: {
+        salesFunnelBackgroundGradient: "linear-gradient(to right, #001F3E, #203DA3, #3752E9)",
+      },
       screens: {
         xxm: "950px",
         xxl: "500px",
