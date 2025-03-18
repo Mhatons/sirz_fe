@@ -152,19 +152,19 @@ export default function SalesFunnel() {
                         backgroundSize: "cover",
                         backgroundRepeat: 'no-repeat'
                     }}
-                    className='bg-salesFunnelBackgroundGradient'
+                    className='bg-salesFunnelBackgroundGradient '
                 >
-                    <div className=' grid grid-cols-2 pt-28 h-screen'>
+                    <div className=' grid grid-cols-2 pt-28 h-screena'>
                         <img src={rightImg} alt="" />
                         <img src={leftImg} alt="" />
                     </div>
                     <div className=' absolute top-0'>
-                        <div className=' flex items-center text-colorDefaultLight pt-20  justify-center sm:w-[60%] w-[90%] text-center m-auto flex-col h-screen'>
+                        <div className=' flex items-center text-colorDefaultLight pt-20  justify-center sm:w-[70%] w-[90%] text-center m-auto flex-col h-screen'>
                             <div>
                                 <img src={onboardinLogo} alt="" />
                             </div>
-                            <h4 className=' sm:text-[45px] text-[30px] font-bold pt-5'>Transform <i className=' text-colorGreen'>Your Business</i> with SIRz: Where Innovation Meets Growth</h4>
-                            <p className=' py-5'>
+                            <h4 className=' sm:text-[50px] text-[30px] font-bold pt-5'>Transform <i className=' text-colorGreen'>Your Business</i> with SIRz: Where Innovation Meets Growth</h4>
+                            <p className=' py-5 w-[63%] text-[15px] sm:text-[20px] mb-6'>
                                 We don’t just execute projects; we create success stories.
                                 Partner with us for top-tier e-commerce, branding, and digital marketing solutions.
                             </p>
@@ -174,7 +174,7 @@ export default function SalesFunnel() {
                                 onClick={() => navigate(ROUTES.HOME.PATH)}>
                                 Get started
                             </button>
-                            <div className=' flex gap-3 pt-10 sm:w-[70%] w-[90vw] overflow-x-scroll px-2 hideScrollBar m-auto text-colorGreen'>
+                            <div className=' flex gap-3 pt-7 sm:w-[70%] w-[90vw] overflow-x-scroll px-2 hideScrollBar m-auto text-colorGreen justify-center pb-10'>
                                 {
                                     serviceNames.map((data, index) => (
                                         <div>
@@ -236,7 +236,7 @@ export default function SalesFunnel() {
                 <div className=' sm:w-[60%] m-auto pb-10 text-center'>
                     <header className=' flex items-center justify-center py-5'>
                         <div>
-                            <h1 className=' font-semibold capitalize text-[30px]'>our <i className=' text-colorGreen'>services</i> - what we offer</h1>
+                            <h1 className=' font-semibold capitalize text-[35px]'>our <i className=' text-colorGreen'>services</i> - what we offer</h1>
                             <img src={titleBorder} alt="" className=' w-[100px] m-auto' />
                         </div>
                     </header>
@@ -261,7 +261,7 @@ export default function SalesFunnel() {
                 <div className=' sm:w-[60%] w-[95%] m-auto pb-10 text-center'>
                     <header className=' flex items-center justify-center py-5'>
                         <div>
-                            <h1 className=' font-semibold capitalize text-[30px]'>our previous <i className=' text-colorGreen'>projects</i></h1>
+                            <h1 className=' font-semibold capitalize text-[35px]'>our previous <i className=' text-colorGreen'>projects</i></h1>
                             <img src={titleBorder} alt="" className=' w-[100px] m-auto' />
                         </div>
                     </header>
@@ -318,11 +318,11 @@ export default function SalesFunnel() {
             <section className="bg-colorLight dark:bg-colorDefaultDark pt-6">
                 <div className="py-10">
                     <div className=' sm:w-[85%] w-[95%] m-auto '>
-                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[32px] text-colorBlueDeep text-[17px] sm:leading-9">
+                        <h4 className=" font-bold text-center pb-12 pt-4 sm:text-[40px] text-colorBlueDeep text-[20px] sm:leading-9">
                             Creative Graphics Designs & Ebook Designs
                         </h4>
                     </div>
-                    <div className=" flex gap-4 sm:ps-36 sm:w-[98%] w-[90%] ms-5 hideScrollBar overflow-x-scroll">
+                    <div className=" flex gap-4 sm:ps-16 sm:w-[98%] w-[90%] ms-0 hideScrollBar overflow-x-scroll">
                         {
                             ebookImg.map((img, index) => (
                                 <img key={index} src={img} alt="" className=" object-cover sm:h-[500px]" />
@@ -345,7 +345,7 @@ export default function SalesFunnel() {
             <section className="bg-colorLight dark:bg-colorDefaultDark pt-6">
                 <div className=" sm:w-[85%] w-[90%] m-auto py-10">
                     <div className=''>
-                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[32px] text-colorBlueDeep text-[17px] sm:leading-9">
+                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[40px] text-colorBlueDeep text-[20px] sm:leading-9">
                             Social Media Management                   </h4>
                     </div>
                     <div className=" grid grid-cols-4 gap-0">
@@ -373,7 +373,7 @@ export default function SalesFunnel() {
                         </div>
                         <Button text="Get started" onClick={() => { }} className=' w-[50%] max-sm:hidden' />
                     </div>
-                    <div>
+                    <div className='items-end justify-end flex'>
                         <img src={sealImgTwo} alt="" />
                     </div>
                 </div>
@@ -399,7 +399,7 @@ export default function SalesFunnel() {
                     <div className='grid sm:grid-cols-2 w-[90%] gap-4 m-auto py-10'>
                         {
                             customerReviews.map((data, index) => (
-                                <div key={index} className='text-center flex items-center flex-col border rounded-xl p-10'>
+                                <div key={index} className='text-center flex items-center flex-col border rounded-xl p-10 bg-[#001F3E99]'>
                                     <img src={data.img} alt="" className=' rounded-full h-32 w-32 object-cover ' />
                                     <img src={data.rate} alt="" />
                                     <p className='text-sm py-3'>
@@ -417,7 +417,7 @@ export default function SalesFunnel() {
             <section className=" bg-colorLight dark:bg-colorDark py-10">
                 <header className="sm:w-[45%] sm:ps-16 w-[90%] max-sm:m-auto">
                     <HeaderFormat title="Schedule a free consultation" />
-                    <h4 className=" sm:font-extrabold font-bold  max-sm:text-center pt-5 sm:text-[17px] text-[17px]">
+                    <h4 className=" sm:font-extrabold font-bold  max-sm:text-center pt-5 sm:text-[22px] text-[17px]">
                         Let’s Talk! Book a free consultation and discover how we can elevate your business
                     </h4>
                 </header>
