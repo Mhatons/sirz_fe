@@ -8,12 +8,12 @@ import { socialLinks } from '../../utils';
 // import { sirzLogoWhite } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes/desc';
-import { BlogCardFour, BlogCardOne, BlogCardThree, BlogCardTwo, sirzLogo, sirzLogoWhite } from '../../assets';
+import { BlogCardFour, BlogCardOne, BlogCardThree, BlogCardTwo, ClientRevO, ClientRevT, Fivestar, FiveStar, FunnelStartFinish, sirzLogoWhite } from '../../assets';
 import Button from '../../components/common/button';
 import HeaderFormat from '../../components/header';
-import ContactLetterForm from '../contact/components/contactForm';
-import { useAppSelector } from '../../app/hook';
-import { allReduxSliceInfo } from '../../features/reduxSlice';
+// import ContactLetterForm from '../contact/components/contactForm';
+// import { useAppSelector } from '../../app/hook';
+// import { allReduxSliceInfo } from '../../features/reduxSlice';
 
 // hero images
 import rightImg from './images/image 11.png';
@@ -47,9 +47,6 @@ import bookImgThree from './images/book (3).png';
 import sealImg from './images/Frame 1808.png';
 import sealImgTwo from './images/Frame 1807 (1).png';
 
-// customer reviews
-import profileImg from './images/profileImg.png';
-import ratingFour from './images/Frame 1815.png';
 
 
 const services = [
@@ -74,16 +71,16 @@ const customerReviews = [
     {
         review: `“ Working with SIRz completely transformed our brand. They didn’t just design a logo; they built an identity that truly reflects our vision. The attention to detail and creativity were beyond our expectations! “`,
         name: `James Osborne, `,
-        title: `Founder of Urban Trends Limited`,
-        img: profileImg,
-        rate: ratingFour
+        title: `Founder of Brandcom`,
+        img: ClientRevO,
+        rate: FiveStar,
     },
     {
         review: `From concept to execution, SIRz made the entire process seamless. Their project management approach ensured we stayed on track, and the results speak for themselves!`,
         name: `Aisha K.`,
-        title: `COO of Bright Innovations`,
-        img: profileImg,
-        rate: ratingFour
+        title: `COO of Moss and Glow Beauty`,
+        img: ClientRevT,
+        rate: Fivestar,
     },
 ]
 
@@ -134,9 +131,31 @@ const serviceNames = [
     "E-commerce"
 ]
 
+const steps = [
+    {
+        text: `We provide high-quality, conversion-focused sales funnel designs tailored to your brand. Expect engaging landing pages, optimized copy, and seamless integrations that drive results.`,
+        title: `Deliverables `,
+    },
+    {
+        text: `Our streamlined process ensures delivery within eight (8) weeks. From strategy to launch, we work efficiently while maintaining top-tier quality.`,
+        title: `Timeline `,
+    },
+    {
+        text: `We refine until it's right! Our process includes three (3) revision rounds to ensure your sales funnel aligns perfectly with your vision and goals.`,
+        title: `Revisions `,
+    },
+];
+
+const funnelNext = [
+    { tittle: `01 - Finalise Scope`, text: `We’ll define the project scope, ensuring every detail aligns with your goals. This step sets clear expectations and a solid foundation for success.` },
+    { tittle: `02 - Pay Deposit`, text: `Secure your project spot with an initial deposit. This allows us to allocate resources and begin crafting your high-converting sales funnel.` },
+    { tittle: `03 - Sign Contract`, text: `We’ll formalize our collaboration with a contract that outlines deliverables, timelines, and expectations—keeping everything transparent and aligned.` },
+    { tittle: `04 - Project Commencement`, text: `With everything set, we kick off your project! Our team will start bringing your vision to life with strategy, design, and seamless execution.` },
+]
+
 export default function SalesFunnel() {
     const navigate = useNavigate();
-    const { isDarkMode } = useAppSelector(allReduxSliceInfo);
+    // const { isDarkMode } = useAppSelector(allReduxSliceInfo);
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const toggleFAQ = (index: number) => {
@@ -358,6 +377,32 @@ export default function SalesFunnel() {
                 </div>
             </section>
 
+
+            <section className=' sbg-colorLight dark:bg-colorDark py-5 my-10 bg-[#001F3E]'>
+                <div className='w-[80%] m-auto'>
+                    <header className='py-5'>
+                        <h1 className=' font-semibold font-Helvetica text-white text-[35px]'>OUR PROCESS..</h1>
+                    </header>
+                    <div className=' grid sm:grid-cols-3 wd-[90%] m-auto gap-5'>
+                        {
+                            steps.map((data, index) => (
+                                <div key={index} className=' bg-white text-black px-4 py-5 rounded-xl'>
+                                    <h4 className=' font-bold py-2 text-[40px]' style={{
+                                        background: 'linear-gradient(10deg, #001F3E, #203DA3, #3752E9)',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                    }}>0{index + 1}</h4>
+                                    <h2 className='font-bold pb-1 text-base'>{data.title}</h2>
+                                    <div className='text-[17px]'>
+                                        {data.text}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+
             <section className=' py-8'>
                 <div className=' grid grid-cols-3 sm:w-[90%] w-[95%] m-auto max-sm:pb-8'>
                     <div>
@@ -380,9 +425,27 @@ export default function SalesFunnel() {
                 <Button text="Get started" onClick={() => { }} className=' w-[50%] sm:hidden m-auto ' />
             </section>
 
-            <section
-                className='bg-salesFunnelBackgroundGradient'
-            >
+            <section className='bg-dashboard-form-gradient py-8'>
+                <div className='sm:w-[80%] w-[90%] m-auto text-white'>
+                    <header>
+                        <h1 className='text-5xl font-Helvetica font-bold mb-10'>WHAT’S NEXT???</h1>
+                    </header>
+                    <section className='grid sm:grid-cols-2 grid-cols-1 gap-7'>
+                        {funnelNext.map((data, index) => (
+                            <div key={index}>
+                                <h2 className='font-bold text-lg pb-1'>{data.tittle}</h2>
+                                <p>{data.text}</p>
+                            </div>
+                        ))}
+                    </section>
+                </div>
+            </section>
+
+            <section>
+                <img src={FunnelStartFinish} alt="" />
+            </section>
+
+            <section className='bg-salesFunnelBackgroundGradient'>
                 <div
                     style={{
                         backgroundImage: `url(${rightLargeImg})`,
@@ -390,30 +453,31 @@ export default function SalesFunnel() {
                         backgroundSize: "cover",
                         backgroundRepeat: 'no-repeat'
                     }}
-                    className='py-5 text-white'
-                >
-                    <header className='text-center sm:w-[40%] w-[90%] m-auto'>
-                        <h2 className='text-[30px] font-bold'>Amazing feedback from our <i className=' text-colorGreen'>wonderful customers.</i></h2>
-                        <p>Our clients are at the heart of everything we do. Here’s what they have to say about working with SIRz!</p>
-                    </header>
-                    <div className='grid sm:grid-cols-2 w-[90%] gap-4 m-auto py-10'>
-                        {
-                            customerReviews.map((data, index) => (
-                                <div key={index} className='text-center flex items-center flex-col border rounded-xl p-10 bg-[#001F3E99]'>
-                                    <img src={data.img} alt="" className=' rounded-full h-32 w-32 object-cover ' />
-                                    <img src={data.rate} alt="" />
-                                    <p className='text-sm py-3'>
-                                        {data.review}
-                                    </p>
-                                    <b>{data.name}</b>
-                                    <p className='text-[12px]'>{data.title}</p>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    className='py-5 text-white'>
+                    <section className='w-[90%] m-auto'>
+                        <header className=' sm:w-[65%] w-[95%]'>
+                            <h2 className='text-6xl font-bold mb-5'>CLIENT’S REVIEW..</h2>
+                            <p className='text-[20px]'>Our clients are at the heart of everything we do. Here’s what they have to say about working with SIRz!</p>
+                        </header>
+                        <div className='grid sm:grid-cols-2 gap-4 m-auto py-10'>
+                            {
+                                customerReviews.map((data, index) => (
+                                    <div key={index} className='text-center flex items-center flex-col border rounded-xl p-10 bg-[#001F3E99]'>
+                                        <img src={data.img} alt="" className=' rounded-full h-32 w-32 object-cover ' />
+                                        <img src={data.rate} alt="" />
+                                        <p className='text-sm py-3'>
+                                            {data.review}
+                                        </p>
+                                        <b>{data.name}</b>
+                                        <p className='text-[12px]'>{data.title}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </section>
                 </div>
             </section>
-
+{/* 
             <section className=" bg-colorLight dark:bg-colorDark py-10">
                 <header className="sm:w-[45%] sm:ps-16 w-[90%] max-sm:m-auto">
                     <HeaderFormat title="Schedule a free consultation" />
@@ -434,6 +498,13 @@ export default function SalesFunnel() {
                     <div>
                         <ContactLetterForm />
                     </div>
+                </div>
+            </section> */}
+
+            <section className=' bg-[#FAFAFA]'>
+                <div className='py-8 w-[90%] m-auto'>
+                    <h1 className='sm:text-[85px] text-[65px] sm:w-[80%] w-[95%] font-bold mb-6 '>ANY QUESTIONS OR THOUGHTS? OR MAYBE YOU SHOULD SAY HELLO</h1>
+                    <p className='w-[90%] sm:w-[40%] text-[25px]'>Contact us via email on  <span className='underline'>[support@sirz.co.uk] or via</span> mobile on 074 07245685</p>
                 </div>
             </section>
 

@@ -13,11 +13,15 @@ import indexFour from './images/index (4).png';
 import indexFive from './images/index (5).png';
 import { FacebookIcon, InstagramIcon, LinkedlnIcon } from '../../assets/icons/svg';
 import { socialLinks } from '../../utils';
-import { sirzLogoWhite } from '../../assets';
+import { DashbordVector, sirzLogoWhite, VidDemonstration } from '../../assets';
 import WaterflowCards from './slider';
 import WaterflowCardTwo from './slider2';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes/desc';
+import HeaderFormat from '../../components/header';
+// import { useAppSelector } from '../../app/hook';
+// import { allReduxSliceInfo } from '../../features/reduxSlice';
+import DashboardLetterForm from '../contact/components/dashbordForm';
 
 const expectationData = [
     `A consultative approach, where we listen to your business needs and tailor our services accordingly. `,
@@ -71,6 +75,7 @@ const steps = [
 
 export default function OnboardingPage() {
     const navigate = useNavigate();
+    // const { isDarkMode } = useAppSelector(allReduxSliceInfo);
     return (
         <div>
             <section className=' p-2'>
@@ -209,6 +214,45 @@ export default function OnboardingPage() {
                             </div>
                         ))
                     }
+                </div>
+            </section>
+
+            <section className='bg-[#FAFAFA]'>
+                <section className=' pt-16 w-[95%] sm:w-[90%] m-auto pb-8'>
+                    <div className=' text-colorGreen italic font-bold text-[25px] max-sm:text-center sm:ps-20 text-center w-[70%] m-auto mb-6'>Take a quick tour - Watch this demonstration video on how you to use our client portal</div>
+                    <div className='pb-7'>
+                        <img src={VidDemonstration} alt="" className='rounded-tr-2xl rounded-tl-2xl' />
+                    </div>
+
+                    <div>
+                        <Button text="Client portal sign up" onClick={() => { }} className='sm:w-[250px] w-full' />
+                    </div>
+                </section>
+            </section>
+
+            <section className=" bg-colorLight dark:bg-colorDark py-10 bg-dashboard-form-gradient">
+                <header className="sm:w-[45%] sm:ps-16 w-[90%] max-sm:m-auto text-white">
+                    <HeaderFormat title="Schedule a free consultation" />
+                    <h4 className=" sm:font-extrabold font-bold  max-sm:text-center pt-5 sm:text-[22px] text-[17px]">
+                        Let’s Talk! Book a free consultation and discover how we can elevate your business
+                    </h4>
+                </header>
+                <div className='flex justify-center items-center mt-3'>
+                    <img src={DashbordVector} alt="" />
+                </div>
+                <div className=" sm:w-[60%] w-[90%] m-auto sm:mt-16 mt-10">
+                    {/* <header className="relative">
+                        <div className=" sm:w-[70%]">
+                            <h4 className=" font-bold">Let's get started</h4>
+                            <p className="  max-sm:text-justify pt-1 sm:text-[13px] text-[13px]">
+                                Please fill in the details correctly and let us know about the services you are interested in
+                            </p>
+                        </div>
+                        <div className="absolute top-3 right-0"><img src={isDarkMode ? sirzLogoWhite : sirzLogo} alt="" className=" h-3" /></div>
+                    </header> */}
+                    {/* <div> */}
+                        <DashboardLetterForm />
+                    {/* </div> */}
                 </div>
             </section>
 

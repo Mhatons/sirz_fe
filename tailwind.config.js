@@ -36,6 +36,8 @@ export default {
       },
       backgroundImage: {
         salesFunnelBackgroundGradient: "linear-gradient(to right, #001F3E, #203DA3, #3752E9)",
+        'dashboard-form-gradient': 'linear-gradient(90deg, #001F3E, #203DA3, #3752E9)',
+        'text-gradient': 'linear-gradient(90deg, #001F3E, #203DA3, #3752E9)',
       },
       screens: {
         xxm: "950px",
@@ -43,6 +45,9 @@ export default {
         xxxm: "400px",
         xxxxm: "350px"
       },
+      // backgroundImage: {
+      //   'custom-gradient': 'linear-gradient(90deg, #001F3E, #203DA3, #3752E9)',
+      // },
     },
   },
   plugins: [],

@@ -53,10 +53,16 @@ import homeBg from './imgs/homeWriteUp.svg';
 import homeBanner from './imgs/Image 1.svg';
 import instagramBg from './imgs/instagramBg.svg';
 import homeVector from './imgs/homeVector.svg';
+import dashbordVector from './imgs/Vector copy.svg'
+import fivestar from './imgs/fivestar.svg'
 
 import iroseImage from './imgs/Frame 42.png';
 import domesticiaImage from './imgs/Frame 42 (2).png';
 import socialSupportImage from './imgs/Frame 57.svg';
+import funnelStartFinish from './imgs/Frame 1851.svg';
+import fiveStar from './imgs/Frame 1815.svg';
+import clientRevO from './imgs/Frame 1799.svg';
+import clientRevT from './imgs/Frame 1799 (1).svg';
 
 import sampleImgMain from './imgs/sampleImg.jpg';
 
@@ -101,6 +107,8 @@ export const HomeBg = homeBg;
 export const HomeBanner = homeBanner;
 export const InstagramBg = instagramBg;
 export const HomeVector = homeVector;
+export const DashbordVector = dashbordVector;
+
 
 import mossGlowBg from './imgs/Frame 1807.svg';
 import mossGlowLastBg from './imgs/Frame 1807.png';
@@ -165,6 +173,7 @@ import purviaAchievedImgThree from './imgs/Screenshot 2025-02-28 at 03.29.57 1 (
 import purviaAchievedImgFour from './imgs/image 51.png';
 import purviaAchievedImgFive from './imgs/image 65 (1).png';
 import purviaAchievedImgSix from './imgs/image 3 (1).png';
+import vidDemonstration from './imgs/Frame 6.svg'
 
 
 // case studies
@@ -179,6 +188,7 @@ import caseNuvera from './imgs/Frame 1781.png';
 import femiImg from './imgs/Frame 1772.png';
 import dominicImg from './imgs/image 34.png';
 import emptyImg from './imgs/image 34 (1).png';
+import sirzFormLogo from './imgs/sirzFormLogo.svg'
 
 // export section
 export const TeamImgs = {
@@ -198,6 +208,7 @@ export const startSmallImg = starSmall;
 export const StarMultipleSmall = starMultipleSmall;
 export const StarMultiple = starMultiple;
 export const StarHalfTop = starHalfTop;
+export const SirzFormLogo = sirzFormLogo;
 
 export const rectangleBlue = rectangle3;
 export const rectangleDarkBlue = rectangle1;
@@ -207,6 +218,7 @@ export const greatBg = sirzIsGreat;
 export const elipseImg = elipse;
 export const blueBoxImg = blueBox;
 export const ContactBg = contactBg;
+export const Fivestar = fivestar;
 
 export const iroseImg = iroseImage;
 export const domesticiaImg = domesticiaImage;
@@ -223,7 +235,11 @@ export const MainCardBg = mainCardBg;
 export const ProjectVector = projectVector;
 export const GreenVector = greenVector;
 export const ProjectWebBg = projectWebBg;
-export const IroseBg = iroseBg
+export const IroseBg = iroseBg;
+export const FunnelStartFinish = funnelStartFinish;
+export const ClientRevO = clientRevO;
+export const ClientRevT = clientRevT;
+export const FiveStar = fiveStar;
 
 export const graphicProjects = [
     grProFour,
@@ -310,6 +326,7 @@ export const AchievementImg_Two = achievementImg_Two;
 export const AchievementImg_Three = achievementImg_Three;
 export const AchievementImg_Four = achievementImg_Four;
 export const AchievementImg_Five = achievementImg_Five;
+export const VidDemonstration = vidDemonstration;
 
 // dentiQ
 export const DentiqBg = dentiqBg;
