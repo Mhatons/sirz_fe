@@ -16,9 +16,8 @@ import HeaderFormat from '../../components/header';
 // import { allReduxSliceInfo } from '../../features/reduxSlice';
 
 // hero images
-import rightImg from './images/image 11.png';
-import leftImg from './images/image 12 (1).png';
 import rightLargeImg from './images/image 13.png';
+import heroSectionBg from './images/herosection bg.png';
 
 // service images
 import serviceOneImg from './images/Frame 55.png';
@@ -166,28 +165,24 @@ export default function SalesFunnel() {
             <section className=''>
                 <div
                     style={{
-                        // backgroundImage: `url(${rightImg})`,
+                        backgroundImage: `url(${heroSectionBg})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         backgroundRepeat: 'no-repeat'
                     }}
-                    className='bg-salesFunnelBackgroundGradient '
+                    className=' py-3 '
                 >
-                    <div className=' grid grid-cols-2 pt-28 max-h-screen overflow-y-hidden'>
-                        <img src={rightImg} alt="" className='bg-red4-400 object-top h-[100vh]' />
-                        <img src={leftImg} alt="" className=' h-[100vh] object-top' />
-                    </div>
-                    <div className=' absolute top-0'>
-                        <div className=' flex items-center text-colorDefaultLight pt-20  justify-center sm:w-[70%] w-[90%] text-center m-auto flex-col h-screen'>
+                    <div className=' top-0'>
+                        <div className=' flex items-center text-colorDefaultLight pt-10 justify-center sm:w-[90%] w-[95%] text-center m-auto flex-col h-screen'>
                             <div>
                                 <img src={onboardinLogo} alt="" />
                             </div>
-                            <h4 className=' sm:text-[50px] text-[30px] font-bold pt-5'>Transform <i className=' text-colorGreen'>Your Business</i> with SIRz: Where Innovation Meets Growth</h4>
-                            <p className=' py-5 w-[63%] text-[15px] sm:text-[20px] mb-6'>
+                            <h4 className=' sm:text-[60px] text-[35px] leading-tight font-extrabold pt-2'>Transform <i className=' text-colorGreen'>Your Business</i> with SIRz: Where Innovation Meets Growth</h4>
+                            <p className=' py-5 sm:w-[50%] w-[80%] text-[15px] sm:text-[20px] mb-6'>
                                 We don’t just execute projects; we create success stories.
                                 Partner with us for top-tier e-commerce, branding, and digital marketing solutions.
                             </p>
-                            <button className={` tracking-widest bg-white text-black rounded-full sm:w-[40%] w-[90%] max-sm:mt-5
+                            <button className={` tracking-widest bg-white text-black rounded-full sm:w-[25%] w-[70%]
                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                 `}
                                 onClick={() => navigate(ROUTES.HOME.PATH)}>
@@ -197,7 +192,7 @@ export default function SalesFunnel() {
                                 {
                                     serviceNames.map((data, index) => (
                                         <div>
-                                            <div key={index} className=' flex items-center max-sm:pr-10 px-4 rounded-full whitespace-nowrap py-[7px] gap-2 text-sm border-colorGreen border'>
+                                            <div key={index} className=' flex items-center max-sm:pr-10 px-10 rounded-full whitespace-nowrap py-[7px] gap-2 text-sm border-colorGreen border'>
                                                 <img src={markIcon} alt="" />
                                                 {data}
                                             </div>
@@ -213,15 +208,15 @@ export default function SalesFunnel() {
             <section className=' py-10'>
                 <div className='border-t-[2px] border-colorGreen w-[90%] m-auto pt-4 grid grid-cols-3'>
                     <div className='text-center border-r-[2px] border-colorGreen flex flex-col justify-center align-middle'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <h4 className=' text-colorBlueDeep font-extrabold text-[40px] sm:text-[60px]'>50+</h4>
                         <p className='text-[20px] font-medium'>Clients</p>
                     </div>
                     <div className='text-center flex flex-col justify-center align-middle'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <h4 className=' text-colorBlueDeep font-extrabold text-[40px] sm:text-[60px]'>50+</h4>
                         <p className='text-[20px] font-medium'>Projects</p>
                     </div>
                     <div className='text-center border-s-[2px] border-colorGreen flex flex-col justify-center align-middle'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <h4 className=' text-colorBlueDeep font-extrabold text-[40px] sm:text-[60px]'>50+</h4>
                         <p className='text-[20px] font-medium'>Brands</p>
                     </div>
                 </div>
@@ -251,7 +246,7 @@ export default function SalesFunnel() {
                 </div>
             </section>
 
-            <section className='bg-[#FAFAFA]'>
+            <section className='bg-[#FAFAFA] dark:bg-colorDefaultDark'>
                 <section className=' w-full m-auto'>
                     <div className=' sm:w-[70%] w-[95%] m-auto pb-10 text-center'>
                         <header className=' flex items-center justify-center py-5'>
@@ -366,7 +361,7 @@ export default function SalesFunnel() {
             <section className="bg-colorLight dark:bg-colorDefaultDark pt-6">
                 <div className=" sm:w-[85%] w-[90%] m-auto py-10">
                     <div className=''>
-                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[45px] text-colorBlueDeep text-[35px] sm:leading-9">
+                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[45px] text-colorBlueDeep text-[40px] sm:leading-9">
                             Social Media Management                   </h4>
                     </div>
                     <div className=" grid grid-cols-4 gap-0">
@@ -406,11 +401,11 @@ export default function SalesFunnel() {
             </section>
 
             <section className=' py-8'>
-                <div className=' grid grid-cols-3 sm:w-[90%] w-[95%] m-auto max-sm:pb-8'>
+                <div className=' grid sm:grid-cols-3 grid-cols-2 max-sm:gap-2 sm:w-[90%] w-[95%] m-auto max-sm:pb-8'>
                     <div>
                         <img src={sealImg} alt="" />
                     </div>
-                    <div className=' flex items-center justify-center flex-col py-5'>
+                    <div className=' max-sm:hidden flex items-center justify-center flex-col py-5'>
                         <div>
                             <h1 className=' font-bold capitalize sm:text-[25px]'>Seal the Deal</h1>
                             <img src={titleBorder} alt="" className=' sm:w-[100px] w-[70px] m-auto' />
@@ -424,7 +419,17 @@ export default function SalesFunnel() {
                         <img src={sealImgTwo} alt="" />
                     </div>
                 </div>
-                <Button text="Get started" onClick={() => { }} className=' w-[50%] sm:hidden m-auto ' />
+                <div className='  sm:hidden flex items-center justify-center flex-col py-5'>
+                    <div>
+                        <h1 className=' font-bold capitalize sm:text-[25px]'>Seal the Deal</h1>
+                        <img src={titleBorder} alt="" className=' sm:w-[100px] w-[70px] m-auto' />
+                    </div>
+                    <div className='sm:text-[45px] text-[30px] font-bold text-center pb-5'>
+                        Ready to Elevate Your <i className=' text-colorGreen'>Business</i>?
+                    </div>
+                    <Button text="Get started" onClick={() => { }} className=' w-[50%] max-sm:hidden' />
+                </div>
+                {/* <Button text="Get started" onClick={() => { }} className=' w-[50%] sm:hidden m-auto ' /> */}
             </section>
 
             <section className='bg-dashboard-form-gradient py-8'>
@@ -503,7 +508,7 @@ export default function SalesFunnel() {
                 </div>
             </section> */}
 
-            <section className=' bg-[#FAFAFA]'>
+            <section className=' bg-[#FAFAFA] dark:bg-colorDefaultDark'>
                 <div className='py-8 w-[90%] m-auto'>
                     <h1 className='sm:text-[85px] text-[40px] sm:w-[80%] w-[95%] font-bold mb-6 '>ANY QUESTIONS OR THOUGHTS? OR MAYBE YOU SHOULD SAY HELLO</h1>
                     <p className='w-[90%] sm:w-[40%] text-[25px]'>Contact us via email on  <span className='underline'>[support@sirz.co.uk] or via</span> mobile on 074 07245685</p>

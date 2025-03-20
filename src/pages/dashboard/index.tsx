@@ -217,7 +217,7 @@ export default function OnboardingPage() {
                 </div>
             </section>
 
-            <section className='bg-[#FAFAFA]'>
+            <section className='bg-[#FAFAFA] dark:bg-colorDefaultDark'>
                 <section className=' pt-16 w-[95%] sm:w-[90%] m-auto pb-8'>
                     <div className=' text-colorGreen italic font-bold text-[25px] max-sm:text-center sm:ps-20 text-center w-[70%] m-auto mb-6'>Take a quick tour - Watch this demonstration video on how you to use our client portal</div>
                     <div className='pb-7'>
