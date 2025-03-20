@@ -173,9 +173,9 @@ export default function SalesFunnel() {
                     }}
                     className='bg-salesFunnelBackgroundGradient '
                 >
-                    <div className=' grid grid-cols-2 pt-28 h-screena'>
-                        <img src={rightImg} alt="" />
-                        <img src={leftImg} alt="" />
+                    <div className=' grid grid-cols-2 pt-28 max-h-screen overflow-y-hidden'>
+                        <img src={rightImg} alt="" className='bg-red4-400 object-top h-[100vh]' />
+                        <img src={leftImg} alt="" className=' h-[100vh] object-top' />
                     </div>
                     <div className=' absolute top-0'>
                         <div className=' flex items-center text-colorDefaultLight pt-20  justify-center sm:w-[70%] w-[90%] text-center m-auto flex-col h-screen'>
@@ -187,13 +187,13 @@ export default function SalesFunnel() {
                                 We don’t just execute projects; we create success stories.
                                 Partner with us for top-tier e-commerce, branding, and digital marketing solutions.
                             </p>
-                            <button className={` tracking-widest bg-white text-black rounded-full sm:w-[30%] w-[90%] max-sm:mt-5
+                            <button className={` tracking-widest bg-white text-black rounded-full sm:w-[40%] w-[90%] max-sm:mt-5
                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                 `}
                                 onClick={() => navigate(ROUTES.HOME.PATH)}>
                                 Get started
                             </button>
-                            <div className=' flex gap-3 pt-7 sm:w-[70%] w-[90vw] overflow-x-scroll px-2 hideScrollBar m-auto text-colorGreen justify-center pb-10'>
+                            <div className=' sm:flex gap-3 pt-7 sm:w-[90%] w-[70vw] overflow-x-scroll px-2 hideScrollBar m-auto text-colorGreen sm:justify-center pb-10 grid grid-cols-1'>
                                 {
                                     serviceNames.map((data, index) => (
                                         <div>
@@ -211,18 +211,18 @@ export default function SalesFunnel() {
             </section>
 
             <section className=' py-10'>
-                <div className='border-t border-colorGreen w-[90%] m-auto pt-4 grid grid-cols-3'>
-                    <div className='text-center border-r border-colorGreen'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[50px]'>50+</h4>
-                        <p>Clients</p>
+                <div className='border-t-[2px] border-colorGreen w-[90%] m-auto pt-4 grid grid-cols-3'>
+                    <div className='text-center border-r-[2px] border-colorGreen flex flex-col justify-center align-middle'>
+                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <p className='text-[20px] font-medium'>Clients</p>
                     </div>
-                    <div className='text-center'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[50px]'>50+</h4>
-                        <p>Projects</p>
+                    <div className='text-center flex flex-col justify-center align-middle'>
+                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <p className='text-[20px] font-medium'>Projects</p>
                     </div>
-                    <div className='text-center border-s border-colorGreen'>
-                        <h4 className=' text-colorBlueDeep font-bold text-[50px]'>50+</h4>
-                        <p>Brands</p>
+                    <div className='text-center border-s-[2px] border-colorGreen flex flex-col justify-center align-middle'>
+                        <h4 className=' text-colorBlueDeep font-bold text-[35px] sm:text-[60px]'>50+</h4>
+                        <p className='text-[20px] font-medium'>Brands</p>
                     </div>
                 </div>
             </section>
@@ -235,7 +235,7 @@ export default function SalesFunnel() {
                                 <HeaderFormat title="Who are we?" />
                             </section>
                             <header className="sm:text-[40px] text-[30px] leading-tight font-bold">Ready to build a <i className=" text-colorBlueDeep">brand</i> that thrives? Let's make it happen!</header>
-                            <div className="sm:w-[40%] w-[80%] py-8 ">
+                            <div className="sm:w-[40%] w-[80%] py-8 m-auto sm:m-0">
                                 <Button text="Learn more" onClick={() => navigate(ROUTES.SERVICE_BRANDING.PATH)} />
                             </div>
                         </div>
@@ -251,40 +251,42 @@ export default function SalesFunnel() {
                 </div>
             </section>
 
-            <section>
-                <div className=' sm:w-[60%] m-auto pb-10 text-center'>
-                    <header className=' flex items-center justify-center py-5'>
-                        <div>
-                            <h1 className=' font-semibold capitalize text-[35px]'>our <i className=' text-colorGreen'>services</i> - what we offer</h1>
-                            <img src={titleBorder} alt="" className=' w-[100px] m-auto' />
-                        </div>
-                    </header>
-                    <i>
-                        From branding to e-commerce and digital marketing, our services are designed to elevate your brand and maximize impact.
-                    </i>
-                </div>
-                <div className=' bg-colorLight dark:bg-colorDark mb-10 divide-slate-300 divide-x border-t grid sm:grid-cols-3'>
-                    {
-                        services.map((data, index) => (
-                            <div key={index} className=' px-10 py-6'>
-                                <header className=' capitalize text-colorBlueDeep font-bold'>{data.title}</header>
-                                <div className='text-sm pb-7'>{data.text}</div>
-                                <img src={data.img} alt="" />
+            <section className='bg-[#FAFAFA]'>
+                <section className=' w-full m-auto'>
+                    <div className=' sm:w-[70%] w-[95%] m-auto pb-10 text-center'>
+                        <header className=' flex items-center justify-center py-5'>
+                            <div>
+                                <h1 className=' font-semibold capitalize text-[45px]'>our <i className=' text-colorGreen'>services</i> - what we offer</h1>
+                                <img src={titleBorder} alt="" className=' w-[100px] m-auto' />
                             </div>
-                        ))
-                    }
-                </div>
+                        </header>
+                        <i className='font-medium text-[18px]'>
+                            From branding to e-commerce and digital marketing, our services are designed to elevate your brand and maximize impact.
+                        </i>
+                    </div>
+                    <div className='  bg-colorLight dark:bg-colorDark mb-10 divide-slate-300 sm:divide-x border-t grid sm:grid-cols-3 grid-cols-1'>
+                        {
+                            services.map((data, index) => (
+                                <div key={index} className=' px-10 py-6 sm:flex-none flex flex-col justify-center items-center text-center'>
+                                    <header className=' capitalize text-colorBlueDeep text-[19px] font-bold'>{data.title}</header>
+                                    <div className='text-[16px] pb-7'>{data.text}</div>
+                                    <img src={data.img} alt="" />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </section>
             </section>
 
             <section>
-                <div className=' sm:w-[60%] w-[95%] m-auto pb-10 text-center'>
+                <div className=' sm:w-[70%] w-[95%] m-auto pb-10 text-center'>
                     <header className=' flex items-center justify-center py-5'>
                         <div>
-                            <h1 className=' font-semibold capitalize text-[35px]'>our previous <i className=' text-colorGreen'>projects</i></h1>
+                            <h1 className=' font-semibold capitalize text-[45px]'>our previous <i className=' text-colorGreen'>projects</i></h1>
                             <img src={titleBorder} alt="" className=' w-[100px] m-auto' />
                         </div>
                     </header>
-                    <i>
+                    <i className='font-medium text-[18px]'>
                         Take a look at some of the incredible projects we’ve worked on. From branding transformations to high-converting e-commerce platforms, our work speaks for itself.
                     </i>
                 </div>
@@ -299,7 +301,7 @@ export default function SalesFunnel() {
                 >
                     <img src={rectangleImg} alt="" className=' max-xl:hidden ' />
                     <div className=' m-auto xl:absolute top-0 pt-10'>
-                        <header className='text-white text-[25px] ms-10'>Innovative Brand-niche Websites</header>
+                        <header className='text-white text-[35px] ms-10'>Innovative Brand-niche Websites</header>
                         <div className='grid sm:grid-cols-5 sm:gap-8 pt-8'>
                             <div className="space-y-4 col-span-2 w-[90%] text-zinc-400 m-auto ">
                                 {projects.map((faq, index) => (
@@ -308,7 +310,7 @@ export default function SalesFunnel() {
                                             className="flex justify-between border-b border-zinc-500 pb-3 w-full text-left text-lg"
                                             onClick={() => toggleFAQ(index)}
                                         >
-                                            <div className={`flex items-center ${openIndex === index ? "text-colorLight" : "text-zinc-400"} gap-4 text-[22px]`}>
+                                            <div className={`flex items-center ${openIndex === index ? "text-colorLight" : "text-zinc-400"} gap-4 text-[25px] sm:text-[35px]`}>
                                                 <p className={`${openIndex === index ? "text-colorGreen border-colorGreen" : "text-[#227272] border-[#227272]"} text-lg border rounded-3xl py-1 px-4`}>0{index + 1}</p>
                                                 {faq.question}
                                                 {/* #3ACBCC */}
@@ -317,7 +319,7 @@ export default function SalesFunnel() {
                                         </button>
                                         {openIndex === index && (
                                             <>
-                                                <p className="pt-2 text-gray-400 dark:text-gray-400 dark:border-zinc-700">{faq.answer}</p>
+                                                <p className="pt-2 text-gray-400 dark:text-gray-400 dark:border-zinc-700 text-[20px]">{faq.answer}</p>
                                                 <div className='flex items-center gap-2 pt-3 text-sm'>Read brand case study <BsArrowRight /></div>
                                             </>
                                         )}
@@ -326,7 +328,7 @@ export default function SalesFunnel() {
                             </div>
                             <div className=' col-span-3'>
                                 <img src={poepleImg} alt="" className='h-[550px] object-cover w-full' />
-                                <p className=' text-colorLight underline cursor-pointer text-sm'>View website</p>
+                                <p className=' text-colorLight underline cursor-pointer text-lg ml-4 sm:ml-0'>View website</p>
                             </div>
                         </div>
                     </div>
@@ -337,11 +339,11 @@ export default function SalesFunnel() {
             <section className="bg-colorLight dark:bg-colorDefaultDark pt-6">
                 <div className="py-10">
                     <div className=' sm:w-[85%] w-[95%] m-auto '>
-                        <h4 className=" font-bold text-center pb-12 pt-4 sm:text-[40px] text-colorBlueDeep text-[20px] sm:leading-9">
+                        <h4 className=" font-bold text-center pb-12 pt-4 sm:text-[45px] text-colorBlueDeep text-[35px] sm:leading-9">
                             Creative Graphics Designs & Ebook Designs
                         </h4>
                     </div>
-                    <div className=" flex gap-4 sm:ps-16 sm:w-[98%] w-[90%] ms-0 hideScrollBar overflow-x-scroll">
+                    <div className=" flex gap-4 sm:ps-16 sm:w-[98%] w-[90%] sm:ms-0 ms-7 hideScrollBar overflow-x-scroll">
                         {
                             ebookImg.map((img, index) => (
                                 <img key={index} src={img} alt="" className=" object-cover sm:h-[500px]" />
@@ -364,7 +366,7 @@ export default function SalesFunnel() {
             <section className="bg-colorLight dark:bg-colorDefaultDark pt-6">
                 <div className=" sm:w-[85%] w-[90%] m-auto py-10">
                     <div className=''>
-                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[40px] text-colorBlueDeep text-[20px] sm:leading-9">
+                        <h4 className=" font-bold text-center pb-8 pt-4 sm:text-[45px] text-colorBlueDeep text-[35px] sm:leading-9">
                             Social Media Management                   </h4>
                     </div>
                     <div className=" grid grid-cols-4 gap-0">
@@ -410,10 +412,10 @@ export default function SalesFunnel() {
                     </div>
                     <div className=' flex items-center justify-center flex-col py-5'>
                         <div>
-                            <h1 className=' font-semibold capitalize sm:ext-[23px]'>Seal the Deal</h1>
+                            <h1 className=' font-bold capitalize sm:text-[25px]'>Seal the Deal</h1>
                             <img src={titleBorder} alt="" className=' sm:w-[100px] w-[70px] m-auto' />
                         </div>
-                        <div className='sm:text-[40px] text-[20px] font-bold text-center pb-5'>
+                        <div className='sm:text-[45px] text-[30px] font-bold text-center pb-5'>
                             Ready to Elevate Your <i className=' text-colorGreen'>Business</i>?
                         </div>
                         <Button text="Get started" onClick={() => { }} className=' w-[50%] max-sm:hidden' />
@@ -456,8 +458,8 @@ export default function SalesFunnel() {
                     className='py-5 text-white'>
                     <section className='w-[90%] m-auto'>
                         <header className=' sm:w-[65%] w-[95%]'>
-                            <h2 className='text-6xl font-bold mb-5'>CLIENT’S REVIEW..</h2>
-                            <p className='text-[20px]'>Our clients are at the heart of everything we do. Here’s what they have to say about working with SIRz!</p>
+                            <h2 className='sm:text-6xl text-4xl font-bold mb-5'>CLIENT’S REVIEW..</h2>
+                            <p className='sm:text-[30px] text-[20px]'>Our clients are at the heart of everything we do. Here’s what they have to say about working with SIRz!</p>
                         </header>
                         <div className='grid sm:grid-cols-2 gap-4 m-auto py-10'>
                             {
@@ -465,7 +467,7 @@ export default function SalesFunnel() {
                                     <div key={index} className='text-center flex items-center flex-col border rounded-xl p-10 bg-[#001F3E99]'>
                                         <img src={data.img} alt="" className=' rounded-full h-32 w-32 object-cover ' />
                                         <img src={data.rate} alt="" />
-                                        <p className='text-sm py-3'>
+                                        <p className='sm:text-[20px] text-[18px] py-3'>
                                             {data.review}
                                         </p>
                                         <b>{data.name}</b>
@@ -477,7 +479,7 @@ export default function SalesFunnel() {
                     </section>
                 </div>
             </section>
-{/* 
+            {/* 
             <section className=" bg-colorLight dark:bg-colorDark py-10">
                 <header className="sm:w-[45%] sm:ps-16 w-[90%] max-sm:m-auto">
                     <HeaderFormat title="Schedule a free consultation" />
@@ -503,7 +505,7 @@ export default function SalesFunnel() {
 
             <section className=' bg-[#FAFAFA]'>
                 <div className='py-8 w-[90%] m-auto'>
-                    <h1 className='sm:text-[85px] text-[65px] sm:w-[80%] w-[95%] font-bold mb-6 '>ANY QUESTIONS OR THOUGHTS? OR MAYBE YOU SHOULD SAY HELLO</h1>
+                    <h1 className='sm:text-[85px] text-[40px] sm:w-[80%] w-[95%] font-bold mb-6 '>ANY QUESTIONS OR THOUGHTS? OR MAYBE YOU SHOULD SAY HELLO</h1>
                     <p className='w-[90%] sm:w-[40%] text-[25px]'>Contact us via email on  <span className='underline'>[support@sirz.co.uk] or via</span> mobile on 074 07245685</p>
                 </div>
             </section>
