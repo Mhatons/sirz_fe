@@ -14,10 +14,11 @@ export const formatDateTime = (date: string) => {
 };
 
 export const socialLinks = {
-    Facebook: "",
-    Instagram: "",
+    Facebook: "https://www.facebook.com/share/15JPa4mdat/",
+    Instagram: "https://www.instagram.com/sirz_official",
     Whatsapp: ``,
-    TikTok: ""
+    TikTok: "",
+    Linkedin: "https://www.linkedin.com/company/sanz-innovation-retro/"
 };
 
 export const calendyLink = `https://calendly.com/sirz-support/1-hour-business-solutions-consult?month=2025-03`

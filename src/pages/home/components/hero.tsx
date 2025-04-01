@@ -1,6 +1,8 @@
 import { HomeBanner, HomeVector } from "../../../assets";
 import Button from "../../../components/common/button";
 import bgImg from '../../../assets/imgs/Screenshot (602).png'
+import { ROUTES } from "../../../constants/routes/desc";
+import { useNavigate } from "react-router-dom";
 
 
 const cardContent = [
@@ -19,6 +21,7 @@ const cardContent = [
 ]
 
 export default function Hero() {
+    const navigate = useNavigate()
 
     return (
         <section className={` bg-colorGreenDeeper relative pt-6`}>
@@ -45,7 +48,7 @@ export default function Hero() {
                         <div className=" max-sm:w-[90%] max-sm:m-auto">
                             <header className="sm:text-[40px] text-white text-[25px] relative z-10 leading-tight sm:font-bold">Power Up Your <i className=" text-colorGreen">Brand</i> with Expert <br className=" max-sm:hidden" /> E-commerce, Branding & Marketing <br className=" max-sm:hidden" /> Solutions!</header>
                             <div className="sm:w-[30%] w-[70%] py-6 max-sm:pt-10">
-                                <Button text="Get started" onClick={() => { }} />
+                                <Button text="Get started" onClick={() => navigate(ROUTES.DASHBOARD.PATH)} />
                             </div>
                         </div>
                     </div>

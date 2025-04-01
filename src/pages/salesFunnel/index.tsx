@@ -185,7 +185,7 @@ export default function SalesFunnel() {
                             <button className={` tracking-widest bg-white text-black rounded-full sm:w-[25%] w-[70%]
                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                 `}
-                                onClick={() => navigate(ROUTES.HOME.PATH)}>
+                                onClick={() => navigate(ROUTES.DASHBOARD.PATH)}>
                                 Get started
                             </button>
                             <div className=' sm:flex gap-3 pt-7 sm:w-[90%] w-[70vw] overflow-x-scroll px-2 hideScrollBar m-auto text-colorGreen sm:justify-center pb-10 grid grid-cols-1'>
@@ -413,7 +413,7 @@ export default function SalesFunnel() {
                         <div className='sm:text-[45px] text-[30px] font-bold text-center pb-5'>
                             Ready to Elevate Your <i className=' text-colorGreen'>Business</i>?
                         </div>
-                        <Button text="Get started" onClick={() => { }} className=' w-[50%] max-sm:hidden' />
+                        <Button text="Get started" onClick={() => navigate(ROUTES.DASHBOARD.PATH)} className=' w-[50%] max-sm:hidden' />
                     </div>
                     <div className='items-end justify-end flex'>
                         <img src={sealImgTwo} alt="" />
@@ -427,7 +427,7 @@ export default function SalesFunnel() {
                     <div className='sm:text-[45px] text-[30px] font-bold text-center pb-5'>
                         Ready to Elevate Your <i className=' text-colorGreen'>Business</i>?
                     </div>
-                    <Button text="Get started" onClick={() => { }} className=' w-[50%] max-sm:hidden' />
+                    <Button text="Get started" onClick={() => navigate(ROUTES.DASHBOARD.PATH)} className=' w-[50%] max-sm:hidden' />
                 </div>
                 {/* <Button text="Get started" onClick={() => { }} className=' w-[50%] sm:hidden m-auto ' /> */}
             </section>

@@ -34,7 +34,7 @@ export default function Ecommerce() {
     return (
         <section>
             <div className="sm:pt-20 sm:pb-4 bg-colorLight dark:bg-colorDark">
-                <section className=" sm:w-[85%] mx-auto bg-colorGreenDeeper mb-20 sm:rounded-2xl relative p-6 sm:p-12 flex flex-col sm:flex-row items-center sm:items-start">
+                <section className=" sm:w-[85%] mx-auto bg-colorGreenDeeper mb-32 sm:rounded-2xl relative p-6 sm:p-12 flex flex-col sm:flex-row items-center sm:items-start">
                     <div className=" text-white sm:pt-4 pt-16 sm:ps-4">
                         <div className="sm:w-[70%]">
                             <h2 className=" sm:text-[45px] text-[25px] font-bold leading-[1.2em]">Launch & Scale <br /> Your Online <span className="text-colorGreen italic">Store</span> with Ease</h2>
@@ -53,7 +53,7 @@ export default function Ecommerce() {
 
                     {/* Image Wrapper */}
                     <div className="relative flex justify-center sm:absolute sm:top-0 sm:right-0 sm:w-[380px] w-full">
-                        <img src={EcommerceImgBg} alt="" className=" sm:h-[90vh] object-cover sm:mt-[-1cm] sm:mr-10 mr-0 mt-10" />
+                        <img src={EcommerceImgBg} alt="" className="  object-cover sm:mt-[-1cm] sm:mr-10 mr-0 mt-10" />
                     </div>
                 </section>
             </div>
@@ -67,7 +67,7 @@ export default function Ecommerce() {
                     </h1>
                     <Button
                         text='Get started'
-                        onClick={() => navigate(ROUTES.CONTACT.PATH)}
+                        onClick={() => navigate(ROUTES.DASHBOARD.PATH)}
                         className="w-full sm:w-[50%] md:w-[40%]"
                     />
                 </section>

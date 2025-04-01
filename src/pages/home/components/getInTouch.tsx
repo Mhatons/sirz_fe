@@ -23,7 +23,7 @@ const cardData = [
     {
         icon: <TbClockHour5 />,
         title: "Hours",
-        text: ". Mon-Fri 9:00AM - 5:00PM "
+        text: "Mon-Fri 9:00AM - 5:00PM "
     },
 ]
 

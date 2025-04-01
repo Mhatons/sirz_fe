@@ -4,7 +4,7 @@ import { AboutStoryBg } from "../assets";
 import { allReduxSliceInfo, setIsOpen, setShowServices } from "../features/reduxSlice";
 import { useNavigate } from "react-router-dom";
 import { socialLinks } from "../utils";
-import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTiktok, BsWhatsapp } from "react-icons/bs";
 import { ROUTES } from "./routes/desc";
 import { TbChecks } from "react-icons/tb";
 
@@ -52,12 +52,16 @@ export default function NavbarDropdown() {
                 <div className=" grid grid-cols-2 border-t dark:border-zinc-600 border-zinc-300 pt-8 w-[90%]">
                     <div className=" border-r dark:border-zinc-600 border-zinc-300 relative mr-10 pr-10">
                         <div className="w-full relative ">
-                            <img src={AboutStoryBg} alt="" className="w-full rounded-md object-cover max-h-[200px]" />
+                            <img src={AboutStoryBg} alt="" className="w-full rounded-md object-cover max-h-[400px]" />
                         </div>
                         <div className=" absolute bottom-0 bg-[#3752e9d6] rounded-tr-md py-3 px-8">
                             <div className="text-xs font-nexa-light flex flex-col items-start md:items-end">
                                 {/* <p className="text-[#fff] text-start md:text-end mb-3">Social Media</p> */}
                                 <div className="flex flex-row text-white items-center justify-center gap-x-10">
+                                <a href={socialLinks.Linkedin} target="_blank" rel="noopener noreferrer">
+                                        {/* <img src={ICONS.FACEBOOK_ICON} alt="Facebook" /> */}
+                                        <BsLinkedin className='text-xl' />
+                                    </a>
                                     <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
                                         {/* <img src={ICONS.FACEBOOK_ICON} alt="Facebook" /> */}
                                         <BsFacebook className='text-xl' />
@@ -66,12 +70,12 @@ export default function NavbarDropdown() {
                                         {/* <img src={ICONS.INSTAGRAM_ICON} alt="Instagram" /> */}
                                         <BsInstagram className='text-xl' />
                                     </a>
-                                    <a href={socialLinks.Whatsapp} target="_blank" rel="noopener noreferrer">
+                                    {/* <a href={socialLinks.Whatsapp} target="_blank" rel="noopener noreferrer">
                                         <BsWhatsapp className='text-xl' />
                                     </a>
                                     <a href={socialLinks.TikTok} target="_blank" rel="noopener noreferrer">
                                         <BsTiktok className='text-xl' />
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                         </div>
@@ -85,8 +89,8 @@ export default function NavbarDropdown() {
                                     className="cursor-pointer whitespace-nowrap capitalize my-2"
                                     onClick={() => { dispatch(setShowServices(false)); navigate(`${item.url}`) }}
                                 >
-                                    <div className=" text-white gap-6 px-8 mt-6 rounded-full w-[40%] bg-colorBlueDeep hover:w-[45%] duration-700 py-3 flex items-center">
-                                        <TbChecks className="text-lg" />
+                                    <div className=" text-2xl text-white gap-6 px-8 mt-6 rounded-full w-[40%] bg-colorBlueDeep hover:w-[45%] duration-700 py-3 flex items-center">
+                                        <TbChecks className="text-[40px]" />
                                         {item?.title}
                                     </div>
                                 </li>

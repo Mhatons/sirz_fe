@@ -125,7 +125,7 @@ export default function OnboardingPage() {
                                 className="tracking-widest bg-white dark:text-black rounded-full w-full sm:w-[30%] py-4 cursor-pointer text-sm px-8 font-medium floating-button"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => navigate(ROUTES.HOME.PATH)}
+                                onClick={() => navigate(ROUTES.DASHBOARD.PATH)}
                                 {...fadeInUp}
                             >
                                 Get started

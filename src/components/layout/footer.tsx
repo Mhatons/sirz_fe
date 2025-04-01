@@ -49,7 +49,7 @@ export default function Footer() {
               <button className={` tracking-widest bg-white dark:text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                   'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                   `}
-                onClick={() => { }}>
+                onClick={() => navigate(ROUTES.DASHBOARD.PATH)}>
                 Get started now!
               </button>
             </section>
@@ -122,7 +122,7 @@ export default function Footer() {
 
           <div className="mt-10 sm:flex items-center justify-between">
             <div className="flex text-white flex-row items-center justify-center gap-x-5">
-              <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
+              <a href={socialLinks.Linkedin} target="_blank" rel="noopener noreferrer">
                 <LinkedlnIcon />
               </a>
               <a href={socialLinks.Facebook} target="_blank" rel="noopener noreferrer">
