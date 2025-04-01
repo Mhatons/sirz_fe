@@ -16,14 +16,14 @@ const data = [
     },
     {
         title: "03 E-business management",
-        text: "Our unique approach, streamlined processes, and team structure are the backbone of our effective strategy and one of the key reasons we’re able to achieve results for our customers that outperform industry standards."
+        text: "Our unique approach, streamlined processes, and team structure are the backbone of our effective strategy and one of the key reasons we're able to achieve results for our customers that outperform industry standards."
     },
 ];
 
 const teamData = [
     {
         name: "Babafemi Sanusi",
-        position: "Business Growth Analyst",
+        position: "Business Analyst",
         image: TeamImgs.femiImg
     },
     {
@@ -32,9 +32,9 @@ const teamData = [
         image: TeamImgs.dominicImg
     },
     {
-        name: "Babafemi Sanusi",
-        position: "Business Growth Analyst",
-        image: TeamImgs.emptyImg
+        name: "Daniel Oghenederhie",
+        position: "Business Growth Consultant",
+        image: TeamImgs.team3Img
     },
 ];
 
@@ -60,7 +60,7 @@ export default function About() {
                 <div className='sm:w-[85%] w-[90%] m-auto'>
                     <HeaderFormat title="About us.." classNames="" />
                     <h4 className=" sm:font-bold max-sm:text-justify py-6 sm:text-[27px] text-[17px] sm:leading-9">
-                        Sirz isn’t just another agency. We’re a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
+                        Sirz isn't just another agency. We're a partner in your journey. We dig deep into your why—why you started, why your product matters—and build strategies that connect with your audience.
                     </h4>
                 </div>
                 <div className=' md:grid bg-colorLight dark:bg-colorDark md:grid-cols-5 sm:gap-12 m-auto max-sm:p-5'>
@@ -70,10 +70,10 @@ export default function About() {
                             The Story Behind Sirz
                             In 2021, the founder of Sirz launched a small online fashion store with a simple dream: to build something meaningful that could generate passive income while managing a full-time 9-5 job.
                             Like many, the goal was financial freedom. But the focus was off. Hours went into perfecting the website, arranging photoshoots, and stocking inventory—while the most important aspect was overlooked:
-                            understanding the customer. It didn’t take long for the reality to set in. The business never gained traction, despite investments running into Thousands of Dollars. The turning point came with a crucial realization:
-                            the business didn’t fail because of bad products, but because of a flawed approach—building without knowing who it was for. The founder understood that it’s easier to sell what the market already wants than to create
+                            understanding the customer. It didn't take long for the reality to set in. The business never gained traction, despite investments running into Thousands of Dollars. The turning point came with a crucial realization:
+                            the business didn't fail because of bad products, but because of a flawed approach—building without knowing who it was for. The founder understood that it's easier to sell what the market already wants than to create
                             something and hope it sells. This hard-earned lesson led to a deeper question: why do so many small businesses with great ideas fall short? Motivated by this, the founder immersed himself in learning the ins and outs of e-commerce,
-                            focusing on one key principle: success isn’t just about a good product or a well-designed website—it’s about truly understanding customers and executing with a clear, strategic plan.
+                            focusing on one key principle: success isn't just about a good product or a well-designed website—it's about truly understanding customers and executing with a clear, strategic plan.
                         </div>
                         <div className='sm:w-[40%] w-[90%] max-sm:m-auto pt-6 max-sm:pb-20'>
                             <a href={calendyLink} target="_blank" rel="noopener noreferrer">
@@ -139,18 +139,18 @@ export default function About() {
                 </div>
             </section>
 
-            <section className='sm:w-[85%] w-[90%] m-auto'>
+            <section className='sm:w-[85%] w-[90%] py-20 m-auto'>
                 <div className=''>
                     <HeaderFormat title="Meet the team" classNames="" />
-                    <h4 className=" sm:font-bold py-6 sm:text-[27px] text-[17px] max-sm:text-justify sm:leading-9">
+                    <h4 className=" sm:font-bold py-6 sm:text-[35px] text-[17px] max-sm:text-justify sm:leading-9">
                         Get to know the passionate minds shaping brands and delivering exceptional results
                     </h4>
                 </div>
                 <div className=' grid md:grid-cols-3 sm:grid-cols-2 gap-3 pt-5 '>
                     {
                         teamData.map((item, index) => (
-                            <div key={index} className=' text-center'>
-                                <img src={item.image} alt="" className=' h-[350px] w-full object-cover' />
+                            <div key={index} className=' text-center transition-all duration-300 hover:scale-105 hover:shadow-xl'>
+                                <img src={item.image} alt="" className=' h-[590px] w-full object-cover' />
                                 <div className='py-4'>
                                     <h4 className=' font-bold uppercase tracking-wider'>{item.name}</h4>
                                     <p className='tracking-wider capitalize'>{item.position}</p>
@@ -172,7 +172,7 @@ export default function About() {
                         <button className={` tracking-widest bg-white text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                                                 'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                                                 `}
-                            onClick={() => navigate(ROUTES.CONTACT.PATH)}>
+                            onClick={() => navigate(ROUTES.DASHBOARD.PATH)}>
                             Get in touch
                         </button>
                     </div>

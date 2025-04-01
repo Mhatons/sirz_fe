@@ -13,7 +13,7 @@ const cardData = [
     {
         icon: <SlLocationPin />,
         title: "Address",
-        text: "17 Barmouth Road marine parada LL42 1NA"
+        text: "17 Barmouth Road, Marine Parada LL42 1NA"
     },
     {
         icon: <AiOutlineMail />,
@@ -23,7 +23,7 @@ const cardData = [
     {
         icon: <TbClockHour5 />,
         title: "Hours",
-        text: ". Mon-Fri 9:00AM - 5:00PM | Sat-Sun 10:00AM-6:00PM"
+        text: ". Mon-Fri 9:00AM - 5:00PM "
     },
 ]
 
@@ -44,15 +44,15 @@ export default function GetInTouch() {
                 >
                     <div className="text-center">
                         <header>Get in touch with us!</header>
-                        <h4 className=" font-bold pb-8 pt-3 text-[27px] leading-9">
+                        <h4 className=" font-bold sm:w-[60%] m-auto pb-8 pt-3 text-[40px] ">
                             Whether you're launching a business or scaling one, our blog keeps you informed and inspired. Read the latest now!
                         </h4>
                     </div>
-                    <section className=" grid sm:grid-cols-2 gap-8 ">
+                    <section className=" py-12 grid sm:grid-cols-2 gap-8 ">
                         {
                             cardData.map((item, index) => (
                                 <div key={index} className="bg-white text-black rounded-xl py-5 px-5 flex items-center gap-4">
-                                    <div className=" h-12 w-12 bg-colorBlueDeep text-white flex items-center justify-center rounded-full text-[20px] font-semibold">
+                                    <div className=" h-16 w-16 bg-colorBlueDeep text-white flex items-center justify-center rounded-full text-[20px] font-semibold">
                                         {item.icon}
                                     </div>
                                     <div>

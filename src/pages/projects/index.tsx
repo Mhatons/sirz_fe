@@ -225,7 +225,7 @@ export default function Projects() {
                     <button className={` bg-white text-black rounded-full sm:w-[23%] w-full max-sm:mt-5
                         'w-full flex align-center justify-center py-4 cursor-pointer text-[20px] px-8 font-medium floating-button  
                         `}
-                        onClick={() => navigate(ROUTES.CONTACT.PATH)}>
+                        onClick={() => navigate(ROUTES.DASHBOARD.PATH)}>
                         Get in touch
                     </button>
                 </div>

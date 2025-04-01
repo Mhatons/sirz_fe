@@ -187,6 +187,7 @@ import caseNuvera from './imgs/Frame 1781.png';
 // Team members
 import femiImg from './imgs/Frame 1772.png';
 import dominicImg from './imgs/image 34.png';
+import team3Img from './imgs/WhatsApp Image 2025-03-30 at 9.28.52 PM.jpeg';
 import emptyImg from './imgs/image 34 (1).png';
 import sirzFormLogo from './imgs/sirzFormLogo.svg'
 
@@ -194,6 +195,7 @@ import sirzFormLogo from './imgs/sirzFormLogo.svg'
 export const TeamImgs = {
     femiImg,
     dominicImg,
+    team3Img,
     emptyImg
 
 };

@@ -137,7 +137,7 @@ export default function Branding() {
                         <button className={` tracking-widest bg-white text-black rounded-full mb-0 sm:mb-6 sm:w-[30%] w-[80%] max-md:m-auto max-sm:mt-5
                             'w-full flex align-center justify-center py-4 cursor-pointer text-sm px-8 font-medium floating-button  
                             `}
-                            onClick={() => navigate(ROUTES.CONTACT.PATH)}>
+                            onClick={() => navigate(ROUTES.DASHBOARD.PATH)}>
                             Get in touch
                         </button>
                     </div>
