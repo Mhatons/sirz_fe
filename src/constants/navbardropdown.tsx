@@ -4,7 +4,7 @@ import { AboutStoryBg } from "../assets";
 import { allReduxSliceInfo, setIsOpen, setShowServices } from "../features/reduxSlice";
 import { useNavigate } from "react-router-dom";
 import { socialLinks } from "../utils";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { ROUTES } from "./routes/desc";
 import { TbChecks } from "react-icons/tb";
 
